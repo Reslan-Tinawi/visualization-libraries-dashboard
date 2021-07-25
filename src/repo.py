@@ -67,7 +67,7 @@ class Repo:
 
         return df
 
-    def get_repo_stars_history(self) -> pd.DataFrame:
+    def get_stars_history(self) -> pd.DataFrame:
         """
         returns a dataframe contains the stargazers history and their dates
         columns are: repo_id , starred_id
