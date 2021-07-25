@@ -3,6 +3,7 @@ from typing import List
 from github import Github
 import pandas as pd
 from repo_issue import RepoIssue
+from repo_pull_request import RepoPullRequest
 
 
 class Repo:
@@ -86,3 +87,23 @@ class Repo:
             ))
 
         return repo_issues
+
+    def get_repo_pull_requests(self) -> List[RepoPullRequest]:
+        repo_prs: List[RepoPullRequest] = []
+
+        for repo_pr in self.repo.get_pulls(state='all'):
+            repo_prs.append(RepoPullRequest(
+                id=repo_pr.id,
+                number=repo_pr.number,
+                repo_id=self.repo.id,
+                created_at=repo_pr.created_at,
+                closed_at=repo_pr.closed_at,
+                state=repo_pr.state,
+                title=repo_pr.title,
+                body=repo_pr.body,
+                total_comments=repo_pr.comments,
+                total_commits=repo_pr.commits,
+                labels=list(map(lambda label: label.name, repo_pr.labels))
+            ))
+
+        return repo_prs
