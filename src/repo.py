@@ -1,16 +1,17 @@
+from typing import List
+
 from github import Github
 import pandas as pd
-from pandas.core.frame import DataFrame
+from repo_issue import RepoIssue
 
 
 class Repo:
 
-    def __init__(self,name , token) -> None:
+    def __init__(self, name, token) -> None:
         self.name = name
         self.git = Github(token)
         self.__token = token
-        self.repo = self.git.get_repo(self.repo_name)
-    
+        self.repo = self.git.get_repo(self.name)
 
     def get_repo_features(self) -> list:
         """
@@ -25,8 +26,7 @@ class Repo:
         forks_count = self.repo.forks_count
         creation_date = self.repo.created_at
         contrib_count = self.repo.get_contributors().totalCount
-        return [repo_id , repo_name,total_commits,total_stars,forks_count,creation_date,contrib_count]
-
+        return [repo_id, repo_name, total_commits, total_stars, forks_count, creation_date, contrib_count]
 
     def get_contrib_features(self) -> pd.DataFrame:
         """
@@ -36,13 +36,13 @@ class Repo:
         """
         contributors = list(self.repo.get_contributors())
         contribs_features = [[self.repo.id, contrib.id, contrib.name,
-                            contrib.company, contrib.location,contrib.get_repos().totalCount] \
-                            for contrib in contributors]
+                              contrib.company, contrib.location, contrib.get_repos().totalCount] \
+                             for contrib in contributors]
         df = pd.DataFrame(contribs_features)
-        df.columns = ['repo_id' , 'contrib_id' , 'contrib_name' ,
-                        'contrib_company' , 'contrib_location' , 'contrib_repos_count']
+        df.columns = ['repo_id', 'contrib_id', 'contrib_name',
+                      'contrib_company', 'contrib_location', 'contrib_repos_count']
         return df
-    
+
     def get_repo_releases(self) -> pd.DataFrame:
         """
         returns a pandas dataframe contains info about repository releases
@@ -51,10 +51,10 @@ class Repo:
         releases = list(self.repo.get_releases())
         if len(releases) == 0:
             return pd.DataFrame()
-        releases_features = [[self.repo.id , release.tag_name , release.created_at.strftime('%d-%m-%Y')]
-                            for release in releases]
+        releases_features = [[self.repo.id, release.tag_name, release.created_at.strftime('%d-%m-%Y')]
+                             for release in releases]
         df = pd.DataFrame(releases_features)
-        df.columns = ['repo_id' , 'tag_name' , 'created_at']
+        df.columns = ['repo_id', 'tag_name', 'created_at']
         return df
 
     def get_repo_stars_history(self) -> pd.DataFrame:
@@ -63,8 +63,26 @@ class Repo:
         columns are: repo_id , starred_id
         """
         stars = list(self.repo.get_stargazers_with_dates())
-        stars_features = [[self.repo.id , star.starred_at.strftime('%d-%m-%Y')] for star in stars]
+        stars_features = [[self.repo.id, star.starred_at.strftime('%d-%m-%Y')] for star in stars]
         df = pd.DataFrame(stars_features)
-        df.columns = ['repo_id' , 'starred_at']
+        df.columns = ['repo_id', 'starred_at']
         return df
-        
+
+    def get_repo_issues(self) -> List[RepoIssue]:
+        repo_issues: List[RepoIssue] = []
+
+        for issue in self.repo.get_issues(state='all'):
+            repo_issues.append(RepoIssue(
+                id=issue.id,
+                number=issue.number,
+                repo_id=self.repo.id,
+                created_at=issue.created_at,
+                closed_at=issue.closed_at,
+                state=issue.state,
+                title=issue.title,
+                body=issue.body,
+                total_comments=issue.comments,
+                labels=list(map(lambda label: label.name, issue.labels))
+            ))
+
+        return repo_issues
