@@ -10,9 +10,10 @@ from repo_pull_request import RepoPullRequest
 
 class Repo:
 
-    def __init__(self, name, gh_client: Github):
+    def __init__(self, name: str, full_name: str, gh_client: Github):
         self.name = name
-        self.repo: Repository = gh_client.get_repo(self.name)
+        self.full_name = full_name
+        self.repo: Repository = gh_client.get_repo(self.full_name)
 
     def get_repo_features(self) -> pd.DataFrame:
         """
@@ -28,7 +29,7 @@ class Repo:
         total_contributors = self.repo.get_contributors().totalCount
 
         return pd.DataFrame(
-            data=[repo_id, repo_name, total_commits, total_stars, total_forks, creation_date, total_contributors],
+            data=[[repo_id, repo_name, total_commits, total_stars, total_forks, creation_date, total_contributors]],
             columns=["repo_id", "repo_name", "total_commits", "total_stars", "total_forks", "creation_date",
                      "total_contributors"]
         )
@@ -94,7 +95,7 @@ class Repo:
                 title=issue.title,
                 body=issue.body,
                 total_comments=issue.comments,
-                labels=list(map(lambda label: label.name, issue.labels))
+                labels=list(map(lambda label: label.full_name, issue.labels))
             ))
 
         return pd.DataFrame(repo_issues)
@@ -114,7 +115,7 @@ class Repo:
                 body=repo_pr.body,
                 total_comments=repo_pr.comments,
                 total_commits=repo_pr.commits,
-                labels=list(map(lambda label: label.name, repo_pr.labels))
+                labels=list(map(lambda label: label.full_name, repo_pr.labels))
             ))
 
         return pd.DataFrame(repo_prs)
