@@ -1,6 +1,7 @@
 import pandas as pd
 from github import Github
 from repo import Repo
+from decorators import timer
 
 repos_dict = {
     "altair": "altair-viz/altair",
@@ -23,9 +24,10 @@ repos_dict = {
     "vispy": "vispy/vispy",
 }
 
-data_path = './data/raw/'
+data_path = "./data/raw/"
 
 
+@timer
 def init():
     token = ""
     gh_client = Github(token)
@@ -38,60 +40,63 @@ def init():
     return repos_list
 
 
+@timer
 def create_repos_feature(repos_list):
     repos_features = pd.concat(
         [repo.get_repo_features() for repo in repos_list]
     ).reset_index()
-    print(f'getting repos_features finished with shape {repos_features.shape}')
-    repos_features.to_csv(data_path + 'repos_features.csv', index=False)
+    print(f"getting repos_features finished with shape {repos_features.shape}")
+    repos_features.to_csv(data_path + "repos_features.csv", index=False)
 
 
+@timer
 def create_contrib_features(repos_list):
     contrib_features = pd.concat(
         [repo.get_contrib_features() for repo in repos_list]
     ).reset_index()
-    print(
-        f'getting contrib_features finished with shape {contrib_features.shape}')
-    contrib_features.to_csv(data_path + 'contrib_features.csv', index=False)
+    print(f"getting contrib_features finished with shape {contrib_features.shape}")
+    contrib_features.to_csv(data_path + "contrib_features.csv", index=False)
 
 
+@timer
 def create_repo_releases(repos_list):
     repo_releases = pd.concat(
         [repo.get_repo_releases() for repo in repos_list]
     ).reset_index()
-    print(f'getting repo_releases finished with shape {repo_releases.shape}')
-    repo_releases.to_csv(data_path + 'repo_releases.csv', index=False)
+    print(f"getting repo_releases finished with shape {repo_releases.shape}")
+    repo_releases.to_csv(data_path + "repo_releases.csv", index=False)
 
 
+@timer
 def create_stars_history(repos_list):
     stars_history = pd.concat(
         [repo.get_stars_history() for repo in repos_list]
     ).reset_index()
-    print(f'getting stars_history finished with shape {stars_history.shape}')
-    stars_history.to_csv(data_path + 'stars_history.csv', index=False)
+    print(f"getting stars_history finished with shape {stars_history.shape}")
+    stars_history.to_csv(data_path + "stars_history.csv", index=False)
 
 
+@timer
 def create_repo_issues(repos_list):
     repo_issues = pd.concat(
         [repo.get_repo_issues() for repo in repos_list]
     ).reset_index()
-    print(f'getting repo_issues finished with shape {repo_issues.shape}')
-    repo_issues.to_csv(data_path + 'repo_issues.csv', index=False)
+    print(f"getting repo_issues finished with shape {repo_issues.shape}")
+    repo_issues.to_csv(data_path + "repo_issues.csv", index=False)
 
 
+@timer
 def create_repo_pull_requests(repos_list):
     repo_pull_requests = pd.concat(
         [repo.get_repo_pull_requests() for repo in repos_list]
     ).reset_index()
-    print(
-        f'getting repo_pull_requests finished with shape {repo_pull_requests.shape}')
-    repo_pull_requests.to_csv(
-        data_path + 'repo_pull_requests.csv', index=False)
+    print(f"getting repo_pull_requests finished with shape {repo_pull_requests.shape}")
+    repo_pull_requests.to_csv(data_path + "repo_pull_requests.csv", index=False)
 
 
-if __name__ == '__main__':
-    print('Getting data from github repositories')
-    print('initializing.... ')
+if __name__ == "__main__":
+    print("Getting data from github repositories")
+    print("initializing.... ")
     repos_list = init()
     create_repos_feature(repos_list)
     create_contrib_features(repos_list)
