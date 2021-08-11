@@ -1,0 +1,71 @@
+index,id,number,repo_id,created_at,closed_at,state,title,body,total_comments,total_commits,labels
+0,179281547,186,18925814,2018-04-04 04:49:32,2018-04-06 15:09:37,closed,Add new Formatting classes and corresponding tests,,7,12,[]
+1,179279198,185,18925814,2018-04-04 04:25:13,2018-04-04 04:47:47,closed,added unit/currency feature scenarios,,1,3,[]
+2,179278527,184,18925814,2018-04-04 04:18:06,2018-04-04 04:42:04,closed,added implementation unit/currency regression tests,,1,1,[]
+3,139868487,182,18925814,2017-09-07 17:58:22,2017-09-08 21:48:24,closed,include -toyplot-anchor-shift in calculation of line.right extents fo…,"I was having problems with text being cut-off on the right side because the Marker extents `layout.right` attribute did not appear to take into account the `-toyplot-anchor-shift` value. This was a problem for Toytree because I would routinely plot text with style `{'text-anchor': 'start', '-toyplot-anchor-shift': '20px'}`. 
+
+This problem is also apparent in the example for `-toyplot-anchor-shift` from the Toyplot documentation:
+
+```Python
+canvas = toyplot.Canvas(width=500, height=300)
+axes = canvas.cartesian(show=False, ymin=-2.5, ymax=1.5)
+axes.vlines(0, color=""lightgray"")
+axes.text(0, 1, ""Shifted +0px"", style={""-toyplot-anchor-shift"":""0"", ""text-anchor"":""start"", ""font-size"":""24px""})
+axes.scatterplot(0, 1, color=""black"", size=3)
+m0 = axes.text(0, 0, ""Shifted +20px"", style={""-toyplot-anchor-shift"":""20px"", ""text-anchor"":""start"", ""font-size"":""24px""})
+axes.scatterplot(0, 0, color=""black"", size=3)
+m1 = axes.text(0, -1, ""Shifted +40px"", style={""-toyplot-anchor-shift"":""40px"", ""text-anchor"":""start"", ""font-size"":""24px""})
+axes.scatterplot(0, -1, color=""black"", size=3);
+axes.text(0, -2, ""Shifted -20px"", style={""-toyplot-anchor-shift"":""-20px"", ""text-anchor"":""start"", ""font-size"":""24px""})
+axes.scatterplot(0, -2, color=""black"", size=3);
+```
+
+The marker extents do not take into account the anchor shift. You can see the right value is unchanged for `m0` and `m1`:
+```
+>>> m0.extents('x')[1], m1.extents('x')[1]
+```
+```
+((array([ 0.]), array([ 147.432]), array([-14.4]), array([ 14.4])),
+ (array([ 0.]), array([ 147.432]), array([-14.4]), array([ 14.4])))
+```
+
+After making the edit that is in the pull request the extents seem to appropriately valued:
+```
+>>> m0.extents('x')[1], m1.extents('x')[1]
+```
+```
+((array([ 0.]), array([ 167.432]), array([-14.4]), array([ 14.4])),
+ (array([ 0.]), array([ 187.432]), array([-14.4]), array([ 14.4])))
+```
+",4,1,[]
+4,133188123,176,18925814,2017-07-31 08:15:49,2017-08-01 16:12:22,closed,https for readthedocs,"This should also be changed in the ""headline"" on Github which does not seem to be part of the repository.
+
+
+""Interactive plotting for Python. http://toyplot.readthedocs.io"" -> ""Interactive plotting for Python. https://toyplot.readthedocs.io""",2,1,[]
+5,65750041,150,18925814,2016-04-08 08:04:29,2016-04-08 15:29:38,closed,Added 'text-shadow' CSS attribute to valid list of text attributes.,"We use text-shadow in some of our graphs and tables. Its particularly useful to make text pop when the background is a little busy, eg a photo. Believe it or not but we use some plots with transparent background in front of live video.
+",4,1,[]
+6,50049573,110,18925814,2015-11-08 00:42:08,2015-11-09 22:19:33,closed,Locator format,"I needed nicer tick locations, but with my custom formatting such as thousands separators and a currency symbol. So I added a `format` parameter to the `Extended` and `Heckbert` locators as well.
+
+It passes through Travis CI with no errors.
+",2,4,[]
+7,42470622,90,18925814,2015-08-14 15:59:07,2015-09-04 03:42:39,closed,canvas.matrix accepts xlabel and ylabel,"also, what do you think about lifting these style guidelines for commit messages? https://github.com/quantopian/zipline/wiki/Zipline-development-guidelines
+",2,1,[]
+8,40348180,68,18925814,2015-07-20 12:49:46,2015-07-20 18:21:32,closed,Fix args for corner,,4,1,[]
+9,40289723,67,18925814,2015-07-18 09:29:04,2015-08-14 15:59:36,closed,add shared label example to design/,,4,1,[]
+10,40289707,66,18925814,2015-07-18 09:27:49,2015-07-20 15:53:46,closed,autopep8,"inplace, recursive, aggressive
+",1,1,[]
+11,40228010,65,18925814,2015-07-17 12:53:06,2015-07-18 09:34:47,closed,add Tim's shared label example to design and autopep (emacs screams at me when pep8 is broken),,2,3,[]
+12,39891734,63,18925814,2015-07-14 08:15:53,2015-07-14 09:25:05,closed,small update table doc API,,4,1,[]
+13,39569561,58,18925814,2015-07-09 10:39:53,2015-07-09 18:49:00,closed,Added recipe for building conda packages,,1,1,[]
+14,22146137,12,18925814,2014-10-02 15:01:55,2014-11-05 17:29:51,closed,Add a Gitter chat badge to README.md,"### sandialabs/toyplot now has a Chat Room on Gitter
+
+@tshead2 has just created a chat room. You can visit it here: [https://gitter.im/sandialabs/toyplot](https://gitter.im/sandialabs/toyplot?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&content=body_link).
+
+This pull-request adds this badge to your README.md:
+
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/sandialabs/toyplot?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
+
+Happy chatting.
+
+PS: [Click here](https://gitter.im/settings/badger/opt-out) if you would prefer not to receive automatic pull-requests from Gitter in future.
+",0,1,[]
