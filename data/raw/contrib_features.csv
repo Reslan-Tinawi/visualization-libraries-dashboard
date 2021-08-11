@@ -1,0 +1,1892 @@
+index,repo_id,contrib_id,contrib_name,contrib_company,contrib_location,contrib_repos_count
+0,42757577,781659,Jake Vanderplas,Google,Oakland CA,212
+1,42757577,27600,Brian E. Granger,Amazon Web Services,,189
+2,42757577,9993,Ben Welsh,Los Angeles Times,Los Angeles,42
+3,42757577,2041969,Eitan Lees,,,39
+4,42757577,1798497,,,,18
+5,42757577,589034,Dominik Moritz,"CMU, Apple",Seattle,330
+6,42757577,3387500,Jeremy Freeman,@carbonplan,san francisco,161
+7,42757577,5186265,,,,30
+8,42757577,11561581,Ilia Timofeev,,Saint Petersburg Russia,51
+9,42757577,199813,Thomas A Caswell,Brookhaven National Lab,New York,427
+10,42757577,20745904,Luke Shulman,,"Boston, MA",28
+11,42757577,2601457,Rob Story,Stripe,Portland,69
+12,42757577,192568,Marjorie Roswell,Roswell Infographics,,278
+13,42757577,3757165,Pratap Vardhan,,India,40
+14,42757577,477263,Iain Dillingham,@ebmdatalab ,"Bradford-on-Avon, UK",8
+15,42757577,2394575,Todd Iverson,Winona State University,"Winona, MN",56
+16,42757577,24403730,Trevor Manz,Harvard,"Jamaica Plain, MA",93
+17,42757577,6823988,,,,20
+18,42757577,10458975,,,,44
+19,42757577,7026269,,,,23
+20,42757577,2680980,Carol Willing,Willing Consulting,San Diego,783
+21,42757577,1186124,Saul Shanabrook,,"Easthampton, MA",310
+22,42757577,4560057,Joel Ostblom,University of British Columbia,,126
+23,42757577,1320475,Scott Sievert,University of Wisconsin,,158
+24,42757577,204942,Martin Bergtholdt,Philips Research,"Hamburg, Germany",51
+25,42757577,1223892,Chris Moffitt,,MN,13
+26,42757577,18221871,,,Hong Kong,113
+27,42757577,7856031,,,US,16
+28,42757577,1461273,sterlinm,,,12
+29,42757577,9411388,,,,47
+30,42757577,30065865,BaoGiang HoangVu,Epsilo,"HCMC, VN",18
+31,42757577,9020979,Cameron Yick,@DataDog ,"New York, NY",325
+32,42757577,3303,Jed Brown,CU Boulder,,108
+33,42757577,164491,Jeff Zhang,Hortonworks,"Shanghai, China",96
+34,42757577,10406673,Jimmy Wan,,"Austin, TX",11
+35,42757577,305291,Jonathan Ploudre,,"Mount Vernon, WA",21
+36,42757577,7355797,Jonathan Reichelt Gjertsen,,,67
+37,42757577,11877945,Corrie Bartelheimer,,Brussels,30
+38,42757577,1172945,Eoghan Ó Carragáin,,,35
+39,42757577,221277,Gen Zhang,@GROpenSourceDev,"London, UK",17
+40,42757577,4724321,,,,57
+41,42757577,4177727,Marcus Fedarko,UC San Diego,"San Diego, CA",59
+42,42757577,2367311,Max Humber,,Toronto,33
+43,42757577,165546,Mihai Capotă,Intel Labs,,39
+44,42757577,29282,Takafumi Arakaki,,,393
+45,42757577,440128,Ted Lawless,,"Ann Arbor, MI",35
+46,42757577,702580,Tobias Schmidt,,"Berlin, Germany",42
+47,42757577,532263,,,,6
+48,42757577,559360,Wasim Lorgat,,"Cape Town, South Africa",14
+49,42757577,33534303,,,,18
+50,42757577,4321826,Jona Sassenhagen,@datarobot ,,66
+51,42757577,31087970,,,,36
+52,42757577,5237391,Daniela Huppenkothen,New York University,"New York, NY",79
+53,42757577,57394,Fernando Perez,"University of California, Berkeley.","Berkeley, CA",137
+54,42757577,8550270,Rüdiger Busche,inserve,Osnabrück,73
+55,42757577,20464764,Amelia Brown,,,23
+56,42757577,51492342,Andreas Kanz,,Germany,23
+57,42757577,18753452,Andrew,,,21
+58,42757577,4558023,Andrew Poliakov,,,8
+59,42757577,4256469,André David,CERN,,51
+60,42757577,4483,Arfon Smith,@github,Edinburgh,77
+61,42757577,55156127,Caleb,The International Council on Clean Transportation,San Francisco,3
+62,42757577,236588,Carl Sandrock,@ChemEngUP ,"Johannesburg, South Africa",68
+63,42757577,1839645,Chris Holdgraf,UC Berkeley,California,305
+64,42757577,852409,Christoph Deil,HeidelbergCement,"Heidelberg, Germany",209
+65,42757577,4090894,Daniel Kapitan,freelance data scientist,"Rotterdam, the Netherlands",42
+66,42757577,2658661,Daniel Saxton,,,5
+67,42757577,15989012,Ehud Karavani,,,7
+68,42757577,1323903,Eric Jain,,"Seattle, WA",8
+69,42757577,7727602,Eric Leijonmarck,Backend - anyfin,Stockholm,87
+70,42757577,112708,Erick Matsen,Fred Hutchinson Cancer Research Center,"Seattle, Washington, USA",72
+71,42757577,1324225,Hugo van Kemenade,Nord Software,"Helsinki, Finland",765
+72,42757577,12141783,Imad Dabbura,HMS,"Irving, Texas",23
+73,42757577,2546728,Ivan Dmitrievsky,,"Saint Petersburg, Russia",47
+74,42757577,963647,James Webber,Broad Institute,"Watertown, MA, USA",59
+75,42757577,976970,John Owens,UC Davis,"Davis, California",7
+76,42757577,215599,Jose Sabater,,Edinburgh,46
+77,42757577,16228946,Joseph D.,,Singapore,20
+78,42757577,10113564,Malcolm Ramsay,,Australia,102
+79,42757577,5436980,Malte Deiseroth,Looking,"Mainz, Germany",61
+80,42757577,1074773,Matthew Conlen,@uwdata,Seattle,261
+81,42757577,124910,Matthew Wardrop,Data Scientist at @Netflix,"Los Gatos, CA",51
+82,42757577,335567,Matthias Bussonnier,@Quansight-Labs,"Merced, CA",465
+83,42757577,956034,Niklas Morberg,,,24
+84,42757577,1421445,Owen Solberg,,"Oakland, CA",19
+85,42757577,1163939,Paul Hobson,@Geosyntec ,"Portland, OR, USA",57
+86,42757577,1010404,Pierre Haessig,,France,82
+87,42757577,12795317,Rikard Nordgren,Uppsala University,,12
+88,42757577,17710617,Romain Martinez,Université de Montréal,Montréal,30
+89,42757577,318857,Rose Hooper,,,15
+90,42757577,4984680,Ryan Benson,,San Francisco Bay Area,18
+91,42757577,1658873,Sabrina J. Mielke,Johns Hopkins University,"Baltimore, MD, USA",38
+92,42757577,30111,Sander de Ruiter,,,2
+93,42757577,5720537,Scott Graham,Microsoft,"Boston, MA",23
+94,42757577,28694175,Sergio Sánchez Zavala,@tacosdedatos & @we-are-alluma,San Francisco Bay Area,107
+95,42757577,56927359,,,,17
+96,42757577,2397974,Sylvain Corlay,QuantStack,Paris,387
+97,42757577,6169306,Søren Fuglede Jørgensen,,,61
+98,42757577,13909848,Théo Delecour,,"Paris, France",16
+99,42757577,47873678,Tim Gates,IRESS,Sydney,4065
+100,42757577,42134934,Timo,,,6
+101,42757577,454917,Tzong Hao Chen,@usnistgov ,"Gaithersburg, MD",12
+102,42757577,1175888,Yaser Martinez Palenzuela,,,49
+103,42757577,24250,YY Ahn,,"Bloomington, IN",36
+104,42757577,2791223,Zachary Sailer,Apple,"San Luis Obispo, CA",206
+105,42757577,1924092,,,,40
+106,42757577,24854248,Evgeni Chasnovski,,"Kharkiv, Ukraine",42
+107,42757577,1300499,hannah,,,62
+108,42757577,45575009,,,"London, UK",9
+109,42757577,4510962,,,,15
+110,42757577,22041007,,,,17
+111,42757577,11890487,lincolnfrias,Unifal,Brazil,13
+112,42757577,9432929,mtzl,,,13
+113,42757577,173637,,,,10
+114,42757577,5100631,,,,34
+115,42757577,464518,Eugene Wu,Columbia University,,71
+116,42757577,4312421,,,France,155
+0,3834332,1078448,Bryan Van de Ven,Nvidia,"Portland, OR",25
+1,3834332,27475,Mateusz Paprocki,,"Wrocław, Poland",34
+2,3834332,1640669,Damian Avila,,Cordoba,46
+3,3834332,1796208,Sarah Bird,@mozilla,"Austin, TX",52
+4,3834332,1084690,Fabio Pliger,,,13
+5,3834332,2198981,Luke Canavan,,"Austin, TX",21
+6,3834332,40453,Paddy Mullen,Independent,"New York, NY",51
+7,3834332,218689,Havoc Pennington,,"Asheville, NC",41
+8,3834332,1417520,,"Continuum Analytics, Inc.",,33
+9,3834332,41646357,,,,1
+10,3834332,3015475,Almar Klein,Independent software engineer,"Enschede, The Netherlands",56
+11,3834332,452052,Nick Roth,@dealnews,"Huntsville, AL",74
+12,3834332,4411115,Kevin Colten,@Zollege  ,"Austin, TX",151
+13,3834332,5904886,Justace Clutter,,"Alexandria, VA, USA",25
+14,3834332,4328,Travis Swicegood,,"Austin, TX",272
+15,3834332,249407,,,,57
+16,3834332,61693314,,,,0
+17,3834332,1550771,Philipp Rudiger,Anaconda Inc.,"Berlin, Germany",70
+18,3834332,39711796,Timo Cornelius Metzger,@makepath ,"Oregon, USA",17
+19,3834332,4944634,Karan Dodia,,,14
+20,3834332,6355636,,,,11
+21,3834332,19802403,,,,16
+22,3834332,6038,Joseph Crail,,,63
+23,3834332,5440553,Brittain Hard,,"Austin, TX",26
+24,3834332,4806877,Julia Signell,@saturncloud,Philadelphia,92
+25,3834332,42037,Janek Klawe,,"New York, NY",9
+26,3834332,4241244,Claire Tang,,,10
+27,3834332,546891,Samantha Hughes,Coiled,"Portland, OR",37
+28,3834332,1403768,Benjamin Zaitlen,,,102
+29,3834332,4410314,Eugene Pakhomov,,,41
+30,3834332,1721820,Antoine Pitrou,,,67
+31,3834332,3019665,,,,828
+32,3834332,12059307,Will Warner,Continuum Analytics,Austin TX,3
+33,3834332,18531147,Xavier Artusi,cea,france,9
+34,3834332,544954,Sahat Yalkabov,SIMON Markets LLC,Remote,184
+35,3834332,890576,Jean-Luc Stevens,,,10
+36,3834332,580326,Ian Thomas,,"Caerphilly, UK",23
+37,3834332,203204,Jānis Ābele,Guardtime,"Tallinn, Estonia",28
+38,3834332,1903876,Amy Troschinetz,,"Portland, OR",54
+39,3834332,334496,Ilan Schnell,,"Austin, TX",34
+40,3834332,6404167,Karel van de Plassche,DIFFER,,27
+41,3834332,1546532,Tarun Gaba,@plotly ,,45
+42,3834332,1695496,James A. Bednar,"Anaconda, Inc.","Austin, TX",20
+43,3834332,17789940,Greg,n/a,UK,18
+44,3834332,33131404,Pavithra Eswaramoorthy,Coiled,India,48
+45,3834332,6984748,Jordan Bramble,Local Food Group,United States,51
+46,3834332,7894671,,,"Wellington, New Zealand",25
+47,3834332,43212692,Carolyn Hulsey,,,2
+48,3834332,9484229,Steven C. Howell,CalypsoAI,"Lexington Park, MD",46
+49,3834332,1941694,,,,11
+50,3834332,4940549,Christine Doig,,,50
+51,3834332,1168692,Dennis O'Brien,,"San Francisco, CA",32
+52,3834332,49699333,,,,0
+53,3834332,1993919,Amelio Vazquez-Reina,,"Boston, MA",13
+54,3834332,732771,Tabish Chasmawala,,"Austin, TX",2
+55,3834332,3757165,Pratap Vardhan,,India,40
+56,3834332,1789816,Joel Hull,Continuum Analytics,"Austin, TX",3
+57,3834332,11044560,Anthony Doucouliagos,,"Melbourne, Vic",1
+58,3834332,6750344,Luke Barnard,Tessian,United Kingdom,30
+59,3834332,4407787,Pav A,@rootsumsquared,London,63
+60,3834332,3137319,Adam Suban-Loewen,,,19
+61,3834332,2358574,Dave Reed,@tr ,"Boston, MA",30
+62,3834332,306380,Matthew Rocklin,@coiled ,"San Juan Capistrano, CA",244
+63,3834332,83846,Tim Snyder,,"Austin, TX",43
+64,3834332,27960786,Corey Ducharme,,"Washington, DC",12
+65,3834332,44108147,Ayush Shrivastava,"Indian Institute of Technology, Roorkee",IIT Roorkee,21
+66,3834332,11700535,Gene Peters,Telligent Data,"San Francisco, CA",11
+67,3834332,26139868,Iury Dias Piva,,"Florianópolis, SC - Brazil",41
+68,3834332,11709993,Jeremy Teitelbaum,University of Connecticut College of Liberal Arts and Sciences,"Storrs, CT",46
+69,3834332,6571497,,,,19
+70,3834332,15260011,Luca,,,5
+71,3834332,417981,Phillip Cloud,,"New York, NY",181
+72,3834332,6582483,Raffs,Busino,Switzerland,24
+73,3834332,46572696,Raghav,,New York,5
+74,3834332,1499555,,,,30
+75,3834332,68619,Peter H. Li,,,30
+76,3834332,11211829,ChesuCR,,,0
+77,3834332,2088743,Fabien C. Y. Benureau,,"Bordeaux, France",50
+78,3834332,7128635,Ammar Najjar,,Germany,138
+79,3834332,6003255,David J Pugh,,UK,27
+80,3834332,11656932,James Bourbeau,@coiled ,"Madison, WI",144
+81,3834332,2048939,Leonardo Brito,SensorTower,"Recife, Brazil",36
+82,3834332,68053396,Moritz Schreiber,ifesca GmbH,"Ilmenau, Thuringia, Germany",2
+83,3834332,1719223,Randy Olson,AbSci,"Vancouver, WA",77
+84,3834332,5279463,Rebecca Paz,,"Boston, MA",144
+85,3834332,2539336,Volker Jaenisch (PhD),Inqbus scientific computing,"Burggen, Germany",9
+86,3834332,18532562,,,,26
+87,3834332,31663098,,,,0
+88,3834332,31801148,komo-fr,,Japan,30
+89,3834332,1200250,pdavezac,,,2
+90,3834332,4312421,,,France,155
+91,3834332,9694524,Toby Hodges,@carpentries,"Heidelberg, Germany",138
+92,3834332,881019,Dave Hirschfeld,,Australia,168
+93,3834332,146527,Aashish Chaudhary,@Kitware ,,761
+94,3834332,27959,Alexandre Hannud Abdo,,,19
+95,3834332,3842326,Ashley C Straw,,United States,17
+96,3834332,281593,Beat Küng,@Auterion ,,51
+97,3834332,30848,Benedikt Reinartz,,,234
+98,3834332,12599080,Blake Hall,,,1
+99,3834332,482051,Carlos H Brandt,Jacobs University,Bremen,106
+100,3834332,3140677,Charles Flynn,,"Austin, TX",35
+101,3834332,1929,Chris B,,,72
+102,3834332,22305345,,,"Detroit, Michigan",9
+103,3834332,6223243,Eric Dill,@conda-forge,NC,69
+104,3834332,3921196,Eugene Petkevich,,Minsk,17
+105,3834332,13196195,Ivan Usov,,,10
+106,3834332,59344,Jeroen Van Goey,@barco,"Ghent, Belgium",135
+107,3834332,3752732,John DiMatteo,,"Boulder Colorado, USA",18
+108,3834332,11962885,Leland McInnes,Tutte Institute for Mathematics and Computing,"Ottawa, Ontario, Canada",42
+109,3834332,2102431,Markus Gerstel,@DiamondLightSource,working from home,153
+110,3834332,10606066,Michael Gilbert,,,9
+111,3834332,89061,Olivier Grisel,Inria,"Paris, France",179
+112,3834332,8461706,Peter Fontana,@usnistgov ,,0
+113,3834332,7004949,Santos,@theatlantic,,80
+114,3834332,5782892,Shea Parkes,@milliman,"Indianapolis, IN",36
+115,3834332,42297652,,,,38
+116,3834332,31079536,,Pontificia Universidad Católica de Chile,"Santiago, Chile",5
+117,3834332,574252,,,,8
+118,3834332,5950329,David,,,4
+119,3834332,7702207,,,,3
+120,3834332,684364,,,,130
+121,3834332,6053592,,,,40
+122,3834332,10517326,,,,6
+123,3834332,132978,Terry Jones,,"Berlin, Germany",111
+124,3834332,6788290,Brigitta Sipőcz,Caltech/IPAC,"Seattle, WA",405
+125,3834332,164491,Jeff Zhang,Hortonworks,"Shanghai, China",96
+126,3834332,38393,Mike Sarahan,@RStudio,"Austin, TX",268
+127,3834332,2258401,Liam Buchanan,,,16
+128,3834332,3971205,,,,55
+129,3834332,15331990,Andrew,,,38
+130,3834332,1254588,Boris Ettinger,,"Tel Aviv, Israel",25
+131,3834332,2680980,Carol Willing,Willing Consulting,San Diego,783
+132,3834332,1530840,Chris Barber,,,20
+133,3834332,12901868,Chris Coutinho,DataChef,The Netherlands,81
+134,3834332,20155748,Christine Banek,,,17
+135,3834332,60206,David Warde-Farley,,"London, United Kingdom",49
+136,3834332,1315589,Egor Panfilov,,"Oulu, Finland",21
+137,3834332,2631566,Eric Ma,,"Cambridge, MA",244
+138,3834332,18086180,Franz Wöllert,,Heidelberg,24
+139,3834332,4380622,Greg Nordin,,,39
+140,3834332,753225,Hermann Kraus,,,39
+141,3834332,19758978,,,"Copenhagen, Denmark",4
+142,3834332,129501,Ionel Cristian Mărieș,,"Cluj-Napoca, Romania",186
+143,3834332,4998058,James Guillochon,@Esri,MA,78
+144,3834332,7036678,Jonathan Adamczewski,,,8
+145,3834332,13782231,Jonathan Okasinski,,,4
+146,3834332,68544,Julien Phalip,Google Inc.,"San Francisco, CA",81
+147,3834332,11966062,Kasper Pihl Rasmussen,,Denmark,3
+148,3834332,32682103,Kumaran,@Delta,"National Institute of Technology, Tiruchirappalli.",26
+149,3834332,1053245,Leopold Talirz,EPFL,"Bern, Switzerland",189
+150,3834332,10113564,Malcolm Ramsay,,Australia,102
+151,3834332,34085597,Man Yi (Ariel) Yeung,,"Philadelphia, PA",16
+152,3834332,244656,Manuel Kaufmann,Argentina en Python,"Barcelona, Catalunya, Spain",74
+153,3834332,10058240,Marc Garcia,,Cancun,6
+154,3834332,42288570,Marc Skov Madsen,Ørsted A/S,"Børkop, Denmark",26
+155,3834332,1385621,Mark Mikofski,@DNVGL,"Oakland, CA",80
+156,3834332,313135,Matthew Willis,,"Ithaca, NY",6
+157,3834332,186278,Michael Brown,,Raleigh/Durham,31
+158,3834332,455121,Nikola Hardi,CERN,Switzerland,59
+159,3834332,17646853,Norbert Klar,,Hungary,7
+160,3834332,5682309,Olav Vahtras,KTH,Stockholm,121
+161,3834332,649444,Oleksandr Pryymak,pleso.net,"England,UK",17
+162,3834332,13223818,Oluwafemi Sule,@door2door-io ,"Lagos, Nigeria",147
+163,3834332,4127548,Oscar Viquez,,,6
+164,3834332,5387086,Paul Nguyen,,,41
+165,3834332,4604869,Pete Bachant,@WindESCo,"Boston, MA",147
+166,3834332,153745,Peter Parente,@wearethorn ,,160
+167,3834332,25875031,,,,31
+168,3834332,22864480,Samira Kumar,Individual,California,25
+169,3834332,2266682,Schaun Wheeler,,"Raleigh, NC",12
+170,3834332,7473521,Sean M. Law,@TDAmeritrade ,,21
+171,3834332,8083666,Sebastiaan Lokhorst,,Netherlands,51
+172,3834332,428775,Shon T. Urbas,Pandium,"Brooklyn, NY",26
+173,3834332,4314261,Sourav Singh,,,224
+174,3834332,1019539,Spencer Ogden,,"Norwalk, CT",35
+175,3834332,45071,Stefan van der Walt,"University of California, Berkeley","Berkeley, CA",200
+176,3834332,5063791,Steffen Schröder,,Schwerin,25
+177,3834332,49269671,Theom,,,1
+178,3834332,1895387,Timothy Morton,,,97
+179,3834332,12504517,Tyler Kim,,South Korea,18
+180,3834332,3804282,Victor Silva,,"São Paulo, SP - Brazil",17
+181,3834332,22370149,Zvi Baratz,,Tel-Aviv,31
+182,3834332,6708431,,,,6
+183,3834332,1609952,,,"Portland, OR",30
+184,3834332,7291104,Chalmer Lowe,The Dark Art of Coding | Booz Allen Hamilton,United States,54
+185,3834332,29280226,,,,1
+186,3834332,17650526,crashMOGWAI,,,3
+187,3834332,2630359,Daniel Danner,,,50
+188,3834332,16887209,,,,14
+189,3834332,2726868,Euan de Kock,,,1
+190,3834332,61096711,g-parki,,"Longview, WA",4
+191,3834332,16763201,Itay Livni,,,12
+192,3834332,7515105,,,,12
+193,3834332,121755,,,,99
+194,3834332,3465637,Jan Frydendall,orsted.dk,Denmark,28
+195,3834332,11908736,,,Israel,9
+196,3834332,25136779,,,,3
+197,3834332,3941277,Max G,,,8
+198,3834332,56525288,Naveen Sai,Indian Institute of Technology Mandi,"Bangalore, India",27
+199,3834332,623307,,,,8
+200,3834332,2906750,,,,10
+201,3834332,6854235,Morten Simonsen,,"Sandnes, Norway",8
+202,3834332,4145309,,,,36
+203,3834332,303932,Tal Yarkoni,University of Texas,"Austin, TX",44
+204,3834332,13487305,Alex,,Hong Kong,14
+205,3834332,1485056,Gabi Maeztu,@iomedhealth,Basque Country,10
+206,3834332,2783717,Jim Crist-Harif,,"Austin, TX",147
+207,3834332,2692805,,,,111
+208,3834332,9244085,Memet Bilgin,,,12
+209,3834332,151929,Min RK,Simula Research Laboratory,"Oslo, Norway",648
+210,3834332,26602940,0xflotus,,,2207
+211,3834332,1088576,Aaron Andalman,Stanford University,San Francisco,10
+212,3834332,38992106,Achim Randelhoff,Takuvik,QC,28
+213,3834332,8851500,Adam B,,"Vancouver, Canada",22
+214,3834332,6889910,Adam Levin,,,17
+215,3834332,42397096,Aditya Jetely,Student,India,45
+216,3834332,11625672,Afzal Ansari,,India,57
+217,3834332,33599912,,,"Amritsar, Punjab",27
+218,3834332,5179430,Alex Goodman,NASA Jet Propulsion Laboratory,"Pasadena, CA",23
+219,3834332,2299504,Alexandre Garcia,Prodigy,Toronto,42
+220,3834332,61110584,,,,2
+221,3834332,449558,Andreas Mueller,Microsoft,Palo Alto,186
+222,3834332,8530685,Andrei Alexandru,,,41
+223,3834332,8674072,Andrew S. Rosen,Northwestern University,"Evanston, IL",13
+224,3834332,2229284,Andrey Paramonov,ACD/Labs,,17
+225,3834332,6502699,Antonio Russo,,,25
+226,3834332,10434719,Anupam,,,10
+227,3834332,355183,Arcuri Davide,,,10
+228,3834332,13161958,Ari Hartikainen,Aalto University,"Espoo, Finland",70
+229,3834332,63328798,Ariel Pillemer,,United Kingdom,27
+230,3834332,39364391,Ari,,,5
+231,3834332,20646300,Arnaud Tsombeng,,Yaounde Cameroon,37
+232,3834332,512293,Aron Ahmadia,@CapitalOne,"Arlington, VA",97
+233,3834332,18234073,Artem,,Ukraine,18
+234,3834332,13554208,Artur Ciesielski,,"Warsaw, Poland",7
+235,3834332,425653,Arun Persaud,,,24
+236,3834332,54855463,ash,"B.E. IT,UIET,Panjab University,India","Chandigarh,India",130
+237,3834332,1273761,Ben Che,,,6
+238,3834332,273688,Beni Cherniavsky-Paskin,Red Hat,"Ariel, Israel",216
+239,3834332,13618205,Benjamin Lee,,"Arlington, VA",51
+240,3834332,16954694,Bijan Fallah,@FUBerlin,Berlin,50
+241,3834332,506547,Boris Gorelik,,Israel,20
+242,3834332,49027,Brent Payne,,,34
+243,3834332,18388818,Brett Montague,,"Calgary, Alberta",24
+244,3834332,15748700,Brian Abrams,@ReliableCarriers ,"Detroit, MI",10
+245,3834332,8185174,Brian Panneton,,,6
+246,3834332,3915737,Brian Schoolcraft,,"Crawfordsville, IN",27
+247,3834332,18532213,,,,49
+248,3834332,12300792,Camila Oliveira,,"Brasília, Brazil. ",9
+249,3834332,27929341,Antonio Campello,,,21
+250,3834332,118039,Carlos Cardenas,,"Redmond, WA",16
+251,3834332,50200796,Chaytanya Sinha,Alibaba Cloud Inc.,Bangalore,175
+252,3834332,28761465,Cheuk Ting Ho,TerminusDB,London,80
+253,3834332,1093960,Chris Drake,Ampere Computing,"Fremont, CA",12
+254,3834332,16281420,Chris Saldivar,,,6
+255,3834332,3591721,Christian Brædstrup,,"Copenhagen, Denmark",19
+256,3834332,371774,Christian Hill,,,19
+257,3834332,10518798,Christopher Sweet,,"Buffalo, NY",18
+258,3834332,638797,Christopher Wilcox,Google Cloud,"Seattle, WA",83
+259,3834332,1385106,Colm Ryan,,,42
+260,3834332,22548039,Connor Tann,BP,London,14
+261,3834332,36364045,Crypto Jerônimo,Crypto Jerônimo's Musings,,24
+262,3834332,27850535,Cédric Bouysset,Université Côte D'Azur,"Nice, France",13
+263,3834332,7462936,Dan Dale,,,8
+264,3834332,4229284,Dan Kovacek,,"Vancouver, BC",27
+265,3834332,786238,Dan Lester,ContainDS / Ideonate,"Cambridge, UK",35
+266,3834332,8559534,Dane Kennedy,University of Cape Town,Cape Town,26
+267,3834332,4090894,Daniel Kapitan,freelance data scientist,"Rotterdam, the Netherlands",42
+268,3834332,1580714,Daniel Rodriguez,,"Austin, TX",92
+269,3834332,62559,Dave Katten,,"Fort Worth, TX",22
+270,3834332,2343358,Dave Willmer,,,125
+271,3834332,4655950,David Born,,"Boston, MA",19
+272,3834332,18173173,Devin Horvay,,,0
+273,3834332,1813121,Dheepak Krishnamurthy,,Colorado,222
+274,3834332,1001778,,,,97
+275,3834332,4755760,Dirk Biesinger,,,21
+276,3834332,17899808,Dmitry Nikolaev,,,20
+277,3834332,1774752,Dmitry Veltishchev,Yandex LLC,"Russia, Moscow",7
+278,3834332,7279457,,,,15
+279,3834332,26342344,Duarte OC,DSB (Danish State Railways),"Copenhagen, Denmark",57
+280,3834332,12659763,Dylan Moore,,,35
+281,3834332,22224469,Emlyn Price,,Manchester,35
+282,3834332,1774207,,,"Lübeck, Germany",8
+283,3834332,302469,Elliott Sales de Andrade,,"Toronto, Ontario, Canada",262
+284,3834332,7615260,eric,,boulder,17
+285,3834332,346587,Erik Tollerud,Space Telescope Science Institute,"Baltimore, MD",253
+286,3834332,8998918,Ethan Nelson,,"Madison, WI, USA",68
+287,3834332,217898,Federico Frenguelli,@evonove ,Perugia,70
+288,3834332,1632323,Fedor Baart,,Netherlands,98
+289,3834332,8487127,Fei,,,12
+290,3834332,4386497,Gary Godfrey,,"Austin, TX",7
+291,3834332,14757659,Gaudenz Halter,,"Zürich, Switzerland",22
+292,3834332,55525317,Gaurav Wasnik,,,1
+293,3834332,817669,Geert Barentsen,NASA,"San Francisco, California",156
+294,3834332,30920819,Genevieve Buckley,Monash University,Melbourne,151
+295,3834332,3341840,Geoffrey Stoel,n/a,the Netherlands,13
+296,3834332,58937,Geza Kovacs,Stanford University,"Stanford, CA",239
+297,3834332,7980466,Gina,,"Austin, TX",30
+298,3834332,1272984,Gordon Inggs,@cityofcapetown ,"Cape Town, South Africa",28
+299,3834332,1074487,Greg Freeman,,"Austin, TX",41
+300,3834332,6600690,Greg Romrell,,"Bluffdale, UT",7
+301,3834332,88278,Gregor Müllegger,Gregor Müllegger Software Solutions,"Munich, Germany",56
+302,3834332,38019,Grégoire Détrez,,"Gothenburg, Sweden",93
+303,3834332,36577631,Guilherme Fonseca,,,0
+304,3834332,2450496,Hamza Faran,,"Redmond, WA",25
+305,3834332,5981644,Dr. Hanan Shteingart,,Israel,6
+306,3834332,1008866,Hein Bekker,netbek,South Africa,79
+307,3834332,18420184,Henning Timm,,Germany,37
+308,3834332,1161208,,,,21
+309,3834332,14038787,Iaroslav Shcherbatyi,"Amazon AWS, AI Platforms","Germany, Berlin",70
+310,3834332,1473485,Ikaro Silva,Philips,"Watertown, MA",23
+311,3834332,1881263,Ivan Krukov,,Canada,81
+312,3834332,29014804,JAK-Zero,,,8
+313,3834332,10371495,Jack Beanland,,"Oslo, Norway",11
+314,3834332,15275922,Jacky Cao,,"Oulu, FI",15
+315,3834332,22569604,James Draper,Duke Molecular Physiology Institute,North Carolina,106
+316,3834332,2033938,Jan Eglinger,Friedrich Miescher Institute for Biomedical Research,"Basel, Switzerland",176
+317,3834332,23491538,Jason,,Los Angeles,15
+318,3834332,273454,Jason Antman,@manheim ,"Decatur, GA",211
+319,3834332,103499,Jason Novinger,Elias Sports Bureau,"Austin, TX",89
+320,3834332,658597,Jean-Denis Lesage,Criteo,Paris,15
+321,3834332,20694664,Jeff,,,41
+322,3834332,1482434,Jeffrey Morgan,,,47
+323,3834332,1527821,Jian Li,,San Francisco Bay Area,26
+324,3834332,4560057,Joel Ostblom,University of British Columbia,,126
+325,3834332,8440927,Johannes Sasongko,,"Brisbane, Australia",6
+326,3834332,109530,John F. Burkhart,,Oslo,28
+327,3834332,18459252,John Paton,@Catawiki,"Amsterdam, Netherlands",46
+328,3834332,4823863,John Walk,Pluralsight,"Boston, MA",25
+329,3834332,2032871,Jonathan Cooper,@UCL ,,23
+330,3834332,11357144,Jonathan Eisch,,,19
+331,3834332,8526498,Joris Zimmermann,,Germany,13
+332,3834332,7328852,José Coto,,,49
+333,3834332,35902717,Juan Carlos Sarmiento,"Co-founder @ Somos Cred, Inc",,2
+334,3834332,251215,Juan Pedro Fisanotti,,,97
+335,3834332,144894,Julian,Karlsruhe Institute of Technology,Karlsruhe,48
+336,3834332,624737,Justin Li,Occidental College,Los Angeles,69
+337,3834332,57212747,Kaamraan,,Cape Town,10
+338,3834332,3972343,Karthikeyan Singaravelan,Visa Inc.,"Bangalore, India",241
+339,3834332,2515508,Kevin Anderson,,,27
+340,3834332,9023838,Yu-Sheng Li,@Dcard ,,33
+341,3834332,5044802,Kyle Roth,Cobalt Speech and Language,Utah,14
+342,3834332,13525017,Lee Chengkai,,,17
+343,3834332,170910,Lev Maximov,,,88
+344,3834332,10073831,,,,5
+345,3834332,2065805,Luca Chiodini,,,29
+346,3834332,6642,Luiz Irber,@10xgenomics,"Davis, CA",179
+347,3834332,28904135,Luke M Craig,,,22
+348,3834332,20745904,Luke Shulman,,"Boston, MA",28
+349,3834332,17992458,Luke Tudge,,"Berlin, Germany",11
+350,3834332,1615089,Maurice Schleußinger,,"Düsseldorf, Germany",25
+351,3834332,9082353,Maciej J,,London,38
+352,3834332,66687425,Mahendra Kumar,"Indian Institute of Technology,Goa",Jaisalmer,6
+353,3834332,7724047,Maik Heistermann,University of Potsdam,"Potsdam, Germany",50
+354,3834332,12762439,Marat Kopytjuk,,"Heilbronn, Germany",71
+355,3834332,459665,Marc Kassay,,"Orlando, Florida",66
+356,3834332,16868431,Marco Hemken,UCLA,"Los Angeles, CA",36
+357,3834332,2227806,Marianne Corvellec,,"Strasbourg, France",129
+358,3834332,17365607,Mark Grassi,,,3
+359,3834332,34218455,Mark Perera,,,13
+360,3834332,36151,Martin Marcher,,Earth,34
+361,3834332,1040871,Mathis,,,93
+362,3834332,3431592,Matt Mowers,,,32
+363,3834332,39389064,Matthias,TUM,Germany,2
+364,3834332,17294645,Mauhcs,,Tokyo,17
+365,3834332,22289608,Mayur Vashishth,Honeywell,"Gurgaon, India",17
+366,3834332,8329826,Michael König,Blue Yonder GmbH,"Karlsruhe, Germany",13
+367,3834332,13667847,Miguel Cardoso,@vohcolab ,"Lisbon, Portugal",12
+368,3834332,28698827,,,,2
+369,3834332,2805515,Mike DePalatis,"Inscripta, Inc.","Longmont, CO",63
+370,3834332,8919901,Mike Mylonakis,UBS,London,42
+371,3834332,87697,Miki Tebeka,353solutions,Israel ,80
+372,3834332,15278512,Minho,,Australia,8
+373,3834332,1879306,Nathan West,,"Washington, DC",67
+374,3834332,19185982,Nicolas Leclercq,ESRF - The European Synchrotron,Grenoble - France,3
+375,3834332,8755300,Nicolas de Palezieux,sunflower-labs.com,Zurich,14
+376,3834332,88704,Nils Werner,,Germany,202
+377,3834332,43414361,Nimish Bongale,@jpmorganchase,"Bangalore, India",44
+378,3834332,20568,Ondřej Čertík,Los Alamos National Laboratory,"Los Alamos, NM",321
+379,3834332,23738400,Oriol Abril-Pla,,Barcelona,59
+380,3834332,3052100,Pablo M. Reyes,,,13
+381,3834332,31520015,Pall Jonsson,,"Seattle, WA",1
+382,3834332,776111,Pankaj Pandey,,,42
+383,3834332,1348834,Patrick O'Keeffe,@wsular ,"Pullman, WA",63
+384,3834332,31643597,Patrik Hlobil,,"Karlsruhe, Germany",10
+385,3834332,289776,Pavel Campr,@Pexeso ,Pilsen / Prague / Los Angeles,19
+386,3834332,505344,Peter Fein,,,44
+387,3834332,4687996,Peter Hausamann,,"Munich, Germany",18
+388,3834332,772305,Petter Strandmark,,Sweden,56
+389,3834332,42834148,Philipp Lehner,,Austria,1
+390,3834332,1571309,Przemysław Buczkowski,@founders4schools,"London, UK",59
+391,3834332,56778,Ram Rachum,Google,"Tel-Aviv, Israel",160
+392,3834332,15256103,Randy Wang,,,12
+393,3834332,29617392,Ravi Singh,,Toronto,4
+394,3834332,1553087,Robin B,HSLU,Switzerland,14
+395,3834332,46074297,RoadHeas,,,1
+396,3834332,11150141,Russell B,,,2
+397,3834332,20629361,Sam Fawcett,@manahl,,9
+398,3834332,10716165,Samuel Austin,,Canada,37
+0,149135719,1086968,Chris Halpert,Spotify,,7
+1,149135719,393289,Daniel Norberg,,,90
+2,149135719,1550920,Tomas Aschan,@spotify,"Stockholm, Sweden",111
+3,149135719,2198981,Luke Canavan,,"Austin, TX",21
+4,149135719,50144563,Daiki Katsuragawa,Japan,Osaka,12
+5,149135719,8800689,Chris Gregory,Microsoft,"Seattle, WA",49
+6,149135719,4699689,Muniz,,Florianopolis - SC,35
+7,149135719,13381361,Bharat Raghunathan,,Chennai,274
+8,149135719,3641660,,,,9
+9,149135719,6503209,Emily Schuch,,"New York, NY",27
+10,149135719,88278,Gregor Müllegger,Gregor Müllegger Software Solutions,"Munich, Germany",56
+11,149135719,36627085,Pranjalya Tiwari,@CoronaWhy,India,56
+12,149135719,47873678,Tim Gates,IRESS,Sydney,4065
+13,149135719,4181796,Todd,,,158
+14,149135719,1527501,,,,20
+0,25441251,3327,maze,,,64
+1,25441251,146133,Yuchen Ying,Google,San Francisco Bay Area,164
+2,25441251,108,Dr Nic Williams,Stark & Wayne LLC @starkandwayne ,"Brisbane, Australia",637
+3,25441251,206721,Gillis J. de Nijs,,"Amsterdam, The Netherlands",7
+4,25441251,925560,Lucas Cimon,,"Angers & Nantes, France",107
+5,25441251,11822547,Nathan Harrington,,"Holly Springs, NC",12
+6,25441251,1774646,,,,17
+0,13384593,1409333,Greg Lamp,,"Boulder, CO",112
+1,13384593,57271,Phil Hazelden,,"London, UK",64
+2,13384593,5297556,Nick Timkovich,Telnyx @team-telnyx ,"Chicago, IL",107
+3,13384593,4303236,Peter M. Landwehr,CytoVale | Carnegie Melon University,"San Francisco, CA",73
+4,13384593,292411,Brandon Aubie,QReserve Inc.,"Hamilton, ON, Canada",18
+5,13384593,10200,Christopher Roach,,SF Bay Area,66
+6,13384593,627486,Dan Brown,Stripe,SF,78
+7,13384593,4737200,Dhash Shrivathsa,radix.bio,,31
+8,13384593,72572,Jeremy G. Kahn,Ozlo,"Seattle, Washington",32
+9,13384593,151929,Min RK,Simula Research Laboratory,"Oslo, Norway",648
+10,13384593,1630582,Sebastian Nagel,@commoncrawl ,"Konstanz, Germany",50
+11,13384593,18700975,,,,22
+12,13384593,4312421,,,France,155
+0,23520171,327203,Nicolas P. Rougier,@INRIA ,"Bordeaux, France",225
+1,23520171,5397919,Sebastian Præsius,,"Lyngby, Denmark",12
+2,23520171,4966764,Maria Patterson,White House Presidential Innovation Fellow,"Indianapolis, IN",44
+3,23520171,2062128,Yusuke Niitani,@pfnet ,Tokyo,56
+4,23520171,19726886,,,,12
+5,23520171,39999081,David Matthews,,,23
+6,23520171,4522484,Victor Shepardson,,"Arlington, VA",36
+7,23520171,5417842,,,,4
+8,23520171,3968360,Le minaw,,"Paris, France",51
+9,23520171,19675437,Vinícius Viana,Pro-Packages,"São Paulo, Brazil",1
+10,23520171,23399666,,,,1
+11,23520171,1731534,Carlos Bergillos,,Barcelona,5
+12,23520171,25011557,Gerard Marull-Paretas,@teslabs,Barcelona,25
+13,23520171,1272951,Matthias Blaicher,,"Karlsruhe, Germany",33
+14,23520171,1121690,Pierre de Buyl,Royal Meteorological Institute of Belgium,Belgium,118
+15,23520171,33482468,QiuJiangkun,,"Hong Kong, China",77
+16,23520171,7423008,Ryan Reno,,,8
+17,23520171,12501995,Toby the potato,,Sushi Land,71
+18,23520171,39889,Yaroslav Halchenko,"Dartmouth College, @Debian, @DataLad, @PyMVPA, @fail2ban",Planet Earth,410
+19,23520171,20872701,CodeDoes,,South Africa,74
+20,23520171,210133,Aaron Dargel,,,32
+21,23520171,884092,Alessandro Re,,Italy,62
+22,23520171,4573394,Alex Forrence,,,100
+23,23520171,391541,,,Down Under,49
+24,23520171,5244318,Brian,,Atlanta,45
+25,23520171,1790200,Carlos Morales,,"Sheffield, UK",24
+26,23520171,1304509,Charlie Barto,@Microsoft,,136
+27,23520171,25935564,"Charles ""Oblivion"" Scoville",,,4
+28,23520171,619375,Eivind Fonn,SINTEF,"Wageningen, Netherlands",178
+29,23520171,17208315,Elias Hasle,,,19
+30,23520171,25385946,,,,3
+31,23520171,15453882,,,,3
+32,23520171,2399255,Jürnjakob Dugge,,,33
+33,23520171,14029493,Konstantin Kochin,,,31
+34,23520171,18632298,mostro,,,29
+35,23520171,1149047,Niklas Haas,,Germany,109
+36,23520171,4181003,Paul Koppen,,,3
+37,23520171,3703497,Peter Fischer,Siemens Healthineers,Erlangen,27
+38,23520171,4084982,Till Bungert,,Heidelberg,32
+39,23520171,32328286,NSigma,,,3
+40,23520171,10544301,Yunzhi Shi,The University of Texas at Austin,"Austin, TX",7
+41,23520171,3713104,Andrew Chalmers,,Wellington,21
+42,23520171,4896200,Edwin Christian Yllanes Cucho,Freelance,Lima-Perú,35
+43,23520171,40467893,,,,1
+44,23520171,5159852,,,Germany,17
+45,23520171,5085170,,,"Copenhagen, Denmark",4
+46,23520171,16313623,kemfic,,sf,31
+47,23520171,49573837,Matthew Emery,@Roblox,Vancouver,2
+0,19542768,1550771,Philipp Rudiger,Anaconda Inc.,"Berlin, Germany",70
+1,19542768,890576,Jean-Luc Stevens,,,10
+2,19542768,1695496,James A. Bednar,"Anaconda, Inc.","Austin, TX",20
+3,19542768,6897215,Bas Nijholt,@Microsoft,"Rotterdam, the Netherlands",250
+4,19542768,15064365,Jon Mease,Plotly,Maryland,35
+5,19542768,15331990,Andrew,,,38
+6,19542768,1929,Chris B,,,72
+7,19542768,38992106,Achim Randelhoff,Takuvik,QC,28
+8,19542768,3776190,Vasco Tenner,,,27
+9,19542768,2692805,,,,111
+10,19542768,5184063,Markus Kaiser,@siemens @mlatcl,,12
+11,19542768,13033479,,,,9
+12,19542768,4312421,,,France,155
+13,19542768,19758978,,,"Copenhagen, Denmark",4
+14,19542768,610909,Jordan Samuels,,,20
+15,19542768,15659110,Kim Pevey,Quansight,,4
+16,19542768,2360669,Florian LB,,,62
+17,19542768,8419157,Andrew Tolmie,,,57
+18,19542768,25608220,Daniel Stephan,,"Frankfurt a.M., Germany",6
+19,19542768,23336875,Douglas Raillard,@ARM-software ,,11
+20,19542768,1873517,Justin Bois,Caltech,,48
+21,19542768,951093,Peter Roelants,,London,29
+22,19542768,2891791,Scott Lowe,Dalhousie University,"Halifax, Canada",40
+23,19542768,418747,John Bampton,,"Brisbane, Australia",978
+24,19542768,3909112,,@LokaHQ ,"Lisbon, Portugal",18
+25,19542768,826871,,,,17
+26,19542768,71657990,Blythe Davis,,,6
+27,19542768,15113894,Irv Lustig,,"Coral Gables, FL",11
+28,19542768,3015475,Almar Klein,Independent software engineer,"Enschede, The Netherlands",56
+29,19542768,1078448,Bryan Van de Ven,Nvidia,"Portland, OR",25
+30,19542768,4806877,Julia Signell,@saturncloud,Philadelphia,92
+31,19542768,1053245,Leopold Talirz,EPFL,"Bern, Switzerland",189
+32,19542768,442687,Lukas Barth,,"Munich, Germany",61
+33,19542768,35924738,Maxime Liquet,CS Group,France,35
+34,19542768,56778,Ram Rachum,Google,"Tel-Aviv, Israel",160
+35,19542768,536362,Yuval Langer,,https://gitlab.com/yuvallanger/,145
+36,19542768,9948595,,,,25
+37,19542768,37403847,,,Tokyo,15
+38,19542768,17993725,kbowen,,,18
+39,19542768,56386632,,,,3
+40,19542768,44586083,Alex Braditsas,,,4
+41,19542768,2971670,Anar Z. Yusifov,,"Houston, TX, USA",4
+42,19542768,2029180,Anthony Monthe,Cloud Mercato,Earth,104
+43,19542768,52913510,Benjamin W. Portner,Bauhaus Luftfahrt e.V.,"Munich, Germany",23
+44,19542768,42480289,Brian Larsen,,"Houston, TX",46
+45,19542768,482051,Carlos H Brandt,Jacobs University,Bremen,106
+46,19542768,8251055,Christian Sachs,,Germany,75
+47,19542768,16920510,Corinne Bosley,Met Office,Exeter,48
+48,19542768,40304663,Daryn,@NOAA-PMEL & UW CICOES,Spaceship Earth,9
+49,19542768,3780274,Eduardo Gonzalez,,,171
+50,19542768,5461357,Elliot Berman,,"San Diego, CA",32
+51,19542768,10050469,Fabien Maussion,University of Innsbruck,"Innsbruck, Austria",83
+52,19542768,29724732,FloLangenfeld,,Paris,9
+53,19542768,18086180,Franz Wöllert,,Heidelberg,24
+54,19542768,946727,Gabriel Corona,,"Nancy, France",39
+55,19542768,29955288,Geronimo Bergk,Fraunhofer HHI,Berlin,3
+56,19542768,29143941,Gil Shoshan,,,8
+57,19542768,13115728,Guillermo González de Garibay,,,35
+58,19542768,498688,Hans Moritz Günther,MIT,"Cambridge, MA, USA",111
+59,19542768,15906523,Hugues-Yanis Amanieu,,Strasbourg,9
+60,19542768,1986155,Jacob Barhak,,,22
+61,19542768,4560057,Joel Ostblom,University of British Columbia,,126
+62,19542768,13782231,Jonathan Okasinski,,,4
+63,19542768,23477,Jonathan deWerd,,"Denver, CO",25
+64,19542768,6038,Joseph Crail,,,63
+65,19542768,20630819,Julio Antonio Soto,,"Madrid, Spain",14
+66,19542768,6162186,Kevin Gullikson,University of Texas,United States,43
+67,19542768,381808,Laurent Perrinet, institut de Neurosciences de la Timone - AMU / CNRS,"Marseille, France",100
+68,19542768,33358882,Lela,@cornell.edu,,10
+69,19542768,4441338,,,,15
+70,19542768,459665,Marc Kassay,,"Orlando, Florida",66
+71,19542768,198999,Matěj Cepl,SUSE,"Prague, Czech republic",91
+72,19542768,1028433,Michael McNeil Forbes,Washington State University,Pullman,37
+73,19542768,1495173,Nuno Gomes Silva,,Amsterdam,5
+74,19542768,272585,Prabhu Ramachandran,IIT Bombay,,33
+75,19542768,917914,Richard Hattersley,@MetOffice ,UK,64
+76,19542768,2022305,Ryan Murray,@dremio,Munich Germany,63
+77,19542768,14047377,,,,15
+78,19542768,8291800,Scott Staniewicz,University of Texas at Austin,"Austin, TX",58
+79,19542768,39501859,Sophia Yang,"Anaconda, Inc.",,14
+80,19542768,1655821,Stuart Berg,,"Ashburn, Virginia, USA",166
+81,19542768,8518239,The Gitter Badger,Gitter,Safe in the Gitter den,37404
+82,19542768,771241,Thomas Jollans,,Rhine-Neckar,31
+83,19542768,327925,Thomas Kluyver,,,375
+84,19542768,47873678,Tim Gates,IRESS,Sydney,4065
+85,19542768,4181796,Todd,,,158
+86,19542768,12778156,,,,1
+87,19542768,1240693,eknath,,"Seattle, WA",32
+88,19542768,24253179,,,,6
+89,19542768,7702207,,,,3
+90,19542768,39441485,,,,1
+91,19542768,3019665,,,,828
+92,19542768,8693117,,,,3
+93,19542768,1557321,Mark Hedley,,,100
+94,19542768,44254521,,,,6
+95,19542768,7629938,noppelmax,,Germany,14
+96,19542768,2245296,,,,3
+97,19542768,173637,,,,10
+98,19542768,50551651,,,,1
+99,19542768,24970221,,,,12
+100,19542768,11760870,,,,142
+101,19542768,1447163,,,,53
+0,1288547,272585,Prabhu Ramachandran,IIT Bombay,,33
+1,1288547,4158417,Deepak Surti,,,32
+2,1288547,3673984,Kit Choi,,United Kingdom,24
+3,1288547,403930,Ioannis Tziakos,@enthought ,UK,43
+4,1288547,132967,Stefano Borini,AstraZeneca UK,"Cambridge, UK",57
+5,1288547,7513610,Tetsuo Koyama,ARK Information Systems,Japan,263
+6,1288547,208217,Gael Varoquaux,,,75
+7,1288547,2365790,Eric Larson,University of Washington,"Ann Arbor, MI",127
+8,1288547,47074125,Amal S Sebastian,IIT BOMBAY,Mumbai,9
+9,1288547,1926457,Poruri Sai Rahul,@enthought ,"WFH, India",38
+10,1288547,36972686,,@enthought ,,4
+11,1288547,662003,Mark Dickinson,Enthought,"Cambridge, UK",24
+12,1288547,7534987,Federico Miorelli,CGG,Milan,7
+13,1288547,46135,Robert Kern,@enthought ,,33
+14,1288547,25587339,Krishna Wadhwani,,Mumbai,40
+15,1288547,1609649,Mark Kness,Enthought,"Austin, TX",2
+16,1288547,184798,Nelle Varoquaux,TIMC-IMAG,Grenoble,102
+17,1288547,647005,Martin Luessi,,Boston USA,34
+18,1288547,96245,Michele Mattioni,,,80
+19,1288547,320553,Anthony Scopatz,"DTN, Inc","Chicago, IL",396
+20,1288547,17787873,Bhavesh Thakkar,,,20
+21,1288547,842366,Chris Farrow,Enthought,"Austin, TX",23
+22,1288547,151929,Min RK,Simula Research Laboratory,"Oslo, Norway",648
+23,1288547,904679,Pratik Mallya,@LiveRamp ,Earth,208
+24,1288547,263366,Emmanuelle Gouillart,,,55
+25,1288547,8539474,Ryan Pepper,University of Birmingham,United Kingdom,23
+26,1288547,10460113,,,,18
+27,1288547,413925,Rustam Safin,,"Ufa, Russia",22
+28,1288547,626438,Adam Reeve,,"Auckland, New Zealand",50
+29,1288547,5454627,Byron Boulton,,,8
+30,1288547,578872,Gabi Davar,"Pelion, an ARM company",Israel,187
+31,1288547,498688,Hans Moritz Günther,MIT,"Cambridge, MA, USA",111
+32,1288547,428273,Marijn van Vliet,Aalto University,"Helsinki, Finland",84
+33,1288547,20568,Ondřej Čertík,Los Alamos National Laboratory,"Los Alamos, NM",321
+34,1288547,708474,Patrick Snape,,"Zurich, Switzerland",104
+35,1288547,971544,Scott Talbert,,,45
+36,1288547,4911352,Senganal,Tiger Analytics,"Chennai, India",5
+37,1288547,874004,Alexandre Leroux,Animoog.org,"Montreal, Canada",47
+38,1288547,145771,Christian Brodbeck,University of Connecticut,Storrs,47
+39,1288547,131137,Daniel Wedlund,@sandvikcode ,Sweden,23
+40,1288547,1651235,David Haberthür,"Institute of Anatomy, Unversity of Bern, Switzerland","Bern, Switzerland",195
+41,1288547,335370,François Boulogne,Paris-Saclay University,"Paris, France",76
+42,1288547,18143289,Guillaume Favelier,INRIA,"Paris, France",39
+43,1288547,16577120,Hongzhuo Liang,University of Hamburg @TAMS-Group,Hamburg,43
+44,1288547,1312873,James Booth,,,54
+45,1288547,548266,Jens Hedegaard Nielsen,@qdev-dk,Copenhagen,115
+46,1288547,278873,Jonathan March,,,14
+47,1288547,1207168,Kristofor Maynard,,,28
+48,1288547,1690979,Magnus Nord,Norwegian University of Science and Technology,"Trondheim, Norway",34
+49,1288547,1272951,Matthias Blaicher,,"Karlsruhe, Germany",33
+50,1288547,1632323,Fedor Baart,,Netherlands,98
+51,1288547,14372447,Stefan Sandfeld,,,3
+52,1288547,4181796,Todd,,,158
+53,1288547,605470,Roan LaPlante,Martinos Center for Biomedical Imaging,Proctorville OH,21
+0,1385122,199813,Thomas A Caswell,Brookhaven National Lab,New York,427
+1,1385122,38294,Michael Droettboom,Mozilla,"Maryland, USA",166
+2,1385122,1322974,Antony Lee,,,146
+3,1385122,302469,Elliott Sales de Andrade,,"Toronto, Ontario, Canada",262
+4,1385122,2836374,Tim Hoffmann,,Germany,37
+5,1385122,38334,John Hunter,,"Chicago, IL",3
+6,1385122,85125,Eric Firing,University of Hawaii,"Honolulu, Hawaii",28
+7,1385122,1562854,Jody Klymak,University of Victoria,"Victoria, B.C., Canada",88
+8,1385122,6197628,David Stansby,UCL,"London, UK",71
+9,1385122,184798,Nelle Varoquaux,TIMC-IMAG,Grenoble,102
+10,1385122,548266,Jens Hedegaard Nielsen,@qdev-dk,Copenhagen,115
+11,1385122,291576,Benjamin Root,,,53
+12,1385122,221526,Ryan May,UCAR/@Unidata,"Boulder, Colorado, USA",96
+13,1385122,810663,Phil Elson,,Geneva,122
+14,1385122,92814,Jouni K. Seppänen,,"Helsinki, Finland",25
+15,1385122,169586,Darren Dale,Cornell University,"Ithaca, NY",25
+16,1385122,95962,Jae-Joon Lee,,,43
+17,1385122,328518,Damon McDougall,AMD,Austin,48
+18,1385122,30176,Andrew Straw,,"Freiburg, Germany",85
+19,1385122,1163939,Paul Hobson,@Geosyntec ,"Portland, OR, USA",57
+20,1385122,1300499,hannah,,,62
+21,1385122,483428,Christoph Gohlke,"University of California, Irvine","Irvine, California",29
+22,1385122,133031,Tony S Yu,,,45
+23,1385122,2631566,Eric Ma,,"Cambridge, MA",244
+24,1385122,17270724,Adrien F. Vincent,Bordeaux INP,"Bordeaux, France",12
+25,1385122,2096628,Steven Silvester,,"Dallas, Texas",260
+26,1385122,581272,Charlie Moad,@SalesLoft ,"Indianapolis, IN, USA",17
+27,1385122,2743474,Nikita Kniazev,,,103
+28,1385122,23121882,Elan Ernest,,Germany,6
+29,1385122,118211,Paul Ivanov,,,144
+30,1385122,890156,Jan Katins,@aiven,"Berlin, Germany",121
+31,1385122,1490153,Federico Ariza,,"Montreal, Canada",7
+32,1385122,1819283,Peter Würtz,,,28
+33,1385122,580326,Ian Thomas,,"Caerphilly, UK",23
+34,1385122,1839645,Chris Holdgraf,UC Berkeley,California,305
+35,1385122,1505899,Cimarron,,California,14
+36,1385122,206581,Thomas Hisch,IMS Nanofabrication,Vienna,72
+37,1385122,8000454,,,,15
+38,1385122,10111092,Ian Hunt-Isaak,Harvard School of Engineering and Applied Sciences,,96
+39,1385122,579593,Jeff Whitaker,,,41
+40,1385122,327203,Nicolas P. Rougier,@INRIA ,"Bordeaux, France",225
+41,1385122,136062,,,,5
+42,1385122,576258,Víctor Zabalza,,,32
+43,1385122,11851990,Eric Prestat,University of Manchester/SuperSTEM Laboratory,,100
+44,1385122,2383378,Matt Giuca,Google Australia,"Sydney, Australia",1
+45,1385122,67612,Matthew Brett,University of Birmingham,"Birmingham, UK",446
+46,1385122,581493,,,,0
+47,1385122,425260,Eric Wieser,University of Cambridge,Cambridge UK,214
+48,1385122,1394820,Francesco Montesano,MPE,"Munich, Germany",48
+49,1385122,1141744,,Hyams Development,"Madison, AL",13
+50,1385122,39504233,MeeseeksMachine,,,25
+51,1385122,345982,Norbert Nemec,,,36
+52,1385122,335567,Matthias Bussonnier,@Quansight-Labs,"Merced, CA",465
+53,1385122,58611,,,"New York, NY",140
+54,1385122,5512021,Dietmar Schwertberger,,"Munich, Germany",3
+55,1385122,43996118,Aitik Gupta,Indian Institute of Information Technology & Management,"Delhi, India",57
+56,1385122,580824,Todd Miller,Space Telescope Science Institute,,25
+57,1385122,68152031,,,Turin,3
+58,1385122,1475390,Bruno Beltran,Stanford University,"Palo Alto, CA",40
+59,1385122,15869616,Harshit Patni,Bloomberg L.P.,London,32
+60,1385122,1842780,Tobias Megies,,,77
+61,1385122,799467,Martin Spacek,LMU Munich,"Munich, Germany",21
+62,1385122,906803,Joe Kington,@planetlabs ,"Houston, TX, USA",23
+63,1385122,314716,Thomas Robitaille,,United Kingdom,382
+64,1385122,2365790,Eric Larson,University of Washington,"Ann Arbor, MI",127
+65,1385122,1377457,Paul Ganssle,@Google,"Hartford, CT",109
+66,1385122,2272878,Todd,,,20
+67,1385122,706257,Ben Congdon,,"Seattle, WA",156
+68,1385122,21251857,Zhili (Jerry) Pan,Microsoft,,17
+69,1385122,393899,Katy Huff,University of Illinois at Urbana - Champaign,"Urbana, IL",218
+70,1385122,5488440,Maximilian Nöthe,TU Dortmund,Germany,153
+71,1385122,1271014,Nic Eggert,Target,"Minneapolis, MN",41
+72,1385122,20972099,Sidharth Bansal,,,114
+73,1385122,15175620,Harshal Prakash Patankar (pharshalp),,"State College, PA",4
+74,1385122,26521816,Max Chen,,,30
+75,1385122,5310424,Johan von Forstner,Paradox Cat GmbH,"Munich, Germany",66
+76,1385122,33512,Joseph Booker,Neoturbine,"Chicago, Illinois",49
+77,1385122,2692805,,,,111
+78,1385122,4617010,Joseph Fox-Rabinovitz,,"New Hampshire, USA",31
+79,1385122,2830900,YaOzI,,"Guangdong, China",36
+80,1385122,584729,Jochen Voss,,,29
+81,1385122,823911,Matti Picus,Quansight Labs,,131
+82,1385122,3758703,,,,8
+83,1385122,29602156,,,,6
+84,1385122,12417828,Greg Lucas,LASP / @lasp / @SWxTREC,"Boulder, CO",27
+85,1385122,427688,Alexander Rudy,,"Oakland, CA",65
+86,1385122,705366,Julien Lhermitte,River Corp,New York,42
+87,1385122,352673,Kacper Kowalik,@ncsa ,"Champaign, IL",127
+88,1385122,528022,Matt Terry,Nextdoor,"Berkeley, CA",40
+89,1385122,580954,Reinier Heeres,CEA Saclay,"Saclay, France",9
+90,1385122,581243,,,,19
+91,1385122,303559,Thomas Spura,,Germany,41
+92,1385122,11835115,Vlas Sokolov,Solita,Germany,27
+93,1385122,8749990,,,,18
+94,1385122,7330385,,,,35
+95,1385122,5623552,Hannes Breytenbach,South African Astronomical Observatory,Cape Town,31
+96,1385122,12721170,Dietrich Brunn,,"München, Germany",1
+97,1385122,17813788,Lee Johnston,,"Austin, TX",17
+98,1385122,189880,Till Stensitzki,Freie Universität Berlin,"Berlin, Germany",31
+99,1385122,35387375,Artem Shmatko,,,8
+100,1385122,781659,Jake Vanderplas,Google,Oakland CA,212
+101,1385122,13226500,Andrzej Novak,,,57
+102,1385122,25685573,Shawn,,,22
+103,1385122,1107796,Danhickstein,KMLabs,"Boulder, CO",37
+104,1385122,3126246,Nathan Goldbaum,Quansight,Denver,101
+105,1385122,630936,Roman Yurchak,,"Paris, France",152
+106,1385122,16891009,Xianxiang Li,Sun Yat-sen University,"Zhuhai, Guangdong, China",75
+107,1385122,326005,,,,74
+108,1385122,649181,Bastian Bechtold,,"Oldenburg, Germany",53
+109,1385122,584741,David Kaplan,,,17
+110,1385122,57394,Fernando Perez,"University of California, Berkeley.","Berkeley, CA",137
+111,1385122,11200528,Forrest,,"Lafayette, LA",31
+112,1385122,11616994,Jann Paul Mattern,UC Santa Cruz,"Santa Cruz, California",8
+113,1385122,4053170,Kevin Rose,,"WI, USA",35
+114,1385122,254880,Travis E. Oliphant,"Quansight, OpenTeams","Austin, TX",32
+115,1385122,10099583,Trish Gillett-Kawamoto,@Shopify,"Montreal, QC",17
+116,1385122,728407,Leo Singer,NASA Goddard Space Flight Center,"Greenbelt, MD",159
+117,1385122,1134834,Pete Huang,@Airtable,"San Francisco, CA",1
+118,1385122,585449,Sameer D’Costa,,"Chicago, IL",12
+119,1385122,43701530,Samesh Lakhotia,,,24
+120,1385122,2501846,Kyle Sunden,@wright-group,University of Wisconsin–Madison,63
+121,1385122,4099759,Benjamin Reedlunn,,,2
+122,1385122,82855,CJ Carey,Google,NYC,71
+123,1385122,8163534,Dora Caswell,,,23
+124,1385122,13906920,Dylan Cutler,Google,"Cambridge, MA",42
+125,1385122,12832470,Frank Sauerburger,,Freiburg,18
+126,1385122,716633,,,,21
+127,1385122,3169669,,,,14
+128,1385122,1854435,Joel B. Mohler,Cobalt Iron,,34
+129,1385122,6769833,sfroid,,SF Bay Area,6
+130,1385122,18316979,Jerome Villegas,,"Seattle, WA",14
+131,1385122,437497,Ben Cohen,,"New York, NY",16
+132,1385122,1531139,David Kua,,"Toronto, ON, Canada",79
+133,1385122,6223243,Eric Dill,@conda-forge,NC,69
+134,1385122,13535894,JGoutin,,France,12
+135,1385122,24868098,,Université de Technologie de Compiègne,"Compiègne, France",17
+136,1385122,1033764,Kevin Davies,@hnei ,"Honolulu, HI",18
+137,1385122,6495040,Kjell Le,,,13
+138,1385122,4992897,Larry Bradley,Space Telescope Science Institute,"Baltimore, MD",50
+139,1385122,9091966,Matt,,Charleston,20
+140,1385122,151929,Min RK,Simula Research Laboratory,"Oslo, Norway",648
+141,1385122,4219951,,,,7
+142,1385122,487498,Wes Campaigne,,,17
+143,1385122,6234907,Sindunuraga Rikarno Putra,,,9
+144,1385122,6953323,Tobias Schönberg,,Europe,62
+145,1385122,580820,,,,0
+146,1385122,498688,Hans Moritz Günther,MIT,"Cambridge, MA, USA",111
+147,1385122,5819478,Heath Henley,@farsounder ,"Warwick, RI",13
+148,1385122,406283,Lennart Fricke,,,14
+149,1385122,126239,Martin Fitzpatrick,Freelance,"Amersfoort, Netherlands",48
+150,1385122,135065,Matthew Emmett,Advanced Micro Devices,"Calgary, AB, Canada",34
+151,1385122,30701790,Om Sitapara,Former Intern Arista Networks,"Hyderabad, India.",55
+152,1385122,591316,Piti Ongmongkolkul,Mahidol University International College,"Nakorn Pathom, Thailand",87
+153,1385122,8410950,Vyacheslav Basharov,,Marbella,15
+154,1385122,45071,Stefan van der Walt,"University of California, Berkeley","Berkeley, CA",200
+155,1385122,8399710,Tian Xia,,Toronto,20
+156,1385122,12229877,Zac Hatfield-Dodds,Australian National University,"Canberra, Australia",106
+157,1385122,23063929,,,,3
+158,1385122,4140247,,,,583
+159,1385122,23618263,Gerardo Rivera,Instituto Geofísico del Perú,"Lima, Perú",26
+160,1385122,10050469,Fabien Maussion,University of Innsbruck,"Innsbruck, Austria",83
+161,1385122,2669128,Geoffroy Billotey,,"Grenoble, France",4
+162,1385122,65501,Manuel Jung,,Kiel,21
+163,1385122,1450212,Matthew Petroff,,Baltimore,33
+164,1385122,4129406,Per Parker,,Toronto,4
+165,1385122,12175684,Salinder Sidhu,FRMG SkyForest R&D,"Toronto, Canada",16
+166,1385122,4445535,Taehoon Lee,SK Telecom,"Seoul, South Korea",29
+167,1385122,454824,Werner F Bruhin,,,3
+168,1385122,3238849,Tony Li,,,13
+169,1385122,12649253,Alvaro,DeepMind,London,20
+170,1385122,129339,Evan Berkowitz,University of Maryland,"Washington, DC",50
+171,1385122,1926734,Gregory Ashton,University of Southampton,United Kingdom,50
+172,1385122,780341,Hassan Kibirige,,"Kampala, Uganda",45
+173,1385122,3487237,Kristen Thyng,@axiom-data-science,"Bryan, TX",112
+174,1385122,2297042,Salil Vanvari,,United States,27
+175,1385122,7178184,Taras,,"Lviv, Ukraine",11
+176,1385122,966348,Till Hoffmann,Imperial College London,London,54
+177,1385122,7579321,Valentin Valls,ESRF,"Grenoble, France",51
+178,1385122,8338383,Jason Brokaw,,"Seattle, WA",33
+179,1385122,7451790,Julian Mehne,,Germany,20
+180,1385122,2284074,Alistair Muldal,DeepMind,"London, UK",31
+181,1385122,390602,Andrew Dawson,,,62
+182,1385122,8812382,Arvind Prakash,,,20
+183,1385122,41511103,Asaf,,Israel,16
+184,1385122,3943761,Bradley Dice,University of Michigan,"Kansas City, MO",153
+185,1385122,4704963,Dana Miller,,,48
+186,1385122,21226283,Jamie Nunez,@pnnl ,"Richland, WA",10
+187,1385122,116120,Kevin Mader,,"Zurich, Switzerland",190
+188,1385122,22959508,Stefan Mitic,,"Markham, ON, Canada",21
+189,1385122,1421685,Ted Drain,,"Los Angeles, CA",17
+190,1385122,18373374,,,,3
+191,1385122,2589111,Jean-François B.,,France,15
+192,1385122,583379,Adrian Price-Whelan,Flatiron Institute,NYC,286
+193,1385122,50191787,Akhil Manoj,,India,13
+194,1385122,6053592,,,,40
+195,1385122,20605205,Conner Phillips,Fraunhofer IKTS,"Dresden, Germany",6
+196,1385122,640895,Mike Kaufman,,,1
+197,1385122,3279641,Naoya Kanai,@airbnb,sf,55
+198,1385122,181628,Nico Schlömer,,"Berlin, Germany",90
+199,1385122,8143191,,,,2
+200,1385122,1198183,Robert Johansson,,Tokyo,28
+201,1385122,71395257,Rohit Rawat,Amdocs,India,0
+202,1385122,5618407,Sebastian Raschka,UW-Madison,"Madison, WI",73
+203,1385122,11820627,Nathan Pham,,"Berkeley, CA",47
+204,1385122,29574757,David Banville,Logiag LaserAG,Montreal,37
+205,1385122,10482181,Eric Cotner,American Tire Distributors,"Mountain View, CA",35
+206,1385122,876546,,,,102
+207,1385122,4098537,Wei Chen,,,55
+208,1385122,14959134,Yeo Sing Ng,,,9
+209,1385122,676149,E. M. Bray,,France,176
+210,1385122,10340167,,,,53
+211,1385122,54374648,anushkrishnav,,chennai india,179
+212,1385122,1265819,Alexander Taylor,,UK,62
+213,1385122,1872784,,CU Denver,"Denver, CO",26
+214,1385122,2069677,Anton Akhmerov,Delft University,"Delft, Netherlands",40
+215,1385122,19147159,Antti Soininen,VTT Technical Research Centre of Finland,"Espoo, Finland",2
+216,1385122,1010174,Ben Gamari,Well Typed LLP,"Portsmouth, NH, United States",692
+217,1385122,37900,Cameron Fackler,,,10
+218,1385122,10780059,Casper da Costa-Luis,,"London, UK",97
+219,1385122,20690385,Derek Tropf,,,10
+220,1385122,462802,Hans Meine,,"Bremen, Germany",51
+221,1385122,1690979,Magnus Nord,Norwegian University of Science and Technology,"Trondheim, Norway",34
+222,1385122,2823847,Matěj Týč,Red Hat,Brno,39
+223,1385122,3750670,Ryan Nelson,,,21
+224,1385122,15007950,Samson Tan,Salesforce Research / National University of Singapore,,32
+225,1385122,1391051,Stuart Mumford,@aperiosoftware ,Holmfirth,330
+226,1385122,19318366,Venkada Narasiman Prasad,,,6
+227,1385122,4179106,WANG Aiyong,,,44
+228,1385122,3792659,Yao-Yuan Mao,Rutgers University,"New Brunswick, NJ, USA",24
+229,1385122,536362,Yuval Langer,,https://gitlab.com/yuvallanger/,145
+230,1385122,604073,Fernando L. Garcia Bermudez,,San Francisco Bay Area,27
+231,1385122,9886904,Gene Callahan,,,79
+232,1385122,7881978,Jean Helie,,Netherlands,70
+233,1385122,23384863,Oehrly,,,7
+234,1385122,4109713,Jose Manuel Martí,Universitat de València,GitHub!,17
+235,1385122,40603139,Abhinav Sagar,Stealth Startup,Mumbai,17
+236,1385122,1820237,Amy,,,18
+237,1385122,884032,Cameron Davidson-Pilon,,"Waterloo, Canada",79
+238,1385122,22381125,,,,5
+239,1385122,8534504,Dave,,"Chicago, IL, USA",19
+240,1385122,9411999,Devashish Deshpande,KU Leuven,India,24
+241,1385122,14874091,Divyam Madaan,,,22
+242,1385122,93164,Graham Poulter,,Ireland,9
+243,1385122,6825729,,,,100
+244,1385122,265630,Dr. Jan-Philip Gehrcke,"Opstrace, Inc.",Berlin,86
+245,1385122,176105,Jan-willem De Bleser,,USA,27
+246,1385122,251611,John Gill,,Ottawa,27
+247,1385122,16649631,Klara Gerlei,The University of Edinburgh,,17
+248,1385122,5617956,,,,14
+249,1385122,304251,Matt Newville,University of Chicago,"Chicago, IL",33
+250,1385122,11566055,Ninad,,,8
+251,1385122,2444231,Paul Gierz,@AWI-Paleodyn ,"Bremen, Germany",80
+252,1385122,8797403,Paul Kirow,,"Toronto, Canada",15
+253,1385122,6979384,Rob Harrigan,ViacomCBS,"Nashville, TN",31
+254,1385122,1941408,Stephane Raynaud,Shom,"Brest, France",10
+255,1385122,782050,Sterling Smith,General Atomics,La Jolla,25
+256,1385122,78236,Wieland Hoffmann,,,206
+257,1385122,403930,Ioannis Tziakos,@enthought ,UK,43
+258,1385122,4560057,Joel Ostblom,University of British Columbia,,126
+259,1385122,8794043,,,,2
+260,1385122,20533280,Miguel,,,2
+261,1385122,7470732,Abdul Miraj,,"Toronto, Ontario",6
+262,1385122,6790628,,,,11
+263,1385122,3010235,Maximilian Böhme,Center for advanced systems understanding (CASUS),"Dresden, Germany",18
+264,1385122,916551,Adam Williamson,Red Hat,"Vancouver, B.C.",109
+265,1385122,16123214,Alan Bernstein,@pilosa ,Austin TX,88
+266,1385122,3466341,Aleksey Bilogur,,"Brooklyn, NY",199
+267,1385122,4904947,Alex Buchkovsky,,Kyiv,41
+268,1385122,36734880,Alexander Harnisch,Michigan State University,"Lansing, Michigan",18
+269,1385122,25623375,,,,12
+270,1385122,4127841,Aseem Bansal,,"Noida, India",60
+271,1385122,796752,Chris Beaumont,@Netflix,"San Francisco, CA",77
+272,1385122,991986,Christoph Reiter,,Graz,93
+273,1385122,360669,Craig M,,,0
+274,1385122,1651235,David Haberthür,"Institute of Anatomy, Unversity of Bern, Switzerland","Bern, Switzerland",195
+275,1385122,81219,David Huard,Ouranos,"Québec, Québec, Canada",27
+276,1385122,11776554,David Matos,,,15
+277,1385122,1618530,Duncan Macleod,Cardff University Gravity Exploration Institute (@cardiffgravity),"Cardiff, UK",232
+278,1385122,6146598,Patrick Bos,Netherlands eScience Center,Amsterdam,57
+279,1385122,950575,Filipe,,"Florianópolis, SC",1243
+280,1385122,2360669,Florian LB,,,62
+281,1385122,4411847,Florian Rhiem,,"Jülich, Germany",20
+282,1385122,3614170,Jeff Bingham,,,18
+283,1385122,16762122,Jels Boulangier,,"Leuven, Belgium",5
+284,1385122,15092,John Vandenberg,"@swift-nav, @coala; @PyCQA; @BesutKode @wikimedia-id; University of New England, Australia",Perth,1140
+285,1385122,23077847,,,,0
+286,1385122,10676534,,,,12
+287,1385122,1270511,Kevin Chan,,,25
+288,1385122,550408,Kimmo Palin,University of Helsinki,"Helsinki, Finland",42
+289,1385122,15056721,Lev Nagdimunov,,,4
+290,1385122,4481740,Matthieu Dartiailh,"Institut Néel, CNRS",Grenoble,60
+291,1385122,174640,Neil Crighton,,,25
+292,1385122,1868182,O. Castany,,,4
+293,1385122,22870592,Po,,,15
+294,1385122,17347980,Randall Ung,,PA,11
+295,1385122,808502,Robin Dunn,,,46
+296,1385122,2157033,,,,8
+297,1385122,17338580,Steven Tilley,,,16
+298,1385122,29282,Takafumi Arakaki,,,393
+299,1385122,32895729,Tobias Hangleiter,,"Aachen, Germany",6
+300,1385122,1673826,Tomas Kazmar,,"Vienna, AT",28
+301,1385122,3338684,Vidur Satija,,"Medusae Fossae, Mars",41
+302,1385122,278058,Vlad,IDEO,Chicago,19
+303,1385122,321463,Warren Weckesser,,,47
+304,1385122,2048530,Byron Blay,,UK,28
+305,1385122,1239617,,,Virgo Supercluster,4
+306,1385122,2279598,Dan Allan,Brookhaven National Lab,Baltimore,388
+307,1385122,42461455,,,"Seoul, Korea",87
+308,1385122,37807178,John Imperial,,"Kanagawa, Japan",7
+309,1385122,8787769,,,,6
+310,1385122,5025392,,,Barcelona,28
+311,1385122,4312421,,,France,155
+312,1385122,3654045,,,Boston area,11
+313,1385122,17927006,,,,1
+314,1385122,985816,,,,1
+315,1385122,22462548,Abhinuv Nitin Pitale,,"Mountain View, CA",54
+316,1385122,9040124,Allan Haldane,,,16
+317,1385122,1971455,Ariel Hernán Curiale,Medical Physics Department  - Centro Atómico Bariloche - Instituto Balseiro,"SC. Bariloche, Río Negro, Argentina",4
+318,1385122,13381361,Bharat Raghunathan,,Chennai,274
+319,1385122,15315756,Brennan Magee,@xmos ,UK,43
+320,1385122,1195249,Cameron Bates,UC Berkeley,"Berkeley, CA",16
+321,1385122,2295568,Colin,Google,"Somerville, MA",148
+322,1385122,66017297,danuo,,Hamburg,10
+323,1385122,4404433,Dmitry Mottl,,neo cortex,47
+324,1385122,5739330,Erin Pintozzi,,"Seattle, WA",48
+325,1385122,9583441,Gabe,,,5
+326,1385122,9061909,Gauravjeet,,,8
+327,1385122,11420905,Hakan Kucukdereli,HMS,"Boston, MA",20
+328,1385122,1077132,Hubert Holin,,"Paris, France (U.E.)",3
+329,1385122,14371165,,,,6
+330,1385122,3343990,Jaime,Google,"Zurich, Switzerland",20
+331,1385122,629706,Jan Schlüter,,,42
+332,1385122,5631870,Jay Patel,,,10
+333,1385122,22414895,Jonathan Yong,,,26
+334,1385122,1278301,Joshua Taillon,National Institute of Standards and Technology (@usnistgov),"Boulder, CO",72
+335,1385122,489021,Leon Loopik,,,7
+336,1385122,305268,Marc Abramowitz,@adobe,"San Jose, California, USA",943
+337,1385122,6813152,Mellissa S. C. Warner,,"Tucson, AZ",10
+338,1385122,3264637,Mher Kazandjian,Freelance consultant,The Netherlands,56
+339,1385122,26516997,Mudit Surana,,Hyderabad,62
+340,1385122,88704,Nils Werner,,Germany,202
+341,1385122,20145232,Osaru,OneLocal,Canada,4
+342,1385122,4563941,Patrick Shriwise,Argonne National Laboratory,"Madison, WI",108
+343,1385122,1915760,Pavol Juhas,Google,"Sunnyvale, CA",63
+344,1385122,1010404,Pierre Haessig,,France,82
+345,1385122,52788117,Péter Leéh,University of Szeged,Szeged,12
+346,1385122,35903974,Riccardo Di Maio,,"Dublin, Ireland",57
+347,1385122,917914,Richard Hattersley,@MetOffice ,UK,64
+348,1385122,4498693,Ricky Kwan,,Toronto,22
+349,1385122,4656872,Rishikesh (ऋषिकेश),Open Source,"New Delhi, India",84
+350,1385122,13388802,,,,3
+351,1385122,1534017,Sergey Kholodilov,,Russia,8
+352,1385122,950457,Simon Gibbons,@cosmosvideo ,"London, UK",46
+353,1385122,296164,Skipper Seabold,HCA Healthcare,"Nashville, TN",55
+354,1385122,9084751,Stefan Appelhoff,,Germany,66
+355,1385122,327925,Thomas Kluyver,,,375
+356,1385122,2793551,Vadim Markovtsev,@athenianco,Madrid,215
+357,1385122,39524971,Viraj Mohile,@cutting-edge-visionaries,,55
+358,1385122,245071,Wendell Smith,,"New York, NY",80
+359,1385122,3271878,Xufeng Wang,@squareup ,Toronto,22
+360,1385122,11509423,Chuanzhu Xu,,Pittsburgh,15
+361,1385122,10266332,,,"Sydney, Australia",21
+362,1385122,6894112,Eric Quintero,,Massachusetts,5
+363,1385122,12467657,fuzzythecat,VUNO Inc.,"Seoul, South Korea",37
+364,1385122,1560625,gnaggnoyil,,/dev/null,42
+365,1385122,50923538,Jeffrey Aaron Paul,,"Bangalore, India",29
+366,1385122,35848008,,Google,,1
+367,1385122,10059231,,,,1
+368,1385122,493293,J. Richard Snape,De Montfort University,Leicester,17
+369,1385122,79719997,Tom Charrett,,UK,1
+370,1385122,14400034,Xiaohan(Becky) Zhou,,,7
+371,1385122,3846018,Diego Leal Petrola,,,9
+372,1385122,2273361,Levi Kilcher,National Renewable Energy Lab,"Golden, CO",27
+373,1385122,12762439,Marat Kopytjuk,,"Heilbronn, Germany",71
+374,1385122,12455039,Ahmet Bakan,,,1
+375,1385122,278328,Amit Aronovitch,,"Ramat Gan, Israel",39
+376,1385122,17914410,Andras Deak,,,18
+377,1385122,40345,Andreas Wallner,private,Austria,31
+378,1385122,702934,Andrew Nelson,,"Sydney, Australia",54
+379,1385122,320553,Anthony Scopatz,"DTN, Inc","Chicago, IL",396
+380,1385122,6740921,Ao Liu (frankliuao),,,24
+381,1385122,17169362,Ardie Orden,@thinkingmachines ,Manila,9
+382,1385122,16107991,,,,3
+383,1385122,30065865,BaoGiang HoangVu,Epsilo,"HCMC, VN",18
+384,1385122,461179,Brian McLaughlin,@RealGeeks ,"Dallas, TX",16
+385,1385122,22003979,,,,3
+386,1385122,3119646,Bryan Kok,,,65
+387,1385122,15605015,Chris,,,1
+388,1385122,1032439,Christoph Dann,,Pittsburgh,16
+389,1385122,852409,Christoph Deil,HeidelbergCement,"Heidelberg, Germany",209
+390,1385122,277579,David Trémouilles,,Toulouse France,23
+391,1385122,15670245,,,,13
+392,1385122,29195250,Emily,,,5
+393,1385122,22224469,Emlyn Price,,Manchester,35
+394,1385122,4592857,,,,3
+395,1385122,1559974,Frank Yu,Red Hat ,Beijing China,26
+396,1385122,56827,Gaute Hope,,Norway,81
+397,1385122,20374093,,,,4
+398,1385122,2229105,Ian Hincks,,,29
+399,1385122,180812,AkhIL,,,30
+400,1385122,2895034,Ilya Flyamer,University of Edinburgh,"Edinburgh, United Kingdom",25
+401,1385122,297406,Ismo Toijala,,,7
+402,1385122,1306495,Jaap Versteegh,Orca Software,"Delft, The Netherlands",43
+403,1385122,935083,Jacob McDonald,,"Boston, MA",37
+404,1385122,1873343,James Makela,,,15
+405,1385122,68447808,Janakarajan Natarajan,,,36
+406,1385122,123428,Jarrod Millman,UC Berkeley,"Berkeley, California",98
+407,1385122,83444,Jessica B. Hamrick,,,90
+408,1385122,492549,Juan Nunez-Iglesias,"Biomedicine Discovery Institute, Monash University","Melbourne, VIC, Australia",238
+409,1385122,542663,Julian Taylor,,,47
+410,1385122,1682582,Julian V. Modesto,@google,"New York, NY",54
+411,1385122,5821660,Kai Mühlbauer,University Bonn,Bonn,87
+412,1385122,27111884,Kexuan Sun,,"Los Angeles, CA",16
+413,1385122,2393374,Kjartan Myrdal,,"Lund, Sweden",5
+414,1385122,7376699,Leon Yin,The Markup,www,54
+415,1385122,43081866,Manan Kevadiya,,Surat,25
+416,1385122,11721337,Manuel Nuno Melo,,,13
+417,1385122,724864,Marcel Martin,,Stockholm,12
+418,1385122,33491632,Marco Edward Gorelli,@Gousto,"London, UK",95
+419,1385122,33603991,,,,1
+420,1385122,2227806,Marianne Corvellec,,"Strasbourg, France",129
+421,1385122,90008,Mark Harfouche,California Institute of Technology,Pasadena,338
+422,1385122,705404,Matthias Geier,,,130
+0,54834492,3466341,Aleksey Bilogur,,"Brooklyn, NY",199
+1,54834492,3735451,,,,32
+2,54834492,20803912,Volker Beutner,,"San Diego, CA",4
+3,54834492,570019,Armando Fandango,,,97
+4,54834492,12704137,Ben Everson,Silicon Valley Data Science,"Mountain View, CA",3
+5,54834492,56094812,Daniel Chacreton,,,34
+6,54834492,20975616,Edison J Abahurire,,Remote,17
+7,54834492,72841,Harry Mavroforakis,Boston University,"Boston, United States",14
+8,54834492,39014307,Johnnes SV Cruz,@luizalabs,"Cuiabá, MT",14
+9,54834492,19716714,Max Mahlke,Observatoire de la Côte d'Azur,"Nice, France",10
+10,54834492,36699660,Sergiu,,,6
+11,54834492,9756388,Simon Brugman,,,92
+12,54834492,47873678,Tim Gates,IRESS,Sydney,4065
+13,54834492,4181796,Todd,,,158
+14,54834492,3639446,Zhian N. Kamvar,@carpentries,"Portland, OR",210
+0,14579099,6611546,Andrew,Netflix,"Truckee, CA",35
+1,14579099,203523,Nicolas Kruchten,@plotly,"Montreal, QC",72
+2,14579099,10369095,Adam Kulidjian,,"Toronto, Ontario",22
+3,14579099,1280389,Chris Parmer,Plotly,Montréal,77
+4,14579099,15064365,Jon Mease,Plotly,Maryland,35
+5,14579099,2789078,Chelsea Douglas,Plotly,Montreal,19
+6,14579099,263366,Emmanuelle Gouillart,,,55
+7,14579099,6675409, Étienne Tétreault-Pinard,@R2-inc,Montréal,68
+8,14579099,12302455,Kevin Yan,,,33
+9,14579099,64649603,NickE,@plotly ,"Montreal, QC, Canada",6
+10,14579099,5222384,,,,17
+11,14579099,1909107,Chuck Bronson,@plotly,,15
+12,14579099,21180505,Xing Han Lu,,,91
+13,14579099,1557650,Joseph Damiba,,,37
+14,14579099,4560057,Joel Ostblom,University of British Columbia,,126
+15,14579099,1865834,Jack Parmer,plotly,CANADA,24
+16,14579099,72290009,,,,46
+17,14579099,19889618,Sylwia Mielnicka,,Poland,18
+18,14579099,664504,Oxana (Sachenkova) Lundström,Vildly AB,Sweden,18
+19,14579099,418747,John Bampton,,"Brisbane, Australia",978
+20,14579099,1546532,Tarun Gaba,@plotly ,,45
+21,14579099,49699333,,,,0
+22,14579099,20397548,Carl Andersson,Chalmers University of Technology,"Gothenburg, Sweden",2
+23,14579099,18422723,Ali Shobeiri,,"Montreal, Quebec",21
+24,14579099,47799189,,,,3
+25,14579099,5034604,Matthew Sundquist,Burning Man Project,San Francisco ,32
+26,14579099,6494463,Miklós Tusz,Miklós Tusz,Montreal Canada,44
+27,14579099,26027314,,,UK,12
+28,14579099,30503224,C Chaitanya,Sonetel,Hyderabad,57
+29,14579099,13302110,Alexandre Sobolevski,@shopify,Montreal,23
+30,14579099,301546,Antoine Roy-Gobeil,plotly,Montreal,24
+31,14579099,1105325,Francois Dion,Dion Research LLC,"Winston Salem, NC",94
+32,14579099,910753,Richard Littauer,@mntnr ,"Montpelier, Vermont",727
+33,14579099,1839645,Chris Holdgraf,UC Berkeley,California,305
+34,14579099,41019918,,,,6
+35,14579099,770012,Eran,,,113
+36,14579099,3837114,Erik Sundell,Sundell Open Source Consulting AB,Sweden,171
+37,14579099,684364,,,,130
+38,14579099,29968158,Michael Chapman,,,10
+39,14579099,8888706,Timoté Vaucher,EPFL,Lausanne,20
+40,14579099,8435071,Frédéric Collonval,@QuantStack,,119
+41,14579099,33491632,Marco Edward Gorelli,@Gousto,"London, UK",95
+42,14579099,25144285,Afaque Siddiqui,,,4
+43,14579099,21207095,Caleb Siu,,,13
+44,14579099,207405,Harald Schilly,,"vienna, austria",98
+45,14579099,987837,Jon Malmaud,,,82
+46,14579099,3292874,Jonathan Frederic,@google ,,140
+47,14579099,3972343,Karthikeyan Singaravelan,Visa Inc.,"Bangalore, India",241
+48,14579099,12598309,Marc P. Rostock,Freelancer,"Munich, Germany",11
+49,14579099,2227806,Marianne Corvellec,,"Strasbourg, France",129
+50,14579099,313562,Roy Storey,Plant & Food Research,Tauranga,355
+51,14579099,12001304,Sandu Ursu,Spring,Copenhagen,21
+52,14579099,6860682,Wenjie Zheng,,,25
+53,14579099,51374812,Winston Sebastian Pais,,"Mangalore, India",34
+54,14579099,4215991,YoongHM,,Singapore,45
+55,14579099,1538892,Zack Cornelius,,,7
+56,14579099,14795130,csk,,,5
+57,14579099,5720176,fairlix,,Germany & the rest of the world,47
+58,14579099,22041007,,,,17
+59,14579099,37695050,,,,3
+60,14579099,11822050,Parul Sethi,University College London,"London, UK",29
+61,14579099,31670449,Brandon Andersen,,"Washington, D.C.",18
+62,14579099,766658,Ajay Sharma,,,33
+63,14579099,4235552,Alexander,,"Saint-Petersburg, Russia",14
+64,14579099,1926271,Andreas Bollig,,"Hilden, Germany",6
+65,14579099,3304040,Anthony Miyaguchi,@mozilla ,United States,126
+66,14579099,24878229,Antonios Marios Christonasis,@coolblue-development ,Netherlands,46
+67,14579099,15216687,Ben Mares,m²hycon GmbH,Geneva,71
+68,14579099,13381361,Bharat Raghunathan,,Chennai,274
+69,14579099,11784292,Chris Arthurs,King's College London,"London, UK",15
+70,14579099,12086299,Christopher Dunn,Pacific Biosciences,"Menlo Park, CA",78
+71,14579099,17455636,Daniel Mejia,Purdue University,,19
+72,14579099,29574757,David Banville,Logiag LaserAG,Montreal,37
+73,14579099,426642,David Hay,,,39
+74,14579099,607909,David Martínez Moreno,@inguma ,Palo Alto,27
+75,14579099,6362426,Drew Logsdon,Indeed,"Austin, TX",25
+76,14579099,2772505,Edward O,,,43
+77,14579099,507145,Eric Higgins,(╯°□°)╯︵ ┻━┻,"Portland, OR",18
+78,14579099,1698629,Finlay Maguire,"Faculty of Computer Science, Dalhousie University","Halifax, Nova Scotia, Canada",147
+79,14579099,5522431,George van den Driessche,Google DeepMind,London,7
+80,14579099,512354,Grant Nestor,Hammies Shorts,"Santa Barbara, CA",121
+81,14579099,7051479,Gregor Sturm,Medical University of Innsbruck,"Innsbruck, Austria",148
+82,14579099,17039389,Harutaka Kawamura,,Japan,165
+83,14579099,1324225,Hugo van Kemenade,Nord Software,"Helsinki, Finland",765
+84,14579099,275728,Ícaro Medeiros,Zurich,Barcelona,43
+85,14579099,8238804,Isaac Virshup,University of Melbourne,"Melbourne, Australia",86
+86,14579099,4594825,Ismael Venegas Castelló,,Mexico,305
+87,14579099,781659,Jake Vanderplas,Google,Oakland CA,212
+88,14579099,16545322,Jakub Nowak,,Poland/Warsaw,54
+89,14579099,5494367,James Wong,,,13
+90,14579099,21226283,Jamie Nunez,@pnnl ,"Richland, WA",10
+91,14579099,1160097,Jeffrey Priebe,,USA,35
+92,14579099,379357,John Hendy,,Minnesota,61
+93,14579099,15092,John Vandenberg,"@swift-nav, @coala; @PyCQA; @BesutKode @wikimedia-id; University of New England, Australia",Perth,1140
+94,14579099,32573195,,,,3
+95,14579099,3888181,Josh Burkart,SpaceX,"Los Angeles, CA",10
+96,14579099,316517,Juan Luis Cano Rodríguez,@readthedocs,Spain,248
+97,14579099,20857031,Julien Monticolo,,,9
+98,14579099,116120,Kevin Mader,,"Zurich, Switzerland",190
+99,14579099,836375,Kyle Kelley,@Noteable-io,"Santa Cruz, CA",637
+100,14579099,12579295,Li Xing,,Shanghai,5
+101,14579099,13285808,Lukas Geiger,@plumerai @larq ,London,156
+102,14579099,8481150,Mana Borwornpadungkitti,,,25
+103,14579099,523292,Marco Paolini,,italy,36
+104,14579099,2337223,Martin Humphreys,,,33
+105,14579099,1579756,Martin Lehmann,,Germany,8
+106,14579099,124910,Matthew Wardrop,Data Scientist at @Netflix,"Los Gatos, CA",51
+107,14579099,6076111,Max Ghenis,@ubicenter,"Oxnard, California",105
+108,14579099,4061343,Michael Fore,,,16
+109,14579099,39865650,Murat Can Karacabey,Peter Park,Munich,8
+110,14579099,38958867,Nathan Drezner,@plotly,"Montréal, QC",12
+111,14579099,61286546,Nermin Ghith,Technical university of Denmark,Denmark,45
+112,14579099,541507,Nicolas Burrus,Arcturus Industries,"Madrid, Spain",12
+113,14579099,18031651,Niklas Haas,,"Düsseldorf, DE",16
+114,14579099,29175267,Nikolas Havrikov,@uds-se ,,8
+115,14579099,3338910,Pascal Zingg,,,25
+116,14579099,11561721,,,Switzerland,11
+117,14579099,8436511,Paweł Samoraj,,,8
+118,14579099,25846124,Priyatharsan Rajasekar,,"Montreal, QC",36
+119,14579099,49362475,Quentin Fortier,,,34
+120,14579099,14840767,Rosario Scalise,,Mt. Rainier,38
+121,14579099,1114830,Sayed Hadi Hashemi,@uiuc-srg @baidu-research @google ,,48
+122,14579099,36664302,Shweta Goyal,,India,45
+123,14579099,782446,Simon Legner,,"Innsbruck, Austria",383
+124,14579099,198396,Srinivas Reddy Thatiparthy (శ్రీనివాస్  రెడ్డి తాటిపర్తి),"Independent Consultant, up for hire","Hyderbad,India",232
+125,14579099,8642896,Steven Kern,Enthought,"Austin, TX",23
+126,14579099,1782292,Subodh Dahal,,"Stuttgart, Germany",29
+127,14579099,49280242,,,,15
+128,14579099,8843728,Tarek Allam Jr.,@alan-turing-institute,London,208
+129,14579099,16633223,Tianhua Liao,CUHK,CHINA,36
+130,14579099,47873678,Tim Gates,IRESS,Sydney,4065
+131,14579099,4181796,Todd,,,158
+132,14579099,10914408,Tomás Caram,,"Montevideo, Uruguay",10
+133,14579099,5447064,Vipul,@Vernacular-ai ,"Bangalore, India",106
+134,14579099,9068290,Will Burgess,@Parsely,,9
+135,14579099,908970,William C Grisaitis,,,68
+136,14579099,9483723,,,,19
+137,14579099,6220180,Yuan Yiyang,,Singapore,18
+138,14579099,1798497,,,,18
+139,14579099,2678795,Alex Johnson,,"Boston, MA USA",9
+140,14579099,19711400,ankokumoyashi,,Japan,24
+141,14579099,1228240, alex arsenovic,,"charlottesville, virginia",33
+142,14579099,43573821,Ashwin Nayak,University of ACoruña,,23
+143,14579099,8014374,chris,@MimiHearingTechnologies ,Berlin,16
+144,14579099,4922472,Chris Goddard,DCCC,"Washington, DC",38
+145,14579099,2048203,,,,10
+146,14579099,806188,,,,15
+147,14579099,6399000,Devon Ryan,Genedata AG,"Basel, Switzerland / Freiburg, Germany",418
+148,14579099,47697814,,,"New York, NY",20
+149,14579099,1634231,Olivier Leblanc,,"Laval, Québec",1
+150,14579099,20612213,,,,2
+151,14579099,2653719,,,,11
+152,14579099,4341390,,,,5
+153,14579099,109167,Sébastien Celles,Université de Poitiers,Poitiers,322
+154,14579099,45536464,,,,5
+155,14579099,12651670,,,,3
+156,14579099,1302022,Sebastian Urchs,,Montreal,32
+157,14579099,3341011,Jason Curtis,Osmo Systems,all over the place,63
+158,14579099,7483137,yibo,,Boston,12
+159,14579099,430175,zouhair,,,19
+160,14579099,42673067,Đoàn Trần Công Danh,,,60
+0,12777496,940580,Luke Campagnola,,,54
+1,12777496,646398,Ogi Moore,Sensory,"Portland, OR",45
+2,12777496,2657027,,,,18
+3,12777496,943602,Kenneth Lyons,,bay adjacent,69
+4,12777496,31772910,, University of Münster,,18
+5,12777496,6223243,Eric Dill,@conda-forge,NC,69
+6,12777496,19742018,Nils Nemitz,???,Japan,5
+7,12777496,6310111,,,,1
+8,12777496,28812,Martin Chase,Independent,"Portland, OR",37
+9,12777496,2501846,Kyle Sunden,@wright-group,University of Wisconsin–Madison,63
+10,12777496,4609807,Guillaume Poulin,,Montréal,26
+11,12777496,13218882,Etienne Dumur,CEA - Grenoble,Grenoble - France,14
+12,12777496,1213878,Megan Kratz,,,9
+13,12777496,8177167,Vincent Le Saux,"ENSTA Bretagne, UMR CNRS 6027 - IRDL","Brest, France",52
+14,12777496,4716745,Aleš Erjavec,,,38
+15,12777496,43136580,Dennis Göries,European XFEL,DE-Hamburg,3
+16,12777496,13122669,Billy SU,,"Taiwan, HsinChu",52
+17,12777496,20974290,,University of Cambridge,Cambridge,24
+18,12777496,20952040,Daniel Hrisca,,,22
+19,12777496,5590556,Justin Engel,,,43
+20,12777496,23620506,,,,12
+21,12777496,638052,Ingo Breßler,,,10
+22,12777496,8248171,,,,7
+23,12777496,350050,Karl Georg Bedrich,SERIS,National University of Singapore,24
+24,12777496,1322974,Antony Lee,,,146
+25,12777496,199813,Thomas A Caswell,Brookhaven National Lab,New York,427
+26,12777496,1401239,C W,,Your github issues,62
+27,12777496,10651163,Jan Kotanski,DESY,Hamburg,19
+28,12777496,2853022,Paul Müller,@GuckLab ,Max Planck Institute for the Science of Light,32
+29,12777496,303797,Chadwick Boulay,The Ottawa Hospital Research Institute,"Ottawa, Canada",20
+30,12777496,1299189,Eugene Prilepin,Aligned Research Group,"Russia, St. Petersburg; Portugal, Porto",39
+31,12777496,552182,Marko Toplak,,,40
+32,12777496,4533035,,University of Science and Technology of China,China,15
+33,12777496,117621,Fabio Zadrozny,,,146
+34,12777496,12274852,Julius Juodakis,,,6
+35,12777496,360499,Brianna Laugher,,"Melbourne, Australia",34
+36,12777496,28656911,Charles Brunet,Optel,"Quebec, Canada",4
+37,12777496,302469,Elliott Sales de Andrade,,"Toronto, Ontario, Canada",262
+38,12777496,15861028,Fekete Imre,,,3
+39,12777496,542750,Gabriel Linder,@numberly,"Paris, France",47
+40,12777496,1253071,David Reaver,@stripe,"Riverside, CA",14
+41,12777496,6898214,Josef Nevrly,,,13
+42,12777496,126239,Martin Fitzpatrick,Freelance,"Amersfoort, Netherlands",48
+43,12777496,5393422,Matt Liberty,@jetperch,"Maryland, USA",12
+44,12777496,9015543,Max Peng,,Taiwan,20
+45,12777496,200767,Mikhail Terekhov,,,64
+46,12777496,32181145,MingZZZZZZZZ,,,10
+47,12777496,2225781,Nicholas Tan Jerome,,Karlsruhe,6
+48,12777496,34425799,Y33T 0r B3 Y33TED :fire:,,Spacecake,102
+49,12777496,2096628,Steven Silvester,,"Dallas, Texas",260
+50,12777496,1258889,,,,16
+51,12777496,33010847,,,,1
+52,12777496,9681906,Vladimir Kraus,,Prague,7
+53,12777496,24586651,rafael,,,30
+54,12777496,4115224,Carlos Pascual,,,26
+55,12777496,18530271,Daryl.Xu,,"Shanghai, China",60
+56,12777496,19335,David Nadlinger,,"Oxford, UK",105
+57,12777496,77217,Doug Johnston,,Bay Area,24
+58,12777496,4790289,Fernando Bordignon,LTrace,,7
+59,12777496,56976945,Jennifer Manriquez,,,19
+60,12777496,49998667,Mark,,"New Jersey, USA",12
+61,12777496,1478710,Matthew Shun-Shin,,,14
+62,12777496,19735117,Peter Zagubisalo,,Novosibirsk,100
+63,12777496,8595627,,,,9
+64,12777496,17694065,Jun,European XFEL,"Hamburg, Germany",49
+65,12777496,5286845,Erik Månsson,Acconeer,Sweden,6
+66,12777496,130398,Paul B. Manis,UNC Chapel Hill,North Carolina,35
+67,12777496,83936830,,3D Algo. Lab. Inc.,"Daegu, Korea",8
+68,12777496,103067,Adam Strzelecki,nanoANT,"Zurich Area, Switzerland",132
+69,12777496,7148165,Agamemnon Krasoulis,Deeplab.ai,"Athens, Greece",23
+70,12777496,3519989,,,,19
+71,12777496,11872072,Alessandro Bacchini,Camlin Italy s.r.l. @henesissrl,"Fidenza, Italy",26
+72,12777496,16278369,Manakov Alexander,,,15
+73,12777496,4172822,Allard Hendriksen,@cicwi ,Amsterdam,39
+74,12777496,20728609,Arthur Crippa Búrigo,@perimeter-inc ,,13
+75,12777496,56650223,Artturi,,,23
+76,12777496,2636492,Ben,,,14
+77,12777496,4923349,,,,39
+78,12777496,5036295,Ben Mathews,,"Colorado Springs, Colorado, USA",10
+79,12777496,1044087,Chris Billington,University of Melbourne,"Melbourne, Australia",64
+80,12777496,133209,Chris Lamb,Freelancer for hire. Maybe.,,382
+81,12777496,3709715,Christian Clauss,Christian Clauss,Switzerland,3122
+82,12777496,327442,Christoph Buchner,,,38
+83,12777496,42769515,,,,14
+84,12777496,1045657,Christopher Mullins,,,56
+85,12777496,20019801,Colin Baumgarten,,,2
+86,12777496,6951141,David-Leon Pohl,SiLab University Bonn,Bonn,14
+87,12777496,60646669,,,,0
+88,12777496,37263907,Dennis van Gils,University of Twente,Enschede,27
+89,12777496,24434157,Dominik Kutra,,Heidelberg,90
+90,12777496,10198051,Drew,"University of Maryland, College Park",,44
+91,12777496,6744917,Edward Barnard,,,4
+92,12777496,643690,Felipe Silveira,,,28
+93,12777496,5278031,,,,12
+94,12777496,5638331,,,,5
+95,12777496,7643149,Gabriele Buondonno,,,17
+96,12777496,1227338,Gianfranco Costamagna,,,122
+97,12777496,7233774,Girish Ramlugun,,Bordeaux,11
+98,12777496,33408723,,,"Auckland, NZ",8
+99,12777496,34220817,,,,5
+100,12777496,499374,Ilya A. Kriveshko,@veobot ,Greater Boston Area,14
+101,12777496,1500095,Israel Brewster,BrewsterSoft ,"Fairbanks, AK",25
+102,12777496,7895696,Jacob Welsh,,,8
+103,12777496,1561362,James,,,25
+104,12777496,2387315,Janez Demšar,University of Ljubljana,"Ljubljana, Slovenia",35
+105,12777496,241234,Jeffrey Gill,,,23
+106,12777496,10063217,Jeffrey Nichols,,,4
+107,12777496,548266,Jens Hedegaard Nielsen,@qdev-dk,Copenhagen,115
+108,12777496,1018880,Jerome Kieffer,ESRF,Grenoble,127
+109,12777496,816946,Jindřich Makovička,,,25
+110,12777496,30049909,,Deltares,Netherlands,56
+111,12777496,1929579,Justin Weber,,,18
+112,12777496,47572615,Kevin Newman,US EPA,"Ann Arbor, MI",2
+113,12777496,5582150,Lee Tirrell,@corticometrics,"Corvallis, OR",53
+114,12777496,11955043,Rajab Legnain,Venable Instruments,,14
+115,12777496,170910,Lev Maximov,,,88
+116,12777496,4763322,Lionel Martin,Arcanite,Lausanne,5
+117,12777496,255821,Lorenz Drescher,Max-Born-Institut,Berlin,13
+118,12777496,87603,Marc Poulhiès,@kalray ,Grenoble,129
+119,12777496,3225318,,,,14
+120,12777496,958972,Marcus Müller,,Germany,137
+121,12777496,60338487,Marko,@GlobalFormulaRacing,Germany,5
+122,12777496,46245704,Martin Schulz,Universität Heidelberg,Heidelberg,22
+123,12777496,7215199,Maurice van der Pot,,"Eindhoven, The Netherlands",11
+124,12777496,9135673,Max Klein,,"Karlsruhe, Germany",32
+125,12777496,1945175,Maxim Millen,,,18
+126,12777496,4992805,Mi!,,Germany,55
+127,12777496,30714020,Mitchel Paulin,,Canada ,9
+128,12777496,4587428,Paul Debus,,,26
+129,12777496,3320415,Pepijn Kenter,,"The Netherlands, Delft.",23
+130,12777496,12324068,Petras Jokubauskas,University of Warsaw,,20
+131,12777496,883786,Pieter Eendebak,,,38
+132,12777496,69789,Pietro,,italy,56
+133,12777496,34062862,Ruben de Bruin,Freelance - RDBR,Netherlands,26
+134,12777496,5703634,Sara Zan,,,39
+135,12777496,971544,Scott Talbert,,,45
+136,12777496,635580,Sebastian Pauka,The University of Sydney,"Sydney, Australia",31
+137,12777496,16578738,Stefan Ecklebe,,,15
+138,12777496,16181818,Stephanie Seeman,,,6
+139,12777496,3430798,Sérgio Peixoto,,Portugal,14
+140,12777496,15344581,Tanuj,,,68
+141,12777496,385566,Thomas Feldmann,mercatronics GmbH,Germany,45
+142,12777496,3676502,0x0E,,Hong Kong,36
+143,12777496,3653340,Tom Mudway,McMaster University,"Hamilton, ON",15
+144,12777496,2453858,Torsten Sommer,Dassault Systèmes,Berlin,19
+145,12777496,7659064,Toussaic,,,5
+146,12777496,20793118,"Duy Hoa, Tran",,"Chemnitz,  Germany",23
+147,12777496,39887463,,,,5
+148,12777496,7579321,Valentin Valls,ESRF,"Grenoble, France",51
+149,12777496,16443535,,,,13
+150,12777496,11465003,Vesna Tanko,,,17
+151,12777496,25739586,Wilhelm,,Munich,6
+152,12777496,7340589,,,,1
+153,12777496,24202719,Joseph Zhu,Procore,Houston,39
+154,12777496,14655667,Yoonyoung (Jamie) Cho,,,179
+155,12777496,11495528,,,,4
+156,12777496,2203948,Zach Lowry,,,3
+157,12777496,6556518,alfon_news,,,5
+158,12777496,1609952,,,"Portland, OR",30
+159,12777496,16730331,,,,30
+160,12777496,22744577,dearkarm,,,0
+161,12777496,13417715,,,,8
+162,12777496,10353490,,,,1
+163,12777496,6020301,,,,1
+164,12777496,1842838,Federico Barabas,,,19
+165,12777496,58433184,,,,2
+166,12777496,7544606,,,,27
+167,12777496,32976023,,,United Kingdom,23
+168,12777496,1854574,,nemametrix,Eugene OR,7
+169,12777496,5959019,,,,4
+170,12777496,11241898,,,,5
+171,12777496,8462075,Ronald Pandolfi,,,48
+172,12777496,31414518,,,,13
+173,12777496,68931181,,,,19
+174,12777496,55086542,,@Meijo-TasakiLab ,,34
+175,12777496,11760870,,,,142
+0,92974124,22067021,Bane Sullivan,@Kitware,"Golden, CO",35
+1,92974124,11981631,Alex Kaszynski,,,37
+2,92974124,18143289,Guillaume Favelier,INRIA,"Paris, France",39
+3,92974124,7513610,Tetsuo Koyama,ARK Information Systems,Japan,263
+4,92974124,17914410,Andras Deak,,,18
+5,92974124,29028433,Jevin Jones,,,12
+6,92974124,1608652,Rodrigo Mologni,https://www.solpe.com.br/,"São Paulo, Brazil",5
+7,92974124,39341281,,,,26
+8,92974124,2365790,Eric Larson,University of Washington,"Ann Arbor, MI",127
+9,92974124,2186528,Phil Chiu,,"Denver, CO",17
+10,92974124,14143529,Henrik Åhl,,Cambridge,9
+11,92974124,15955093,Simon Frei,,,53
+12,92974124,72196131,,OZ Minerals,Australia,193
+13,92974124,14357794,Shannon Keough,,Australia,5
+14,92974124,6875882,,,,27
+15,92974124,53714128,,,,5
+16,92974124,17399794,Blue Tyson,,Australia,229
+17,92974124,16566206,Keurfon Luu,Berkeley Lab,"Berkeley, California, USA",24
+18,92974124,15089458,,,,6
+19,92974124,11671536,Derrick Chambers,National Institute for Occupational Safety and Health,Spokane WA,61
+20,92974124,8020943,Dieter Werthmüller,TU Delft (NL); TerraSys (DE),"The Hague, NL",40
+21,92974124,290082,Leonardo Uieda,University of Liverpool,"Liverpool, UK",162
+22,92974124,60893296,Martin Glesser,@Eomys,"Lille, France",4
+23,92974124,20801821,James Wright,,"Boulder, CO",55
+24,92974124,73308131,Thomas G.,,,5
+25,92974124,7264182,Alexis Shakas,,,1
+26,92974124,972008,Anisha Keshavan,,,143
+27,92974124,32061685,Ashley Scillitoe,Data-Centric Engineering @alan-turing-institute,"London, UK",18
+28,92974124,29384527,David Russell,Carnegie Mellon University,"Pittsburgh, PA",33
+29,92974124,6197628,David Stansby,UCL,"London, UK",71
+30,92974124,10827312,Denis Borsh,,,6
+31,92974124,12111288,Denis Sergeev,,"Exeter, UK",49
+32,92974124,2360669,Florian LB,,,62
+33,92974124,2799008,Florian Wagner,RWTH Aachen University,"Aachen, Germany",21
+34,92974124,6797340,Guillaume Jacquenot,,Nantes,94
+35,92974124,3898672,Håkon Strandenes,,"Trondheim, Norway",8
+36,92974124,1770513,J. Hariharan,University of Texas at Austin,"Austin, TX",40
+37,92974124,37593836,,,,15
+38,92974124,25473287,Jiawei Zhuang,Harvard University,"Cambridge, MA",63
+39,92974124,9576982,Julien Moreau,The NW-Edge,Durness,13
+40,92974124,26366811,,@EPFL,,23
+41,92974124,32848391,Marco Musy,EMBL,Barcelona,9
+42,92974124,13513172,Max Zhaoshuo Li,Johns Hopkins University,Baltimore,28
+43,92974124,13750247,Mike Yeti,,"Portland, OR",23
+44,92974124,32978900,Mikhail Kondratyev,,,7
+45,92974124,8452354,Mikolaj Magnuski,,Poland,55
+46,92974124,8573886,Nick Vazquez,Tau Motors,"Redwood City, CA",42
+47,92974124,1313576,Nicolas Cedilnik,inHeart,,11
+48,92974124,34062862,Ruben de Bruin,Freelance - RDBR,Netherlands,26
+49,92974124,32249508,Sina Shirinpour,,,8
+50,92974124,31610422,,,,19
+51,92974124,3531982,Yngve Mardal Moe,University of Oslo,,56
+52,92974124,54398148,,,,1
+53,92974124,17310682,,,,3
+54,92974124,5451504,,,,17
+55,92974124,6035363,Sam Potter,University of Maryland,,11
+56,92974124,21262762,,,,13
+0,4704710,315810,Michael Waskom,,"New York, NY",55
+1,4704710,13831112,Maoz Gelbart,,,4
+2,4704710,806256,Olga Botvinnik,@czbiohub ,"San Francisco, CA",179
+3,4704710,4560057,Joel Ostblom,University of British Columbia,,126
+4,4704710,1163939,Paul Hobson,@Geosyntec ,"Portland, OR, USA",57
+5,4704710,108413,Saulius Lukauskas,,Munich,47
+6,4704710,1033706,David C Gemperline,,,12
+7,4704710,1312546,Tom Augspurger,@microsoft,,284
+8,4704710,39889,Yaroslav Halchenko,"Dartmouth College, @Debian, @DataLad, @PyMVPA, @fail2ban",Planet Earth,410
+9,4704710,7450204,Jordi Warmenhoven,,Sweden,10
+10,4704710,369992,John B. Cole,,"Maryland, USA",14
+11,4704710,307739,Julian de Ruiter,GoDataDriven,Amsterdam,44
+12,4704710,781659,Jake Vanderplas,Google,Oakland CA,212
+13,4704710,1217238,Stephan Hoyer,@google ,"San Francisco, CA",82
+14,4704710,5299472,Cameron Pye,Unnatural Products Inc.,"Santa Cruz, CA",14
+15,4704710,703554,Alistair Miles,Wellcome Sanger Institute,,76
+16,4704710,24383562,Corban Swain,,"Cambridge, MA",60
+17,4704710,1297788,Kyle Meyer,,,59
+18,4704710,724864,Marcel Martin,,Stockholm,12
+19,4704710,4604869,Pete Bachant,@WindESCo,"Boston, MA",147
+20,4704710,6894112,Eric Quintero,,Massachusetts,5
+21,4704710,12086562,Gero Kunter,Universität Siegen,"Siegen, Germany",7
+22,4704710,642252,Santi Villalba,,Berlin,76
+23,4704710,2424677,Brian,,,4
+24,4704710,5356122,Clark Fitzgerald,Math and Stats Department,CSU Sacramento,76
+25,4704710,2054509,Constantine Evans,,,31
+26,4704710,370930,Mike Lee Williams,,,66
+27,4704710,9342082,Drew O'Kane,The Climate Corporation,"San Francisco, CA",24
+28,4704710,303932,Tal Yarkoni,University of Texas,"Austin, TX",44
+29,4704710,35266133,Thomas Brunner,Technical University of Munich,"Munich, Germany",7
+30,4704710,929309,Adel Qalieh,,United States ,158
+31,4704710,1322974,Antony Lee,,,146
+32,4704710,118582,Ariel Rokem,The University of Washington eScience Institute,"Seattle, WA",577
+33,4704710,9361152,Ben Lindsay,C.H. Robinson,"Minneapolis, MN",76
+34,4704710,847215,Luc Rocher,Imperial College London,"London, UK",42
+35,4704710,688395,Gregory Hitz,,,20
+36,4704710,78827,Joel Nothman,"Sydney Informatics Hub, University of Sydney",Sydney,105
+37,4704710,79334,Luis Pedro Coelho,Fudan University,Luxembourg & Shanghai,184
+38,4704710,52861550,,,,2
+39,4704710,3030760,Samuel St-Jean,Lund University,"Lund, Sweden",21
+40,4704710,1577132,Sebastian Pipping,,"Berlin, Europe",123
+41,4704710,1661487,Tamas Nagy,"University of California, San Francisco","San Francisco, CA",78
+42,4704710,1842780,Tobias Megies,,,77
+43,4704710,38984697,Tony Yang,,,38
+44,4704710,11890487,lincolnfrias,Unifal,Brazil,13
+45,4704710,4260594,Swee Lim,,"Irvine, CA 92617",18
+46,4704710,5091462,Benjamin Rose,Duke Univseristy,"Durham, NC",43
+47,4704710,29678,Daniel Wehner,,,102
+48,4704710,4181796,Todd,,,158
+49,4704710,12237157,Aaron Spring,Max-Planck-Institute for Meteorology,Hamburg,44
+50,4704710,7148165,Agamemnon Krasoulis,Deeplab.ai,"Athens, Greece",23
+51,4704710,23556471,Alexandre Huat,"QuantIF, LITIS (EA 4108), University of Rouen & AQUILAB",France,6
+52,4704710,7969170,Alvaro Ulloa,Geisinger,"Danville, PA",27
+53,4704710,2618447,Andrew Janke,,"Brooklyn, NY",271
+54,4704710,2065206,André F. Rendeiro,Weill Cornell Medicine,"New York, USA",46
+55,4704710,19588421,Avinash Thakur,,India,33
+56,4704710,706257,Ben Congdon,,"Seattle, WA",156
+57,4704710,8296169,Benjamin Yeh,,,14
+58,4704710,3943761,Bradley Dice,University of Michigan,"Kansas City, MO",153
+59,4704710,6788290,Brigitta Sipőcz,Caltech/IPAC,"Seattle, WA",405
+60,4704710,31414128,Cameron Riddell,,"University of California, Davis",10
+61,4704710,45864,Chris Catalfo,,,30
+62,4704710,2088399,Chris Hausler,Zendesk,,20
+63,4704710,1839645,Chris Holdgraf,UC Berkeley,California,305
+64,4704710,474937,Chris Roberts,FlightAware,"Houston, TX",31
+65,4704710,440095,Christopher Whelan,,San Francisco,69
+66,4704710,14075922,Clément Robert,Institut de Planétologie et d'Astrophysique de Grenoble (IPAG),Grenoble (France),60
+67,4704710,4690162,Daniel Bauer,Technical University of Darmstadt,"Darmstadt, Germany ",32
+68,4704710,1117703,Daniel Himmelstein,@related-sciences,New Hampshire,203
+69,4704710,1651235,David Haberthür,"Institute of Anatomy, Unversity of Bern, Switzerland","Bern, Switzerland",195
+70,4704710,885751,Dmitrijs Milajevs,,,83
+71,4704710,5585926,Emilio Dorigatti,,Italy,39
+72,4704710,7300030,Fabian Rost,"CRTD, TU Dresden","Dresden, Germany",46
+73,4704710,804023,Gabe Fernando,,"New York, NY, USA",55
+74,4704710,1140359,Gökçen Eraslan,Broad Institute of MIT and Harvard,"Boston, US",95
+75,4704710,20255031,Iqrar Agalosi Nureyza,Universitas Indonesia,"Depok, Indonesia",19
+76,4704710,4306187,Isaac Schwabacher,,,12
+77,4704710,8238804,Isaac Virshup,University of Melbourne,"Melbourne, Australia",86
+78,4704710,92804,Jan Pipek,,"Prague, Czech Republic",80
+79,4704710,123968,Jeffrey Arnold,,"Oakland, CA",234
+80,4704710,8493770,Jessime Kirk,Invitae,San Fransisco,37
+81,4704710,2225828,Jimmy Callin,,"Stockholm, Sweden",21
+82,4704710,1562854,Jody Klymak,University of Victoria,"Victoria, B.C., Canada",88
+83,4704710,395064,John C. Earls,Institute for Systems Biology,Seattle,30
+84,4704710,16713268,Ken Tsuji,,"New York, NY",33
+85,4704710,905683,Kenta Sato,RIKEN,"Tokyo, Japan",141
+86,4704710,755664,Kevin Emmett,Columbia University,"New York, NY",20
+87,4704710,12211516,Koki Sato,,"Tokyo, Japan",15
+88,4704710,36054362,Lukas,,"Munich, Germany",6
+89,4704710,5555937,Margaret Pearce,,Michigan,21
+90,4704710,6085431,Marçal Gabaldà,,Barcelona,8
+91,4704710,1969339,Matthew Badger,,"Oxfordshire, United Kingdom",15
+92,4704710,335567,Matthias Bussonnier,@Quansight-Labs,"Merced, CA",465
+93,4704710,34607,Miikka Koskinen,@metosin ,"Helsinki, Finland",152
+94,4704710,4195510,Niema Moshiri,,"University of California, San Diego",120
+95,4704710,28254773,Ondrej Zacha,,Amsterdam,17
+96,4704710,1413052,Patrick Stegmann,Zühlke Engineering Austria,"Vienna, Austria",50
+97,4704710,5647397,Paul Rougieux,@ec-jrc,"Ispra, Italy",29
+98,4704710,417981,Phillip Cloud,,"New York, NY",181
+99,4704710,1118133,Robin Scheibler,,Japan,66
+100,4704710,61159095,Roman Werpachowski,Microsoft,Norway,5
+101,4704710,2800397,Sandip Chatterjee,Calico,"San Carlos, CA",24
+102,4704710,74460,Sebastian Pölsterl,@ai-med ,Germany,27
+103,4704710,890104,Sergio Pascual,Universidad Complutense de Madrid,"Madrid, Spain",74
+104,4704710,296164,Skipper Seabold,HCA Healthcare,"Nashville, TN",55
+105,4704710,9084751,Stefan Appelhoff,,Germany,66
+106,4704710,24376333,Stefanie Molin,@Bloomberg,,60
+107,4704710,3842201,Stephen W. Thomas,,"Kingston, ON, Canada",43
+108,4704710,29282,Takafumi Arakaki,,,393
+109,4704710,199813,Thomas A Caswell,Brookhaven National Lab,New York,427
+110,4704710,47873678,Tim Gates,IRESS,Sydney,4065
+111,4704710,728759,Timofei Bondarev,,,23
+112,4704710,5556920,Dr. Tobias Knuth,,"Hamburg, Germany",10
+113,4704710,29666009,Tomas Ojea,,Dublin ,15
+114,4704710,2707106,Travis Hoppe,Centers for Disease Control and Prevention (CDC/NCHS/OD),"Hyattsville, MD",97
+115,4704710,381464,Tyler Funnell,MSKCC,New York,18
+116,4704710,4733160,Victor Valente,,"São Paulo, SP. Brasil",16
+117,4704710,1288133,Yoav Ram,Tel Aviv University,Israel,153
+118,4704710,607401,Yury V. Zaytsev,Bugre Porter & Order of Linus,Germany,23
+119,4704710,20629897,Zach,University of Notre Dame,,46
+120,4704710,23712361,,,,6
+121,4704710,7387195,,,,8
+122,4704710,5766631,,,,6
+123,4704710,5199408,,,,16
+124,4704710,2279598,Dan Allan,Brookhaven National Lab,Baltimore,388
+125,4704710,12976905,,,,12
+126,4704710,7297450,,@ImExHS ,Bogotá,45
+127,4704710,9273653,,,,15
+128,4704710,10141036,Jeroen Boeye,Faktion,"Antwerp, Belgium",10
+129,4704710,28426758,,,,5
+130,4704710,44244671,,,,3
+131,4704710,4140247,,,,583
+132,4704710,4936897,,,,19
+133,4704710,3360192,,,,20
+134,4704710,4312421,,,France,155
+135,4704710,1686212,Arnon Yaari,,Israel,26
+136,4704710,10804060,Nate George,Regis University,"Denver, CO",254
+0,18925814,4997768,Timothy M. Shead,Sandia National Laboratories,,1
+1,18925814,103393,Timothy M. Shead,"Shead Custom Design, LLC","Albuquerque, NM",2
+2,18925814,7553213,Benjamin Cunningham,,,17
+3,18925814,29214121,Dana Huget,@trailmarksys ,"Victoria, BC",20
+4,18925814,7661092,Hannes,,manchmal,71
+5,18925814,1038978,Morten Enemark Lund,,Denmark,85
+0,179490554,1270123,Lee Stemkoski,Adelphi University,New York,25
+1,179490554,49280454,,,,5
+2,179490554,306671,,,"Brighton, UK",22
+0,1324413,274711,Jeremy Sanders,,"Garching, Germany",30
+1,1324413,13814,,,,9
+2,1324413,2504902,Emmanuel,,France/Austria,12
+3,1324413,30950088,Takuro Hosomi,,Japan,23
+4,1324413,758066,Steve Richardson,@USNavalResearchLaboratory,,12
+5,1324413,1381584,Dmitry Shachnev,Moscow State University,"Moscow, Russia",97
+6,1324413,11407922,Kevin Tee,,Thailand,64
+7,1324413,944279,Riccardo Marotti,,Arceto,69
+8,1324413,578872,Gabi Davar,"Pelion, an ARM company",Israel,187
+9,1324413,1649796,Graham Bell,East Asian Observatory,"Hilo, Hawaii",21
+10,1324413,3972343,Karthikeyan Singaravelan,Visa Inc.,"Bangalore, India",241
+11,1324413,1348834,Patrick O'Keeffe,@wsular ,"Pullman, WA",63
+12,1324413,15202239,Vince Mutolo,,,20
+13,1324413,22991362,Alex Malins,,"Tokyo, Japan",14
+14,1324413,23076141,Alexander Book,Technical University of Munich,"Germany, Munich",34
+15,1324413,12059585,Andre Celere,,Brazil,16
+16,1324413,637990,Bernhard M. Wiedemann,@SUSE,Nuremberg,443
+17,1324413,3883351,Brian Callahan,Rensselaer Polytechnic Institute,"Troy, NY",145
+18,1324413,1076190,Dave Jones,@CanonicalLtd ,"Manchester, UK",74
+19,1324413,16227753,Fellype do Nascimento,,,5
+20,1324413,3224529,Marco,,"Modena, Italy",2
+21,1324413,8608055,,,,33
+22,1324413,3036798,Nathaniel M. Beaver,Northeastern University,"Boston, MA, USA",106
+23,1324413,314716,Thomas Robitaille,,United Kingdom,382
+24,1324413,478237,Waldir Pimenta,@feedzai ,"Braga, Portugal",505
+25,1324413,483428,Christoph Gohlke,"University of California, Irvine","Irvine, California",29
+26,1324413,61326100,,,Germany,2
+27,1324413,1493614,Matthew Jones,,,6
+28,1324413,5623210,,,,1
+29,1324413,20570977,Yingchao Lu,University of Rochester,,6
+0,8935948,940580,Luke Campagnola,,,54
+1,8935948,2365790,Eric Larson,University of Washington,"Ann Arbor, MI",127
+2,8935948,3015475,Almar Klein,Independent software engineer,"Enschede, The Netherlands",56
+3,8935948,1828519,David Hoese,Space Science and Engineering Center (@ssec),"Madison, WI",105
+4,8935948,1694861,Siddharth,IIIT Hyderabad,Hyderabad,310
+5,8935948,1942359,Cyrille Rossant,@int-brain-lab @cortex-lab ,Paris,73
+6,8935948,1239156,Adam Griffiths,Twisted Pair Development,"Melbourne, Australia",86
+7,8935948,327203,Nicolas P. Rougier,@INRIA ,"Bordeaux, France",225
+8,8935948,830589,,,,32
+9,8935948,5821660,Kai Mühlbauer,University Bonn,Bonn,87
+10,8935948,1265819,Alexander Taylor,,UK,62
+11,8935948,1672294,MSS,,,28
+12,8935948,8123018,,,,7
+13,8935948,1609449,Talley Lambert,Harvard University,,56
+14,8935948,445208,Alex J. Champandard,nucl.ai,"Vienna, Austria",14
+15,8935948,1363114,Max Hunter,,,23
+16,8935948,314716,Thomas Robitaille,,United Kingdom,382
+17,8935948,3976573,Mustafa Furkan Kaptan,@KI-labs ,Munich,39
+18,8935948,302469,Elliott Sales de Andrade,,"Toronto, Ontario, Canada",262
+19,8935948,1075148,Karl Czajkowski,USC Information Sciences Institute,,1
+20,8935948,11872072,Alessandro Bacchini,Camlin Italy s.r.l. @henesissrl,"Fidenza, Italy",26
+21,8935948,18143289,Guillaume Favelier,INRIA,"Paris, France",39
+22,8935948,15892073,Etienne Combrisson,INT,Marseille,35
+23,8935948,11493646,,@ExoVibe ,Belgium,37
+24,8935948,5278031,,,,12
+25,8935948,90008,Mark Harfouche,California Institute of Technology,Pasadena,338
+26,8935948,69774,Michael Aye,LASP,"Boulder, CO, United States",126
+27,8935948,19485143,Casper van Elteren,,,50
+28,8935948,49141,Cedric GESTES,,Paris FRANCE,52
+29,8935948,3826210,Grzegorz Bokota,"University of Warszaw, CeNT","Warsaw, Poland",46
+30,8935948,2117598,Xiongzhi Gao,,"China, Xi'an",47
+31,8935948,6531703,Nicholas Sofroniew,CZI,SF,89
+32,8935948,15962368,Mike Kubanski,,Canada,1
+33,8935948,99779,Thomas Mansencal,Lead Pipeline Developer @ Weta Digital,New Zealand,59
+34,8935948,8848931,,,,1
+35,8935948,1253071,David Reaver,@stripe,"Riverside, CA",14
+36,8935948,16467221,,,,6
+37,8935948,15217634,Jan Cimbalnik,The International Clinical Research Center of St. Anne's University Hospital Brno,Czech Republic,4
+38,8935948,19759836,Kusefiru,,France,3
+39,8935948,2751728,,,,42
+40,8935948,29165011,Kira Evans,@chanzuckerberg ,LA <-> SF,30
+41,8935948,330343,Matthew Spellings,,,33
+42,8935948,896656,Rob McMullen,,,59
+43,8935948,5988775,Pradeep Kumar Jayaraman,,"Toronto, ON, Canada",10
+44,8935948,7307488,,,,31
+45,8935948,1527885,Fiach Antaw,,"Brisbane, Australia",6
+46,8935948,528003,Hadrien Mary,Valence,Montréal,199
+47,8935948,7489565,,,,1
+48,8935948,181628,Nico Schlömer,,"Berlin, Germany",90
+49,8935948,4481740,Matthieu Dartiailh,"Institut Néel, CNRS",Grenoble,60
+50,8935948,2536670,Lars Andersson,,,27
+51,8935948,382160,Martin Povišer,,"České Budějovice, Czech Republic",11
+52,8935948,44009216,Aarushi Gupta,,,16
+53,8935948,483428,Christoph Gohlke,"University of California, Irvine","Irvine, California",29
+54,8935948,47365564,,,,6
+55,8935948,1964655,Ghislain Antony Vaillant,@aramis-lab,"Paris, France",186
+56,8935948,1426279,Guillaume Gay,@centuri-engineering ,"Marseille, France",62
+57,8935948,10777579,,,,9
+58,8935948,4684327,Cody Piersall,Advanced Radar Research Center (University of Oklahoma),"Norman, OK",49
+59,8935948,114267,Brett Graham,,,124
+60,8935948,2297918,Guillaume Baty,,,33
+61,8935948,5285417,Joe,Max Planck Institute of Neurobiology,,11
+62,8935948,506602,Julien Rebetez,Picterra,Switzerland,66
+63,8935948,297680,Keunhong Park,University of Washington,"Seattle, WA",75
+64,8935948,8486343,walker li,,china,25
+65,8935948,1018880,Jerome Kieffer,ESRF,Grenoble,127
+66,8935948,5782069,Eldar Khayrullin,,"Russia, Kazan",11
+67,8935948,59344,Jeroen Van Goey,@barco,"Ghent, Belgium",135
+68,8935948,7161148,Philipp Schlegel,,University of Cambridge,21
+69,8935948,2046265,Richard Höchenberger,@INRIA,"Paris, France",96
+70,8935948,898010,Samuel Gaist,@idiap,Switzerland,51
+71,8935948,47873678,Tim Gates,IRESS,Sydney,4065
+72,8935948,6928710,,,,21
+73,8935948,171338,liubenyuan,,Xi'an,25
+74,8935948,38365841,,,,3
+75,8935948,1322974,Antony Lee,,,146
+76,8935948,569279,Dany Vohl,"ASTRON, The Netherlands",,38
+77,8935948,1715589,Fang He,,Earth,28
+78,8935948,19709142,Federico Pellegrin,,"Munich, DE",31
+79,8935948,158950,Harry Brundage,,Ottawa,238
+80,8935948,3979207,,,,2
+81,8935948,23482191,Lorenzo Gaifas,@gutsche-lab ,,32
+82,8935948,4438221,Lucas Felix,,Grenoble,38
+83,8935948,7221779,Marco,,"London, UK",8
+84,8935948,335567,Matthias Bussonnier,@Quansight-Labs,"Merced, CA",465
+85,8935948,16560360,Mirco Ackermann,"Universität Zürich, Physik",Zürich,5
+86,8935948,10678620,Ryan Grout,Lynker Technologies,"Austin, TX",62
+87,8935948,2387587,,,,5
+88,8935948,118582,Ariel Rokem,The University of Washington eScience Institute,"Seattle, WA",577
+89,8935948,9614311,,,,11
+90,8935948,11960086,midgetfc,,,2
+91,8935948,6143833,,,,51
+92,8935948,4312421,,,France,155
+93,8935948,1908693,,,,2
+94,8935948,26436380,Abhinav Gautam,@Codebucket-Solutions ,"KOCHI,KERALA,INDIA",91
+95,8935948,13411839,Penny Qian,,the Netherlands,29
+96,8935948,1742643,Ravi Peters,Delft University of Technology,"Delft, The Netherlands",29
+97,8935948,3092978,Bitdeli Chef,Bitdeli,"San Francisco,CA",42
+98,8935948,671841,Eric Perlman,Yikes LLC,"Baltimore, MD",22
+99,8935948,17546299,Hagai Har-Gil,,,25
+100,8935948,2399090,JPFrancoia,,London,33
+101,8935948,141546,Jakub Wilk,,,153
+102,8935948,15011251,Joachim Kruithof,,,18
+103,8935948,2772607,Jorge Leitao,Munin Data ApS,"Copenhagen, Denmark",53
+104,8935948,72177299,Kartik Kumar Thakur,,,5
+105,8935948,4525931,Kent Inverarity,DEW,South Australia,84
+106,8935948,2089799,"Liu, Yen-Ting",University of Illinois at Urbana-Champaign,"Urbana, IL",97
+107,8935948,28812,Martin Chase,Independent,"Portland, OR",37
+108,8935948,13316262,Michael Lingelbach,Stanford University,Menlo Park,54
+109,8935948,5743824,Nishant Agrawal,,"Bengalore, India",45
+110,8935948,1828555,R.K.Garcia,University of Wisconsin SSEC,"Madison, WI",10
+111,8935948,53180450,,,,0
+112,8935948,8604178,,,,15
+113,8935948,723226,Simeon Visser,,"London, United Kingdom",227
+114,8935948,1360812,Xavier Olive,Research Scientist,"Toulouse, France",49
+115,8935948,24202719,Joseph Zhu,Procore,Houston,39
+116,8935948,130077,,Internet Archive,,66
+117,8935948,56291702,,,,4
+118,8935948,12408125,,,,1
+119,8935948,2032839,Gael Goret,Atos R&D,"Grenoble, France",15
+120,8935948,7510549,Loic Gouarin,CNRS,Ecole polytechnique,78
+121,8935948,47364977,James Proctor,@glotzerlab,University of Michigan,0
+122,8935948,5316449,,,,5
+123,8935948,43505542,moto,,,2
+124,8935948,76622105,,"West Pomeranian University of Technology, Szczecin","Szczecin, Poland",6
+125,8935948,6250569,Ryan Cordes,,,2
+126,8935948,21579271,,,,15
+127,8935948,1835434,Matej Zajo Kralik,,,17

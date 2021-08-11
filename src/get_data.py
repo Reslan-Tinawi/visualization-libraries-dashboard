@@ -29,7 +29,8 @@ data_path = "./data/raw/"
 
 @timer
 def init():
-    token = ""
+    with open("./data/external/token.txt", "r") as f:
+        token = f.readline()
     gh_client = Github(token)
     repos_list = []
 
@@ -98,9 +99,9 @@ if __name__ == "__main__":
     print("Getting data from github repositories")
     print("initializing.... ")
     repos_list = init()
-    create_repos_feature(repos_list)
-    create_contrib_features(repos_list)
-    create_repo_releases(repos_list)
-    create_stars_history(repos_list)
-    create_repo_issues(repos_list)
+    # create_repos_feature(repos_list)
+    # create_contrib_features(repos_list)
+    # create_repo_releases(repos_list)
+    # create_stars_history(repos_list)
+    # create_repo_issues(repos_list)
     create_repo_pull_requests(repos_list)

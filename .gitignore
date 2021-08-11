@@ -131,3 +131,5 @@ dmypy.json
 # PyCharm files
 *.xml
 *.iml
+
+/data/external/token.txt
