@@ -1,0 +1,365 @@
+index,id,number,repo_id,created_at,closed_at,state,title,body,total_comments,total_commits,labels
+0,693725709,545,1324413,2021-07-20 18:56:05,,open,Use sipbuild API instead of invoking sip as a subprocess,"This adds support for the latest SIP versions (6.x) but removes support for SIP v4.
+
+Background:
+
+- SIP 5.0.0 was released on 2019-10-08.
+- SIP 6.0.0 was released on 2021-01-04.
+- SIP developer [wrote](https://www.riverbankcomputing.com/pipermail/pyqt/2020-September/043162.html) in September 2020:
+  > SIP v4 has been deprecated for more than a year. *Nobody* should still be using it.
+- In #433 I added support for SIP v5. The code used `sip5` legacy tool that was present in SIP v5 for compatibility with v4.
+- In SIP v6, that tool is not present. So we have two ways: either use SIP's own buildsystem (`sip-build` command-line tool), or use the `sipbuild` API from Python. Here I went with the second approach.
+
+To test this, try installing the latest versions of `sip`, `PyQt5` and `PyQt5.sip` from PyPI. On Debian, install `python3-sipbuild` from experimental (it may want to remove `sip5-tools`, if you need that package its new name is `sip-tools`).",3,1,[]
+1,645321052,533,1324413,2021-05-16 14:06:22,2021-05-17 07:01:34,closed,Add metadata license. Use SPDX license. ,"If you prefer different ID let me know. The current ID use reverse-DNS scheme.
+https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#spec-component-filespec
+
+Add metadata license. 
+Use SPDX license.
+Add more screenshots, remove width and height, without them is fine.
+Add help and bug tracker URL.
+Add content rating.
+Add releases.",1,3,[]
+2,580916004,507,1324413,2021-02-26 14:52:20,2021-02-28 09:16:55,closed,Small changes: support iminuit 2,"This PR is related to  #502 and #464.
+
+In the current version, Veusz crashes if used with iminuit 2.x.
+
+I added a little modifications in `fit.py` to support iminuit 2.x.
+This code works under either iminuit 1.x or 2.x.",1,3,[]
+3,577067702,505,1324413,2021-02-21 07:30:16,2021-03-13 09:30:55,closed,Enabling copy and paste as image,"# Abstract
+This pull request is an answer to https://github.com/veusz/veusz/issues/395#issue-589261447
+This update enables
+- copying a plot page to the clipboard as images
+- pasting an clipboard image on the plot page.
+
+I think it would be useful when users want to frequently exchange images with other software.
+![output5](https://user-images.githubusercontent.com/30950088/108617671-bd32c880-745b-11eb-8023-a1ef08f0b3d4.gif)
+
+# Copy as image
+## Behavior
+- ""Copy as Image"" menu appears when a user right click on the tree edit window.
+- ""Ctrl + Alt + C"" is assigned to the shortcut of this action.
+- DPI and other parameters depend on the settings of usual ""export"".
+- ""Copy as Image"" exports the selected page as 3 types of images, and copies them to clipboard as 4 types of mime data
+    - ""image/svg+xml"" (.svg)
+    - ""image/png"" (.png)
+    - ""PNG"" (.png)
+    - ""image/x-bmp"" (.bmp)
+- I checked that either of the 4 mime type can be pasted to major software, as shown below.
+
+|  | image/svg+xml | image/png | PNG | image/x-bmp |
+----|----|----|----|----|
+| Inkscape | ok | ok | ok | ok |
+| GIMP (on Ubuntu) | NG | ok | ok | ok |
+| GIMP (on Windows) | NG | NG | ok | ok |
+| LibreOffice (on Ubuntu)  | NG | ok | NG | NG |
+| LibreOffice (on Windows) | NG | NG | ok | NG |
+| MS Office (-2016) | NG | NG | ok | NG |
+| MS Office (2019-, 365) | ok | NG | ok | NG |
+
+## Changed files
+- veusz.windows.treeeditwindow.py
+
+## Known concerns & points to be discussed
+- The images are exported as overall page, even when only several widgets in the page are selected. 
+- I implemented ""Copy as Image"" separately from ""Copy"". Integrating them into ""Copy"" (always copy widget and image simulataneously) might be simpler. 
+
+# Paste
+## Behavior
+- If clipboard contains image mime types, ""Paste"" action (on the tree edit window) convert the data to veusz ""imagefile"" widget, and then paste it.
+- The program searches mime types in the following priority order:
+    - 'text/x-vnd.veusz-widget-3', 'image/svg+xml', 'image/png', 'PNG', 'image/x‑xpixmap', 'image/x-bmp', 'image/x‑xbm', 'image/x‑xbitmap', 'image/tiff',  'image/jpeg', 'JFIF', 'GIF'
+- I checked that images from major software (as shown below) can be correctly pasted.
+    - Inkscape (as svg)
+    - GIMP (as raster)
+    - LibreOffice (as raster)
+    - MS Office 2016 (as raster)
+    - MS Office 2019, 365 (as svg)
+    - Print-screen (not works on Windows)
+    - Firefox, Chrome (not works on Windows)
+
+## Changed files
+- veusz.document.mime.py
+
+## Known concerns & points to be discussed
+- Print-screen images or copied images from web-browsers cannot be pasted on MS WIndows.
+  It is because Windows HBITMAP format is not supported so far. HBITMAP data are not accessible by PyQt qt.QApplication.clipboard().mimeData().",5,5,[]
+4,545788421,492,1324413,2020-12-27 10:10:01,2020-12-29 17:59:41,closed,Enable to embed external vector graphics,"This PR adds the function to import a .svg file as a vector image, not a raster image.
+
+Veusz has powerful figure composing ability, in addition to the excellent plotting functions. Therefore, I think some users will have benefit if veusz can import an external vector-based images (e.g. chemical structures) without rasterizing. Although the ""add imagefile"" function also can import .svg vector graphics, it rasterizes the images and sometimes makes their resolutions low.
+
+This PR implements `SVGFile` class, which is similar to `ImageFile` class.
+- The `SVGFile` instances can be added by ""Add svgfile"" button in the shape tools menu.
+- The `SVGFile` instances are rendered by `QSvgRenderer`.
+- The `SVGFile` instances are encoded into base64 data with type of `svgfile`.
+
+The imported image can be rendered and embedded as a vector image as shown in the picture below.
+
+![1](https://user-images.githubusercontent.com/30950088/103167140-c3e1fc80-486b-11eb-84a6-90c0e31661b4.png)
+
+`SVGFile` is implemented separately from `ImageFile` class to keep the backward compatibility and reduce unnecessary conditional branches. The newly added code in the `veusz.widgets.shape` may need to have more sophisticated (many of the method in the `SVGFile` and `ImageFile` are duplicated). I left it as is so far because I am new to the veusz policy for code design (e.g. Are function overloads discouraged or not?). I think there are some options. I would like to discuss how to improve it. 
+
+I would appreciate if you consider adding this function.
+
+Many Thanks!
+korintje",5,10,[]
+5,536082366,483,1324413,2020-12-10 16:59:18,2020-12-30 13:08:39,closed,Move all hide checkboxes to top,"This PR is born out of a personal frustration: I often check the effect of a setting by hiding/unhiding the widget. For this to work effectively, the hide checkbox should always be at the same place and easily reachable. IMHO this best place is at the very top of the settings, but #92 has a different idea (at the bottom – but then you always have to scroll down to the bottom …)
+
+This PR implements this with the check box(es) always at the top. If the check box should be at the bottom, the method `setting.settings.Settings.getNames()` should be changed from
+```python
+    def getNames(self):
+        """"""Return list of names.""""""
+        return self.hideboxnames + self.setnames
+```
+to
+```python
+    def getNames(self):
+        """"""Return list of names.""""""
+        return self.setnames + self.hideboxnames
+```
+This could be even made a configuration option? But then I am not sure, if the reversal of
+```python
+   def saveText(self, saveall, rootname = None):
+```
+would still work, if the file is loaded with the checkboxes set to a different position …",16,3,[]
+6,532781667,479,1324413,2020-12-04 20:52:51,2020-12-05 09:27:49,closed,Sort input file list,"Sort input file list
+so that `veusz/helpers/qtloops.cpython-38-x86_64-linux-gnu.so` builds in a reproducible way
+in spite of indeterministic filesystem readdir order
+
+See https://reproducible-builds.org/ for why this is good.",1,1,[]
+7,503245980,455,1324413,2020-10-14 09:42:44,2020-10-24 09:10:27,closed,Bugfix for boxplot,"Fixed calculation of bottom whisker in '1.5IQR' mode. Now effectivly
+rounding up instead of down.
+
+Closes #449 ",1,1,[]
+8,476323379,440,1324413,2020-08-31 14:08:58,2020-08-31 18:12:13,closed,Minor fixes for api.rst,"Some small fixes for the two Python code blocks in the API doc page, section on Translating old to new style.
+
+Maybe in an older version of the docs or Sphinx the quadruple backslashes were necessary, but now all four are passing into both the compiled [HTML](https://veusz.github.io/docs/manual/api.html#non-qt-python-programs) and [PDF](https://veusz.github.io/docs/manual.pdf) versions of docs, when only two backslashes are wanted.
+
+The second fix is adding the y axis label, which was missed from the new style code block.
+
+p.s. Thanks ever so much for developing Veusz. I've used it for many years and think it's fantastic. ",1,1,[]
+9,475643771,439,1324413,2020-08-28 21:13:41,,open,Improved fitting,"Two small improvements to fitting function: choose default Y error, set plot range and fit range independently.",2,4,[]
+10,474870622,438,1324413,2020-08-27 18:20:00,2020-08-29 10:35:12,closed,More dataset operations,This adds two dataset operations that I needed on occasion: reverse order and subtract maximum.,1,2,[]
+11,474869987,437,1324413,2020-08-27 18:18:34,2020-10-24 13:22:52,closed,Optionally reverse order of key entries,"This is useful when plotting datasets with transparent color that should have a certain order to look good, but which might not be what one wants as ordering in the plot key.",2,1,[]
+12,474816639,436,1324413,2020-08-27 16:30:45,2020-08-29 09:22:07,closed,Add setting to optionally omit import paths in document files,"I frequently store veusz files in git repositories.  For that, I do not like it if absolute paths are stored within them.  This branch adds an option in the preferences diaglogue to optionally *not* store import paths in the files.  It defaults to True in line with the current upstream behavior.",2,1,[]
+13,459514225,433,1324413,2020-07-30 19:09:35,2020-08-01 15:00:45,closed,Add support for SIP v5,"This can be tested by installing the latest versions of `sip` and `PyQt5` from PyPI, or by installing `python3-sipbuild` on Debian and `python3-pyqt5`, `pyqt5-dev` from Debian experimental. Then export `SIP_EXE=sip5` when building veusz.
+
+It is a quick solution that allows to support both SIP v4 and v5. When SIP v4 support is no longer needed, it would be better to switch to `sipbuild` API as described in [SIP documentation](https://www.riverbankcomputing.com/static/Docs/sip/index.html).",1,3,[]
+14,370762326,374,1324413,2020-02-04 10:37:03,2020-02-17 16:08:03,closed,Truly display all files,The current version hides some files while importing data.,1,1,[]
+15,366972416,372,1324413,2020-01-24 19:02:19,2020-01-25 12:48:39,closed,"Fix python 3.9 compatibility for using ""U"" in open","* Fix python 3.9 compatibility for using ""U"" in open.
+* Fix deprecation warning due to invalid escape sequences.
+
+Fixes #371 ",2,2,[]
+16,362706259,367,1324413,2020-01-14 15:48:45,2020-08-19 13:07:37,closed,Added flight data recorder style graph examples,Flight Data Recorder style graphs are 2D complex plots using a single canvas but with multiple axis,3,1,[]
+17,339424123,344,1324413,2019-11-11 13:00:36,2020-01-25 12:44:53,closed,Added Brazilian Portuguese description into veusz.desktop,,2,1,[]
+18,325878059,335,1324413,2019-10-08 17:22:38,2019-10-13 10:11:54,closed,Add option to exclude items from key plot,"Just a small improvement to exclude some items (cvs list) from the key widget. 
+Usefull if you have multiple key widgets in one plot and you want to group the items.
+
+![grouping](https://user-images.githubusercontent.com/23076141/66417707-942ca780-e9ce-11e9-9129-01b588cba324.jpg)",1,1,[]
+19,267309415,310,1324413,2019-04-04 06:21:18,2019-04-04 17:49:19,closed,Use unsigned long for widget ids instead of signed long,"Python’s `id()` function returns memory addresses, which do not fit into signed long on 32-bit systems.
+
+In PyQt 5.12 overflow checking is [enabled by default](https://www.riverbankcomputing.com/news/pyqt-512), so this causes errors like this:
+
+```python
+Traceback (most recent call last):
+  File ""tests/runselftest.py"", line 307, in <module>
+    test_unlink=options.test_unlink)
+  File ""tests/runselftest.py"", line 236, in runTests
+    test_unlink=test_unlink)
+  File ""tests/runselftest.py"", line 173, in renderVszTest
+    ifc.Export(outfile)
+  File ""/usr/lib/python3/dist-packages/veusz/document/commandinterface.py"", line 778, in Export
+    e.export()
+  File ""/usr/lib/python3/dist-packages/veusz/document/export.py"", line 232, in export
+    self.exportSelfTest(self.filename)
+  File ""/usr/lib/python3/dist-packages/veusz/document/export.py"", line 417, in exportSelfTest
+    self.renderPage(page, size, (dpi,dpi), painter)
+  File ""/usr/lib/python3/dist-packages/veusz/document/export.py"", line 251, in renderPage
+    self.doc.paintTo(helper, page)
+  File ""/usr/lib/python3/dist-packages/veusz/document/doc.py"", line 345, in paintTo
+    self.basewidget.draw(painthelper, page)
+  File ""/usr/lib/python3/dist-packages/veusz/widgets/root.py"", line 136, in draw
+    page.draw( posn, painthelper )
+  File ""/usr/lib/python3/dist-packages/veusz/widgets/page.py"", line 358, in draw
+    parentposn)
+  File ""/usr/lib/python3/dist-packages/veusz/widgets/widget.py"", line 288, in draw
+    c.draw(bounds, painthelper, outerbounds=outerbounds)
+  File ""/usr/lib/python3/dist-packages/veusz/widgets/scene3d.py"", line 226, in draw
+    root = self.makeObjects(painter, bounds, painthelper)
+  File ""/usr/lib/python3/dist-packages/veusz/widgets/scene3d.py"", line 177, in makeObjects
+    obj = c.drawToObject(painter, painthelper)
+  File ""/usr/lib/python3/dist-packages/veusz/widgets/graph3d.py"", line 246, in drawToObject
+    cont.assignWidgetId(id(self))
+OverflowError: argument 1 overflowed: value must be in the range -2147483648 to 2147483647
+```",1,1,[]
+20,203610252,267,1324413,2018-07-24 18:08:25,2018-07-25 06:15:49,closed,Add OpenBSD to this list.,"Hi --
+
+We have been keeping this patch for a while for the OpenBSD package.
+With this, Veusz compiles cleanly on OpenBSD.
+
+Thanks.",1,1,[]
+21,174473541,240,1324413,2018-03-12 19:38:28,2018-05-26 09:56:40,closed,Update expression.py,"Fixed bug in expression processing (in substituteDatasets), where there were errors if a dataset name ended in ""_data"". Also cleaned up the error checking, and moved the check for dataset existence into function _evaluateDataset.",1,1,[]
+22,150201176,211,1324413,2017-11-02 04:19:03,2020-08-10 18:11:32,closed,Readme edits,"Love the project. Looked like the initial readme could use an update. Just changed the format to markdown. Nothing else has changed (except the filename, to .md for markdown). ",3,2,[]
+23,141986347,194,1324413,2017-09-20 00:28:46,2017-09-23 08:08:45,closed,Update colormap.py,Added several color tables from VisIt.,3,1,[]
+24,132142927,185,1324413,2017-07-24 20:54:53,2017-07-25 18:02:34,closed,Fix typos,"""Add menu"" should be ""Insert menu""",1,1,[]
+25,102818381,164,1324413,2017-01-23 22:53:17,,open,Data attrs,"Addresses #139, #137
+* Dataset label is used as PointPlotter key if none is set and the dataset is yData. 
+* The key is automatically updated on yData change. If the key is deleted, it a new attempt to read the dataset label is made.
+* the dataset edit dialog now has a tabbed view: one tab for the data, one for the attributes.
+![data_tab](https://cloud.githubusercontent.com/assets/1889232/22104883/a5b40138-de41-11e6-9645-205d6cee42e1.png)
+![attr_tab](https://cloud.githubusercontent.com/assets/1889232/22104890/aaed5852-de41-11e6-86dd-9c23116d995a.png)
+I made an very extensible attr table  because I plan to implement more feature building on #137 concept (units, hierarchy, etc).",2,5,[]
+26,102817639,163,1324413,2017-01-23 22:48:16,2020-12-05 19:36:59,closed,Added zoom-out-of-axes functionality,"- Added an alternative zoom-out icon and plugin in plugins/zoomaxes.py (alternative to #145 )
+- Added an undo icon
+![new_icons](https://cloud.githubusercontent.com/assets/1889232/22098741/4420b8da-de28-11e6-9801-1e51feb01188.png)
+- Added a new utility class OperationWrapper, which ease grouping multiple operations in toolsplugin.",1,1,[]
+27,102813641,162,1324413,2017-01-23 22:23:22,2020-08-09 11:01:23,closed,added .travis.yml for continous integration,"This allows Veusz tests to be ran at each commit and results displayed eg here: https://travis-ci.org/tainstr/veusz.
+This version of travis.yml only considers python 2.7, but other versions can be added in the same place.
+",1,1,[]
+28,102247623,161,1324413,2017-01-19 11:20:57,2017-01-23 22:55:28,closed,Added dataset label attribute and use it for auto plot key,"Addresses #139, #137, #145
+* Dataset label is used as PointPlotter key if none is set and the dataset is yData. 
+* The key is automatically updated on yData change. If the key is deleted, it a new attempt to read the dataset label is made.
+* the dataset edit dialog now has a tabbed view: one tab for the data, one for the attributes.
+![data_tab](https://cloud.githubusercontent.com/assets/1889232/22104883/a5b40138-de41-11e6-9645-205d6cee42e1.png)
+![attr_tab](https://cloud.githubusercontent.com/assets/1889232/22104890/aaed5852-de41-11e6-86dd-9c23116d995a.png)
+I made an very extensible attr table  because I plan to implement more feature building on #137 concept (units, hierarchy, etc).
+- Added the magic .travis.yml which will cause TravisCI to automatically run tests upon each commit. 
+See ours here: https://travis-ci.org/tainstr/veusz
+- Added an alternative zoom-out icon and plugin in plugins/zoomaxes.py (alternative to #145 )
+- Added an undo icon
+![new_icons](https://cloud.githubusercontent.com/assets/1889232/22098741/4420b8da-de28-11e6-9801-1e51feb01188.png)
+- Added a new utility class OperationWrapper, which ease grouping multiple operations in toolsplugin.
+
+",7,67,[]
+29,82012787,155,1324413,2016-08-19 17:00:04,2016-09-17 13:40:28,closed,Fix crash when trying to save an error message in the exception dialo…,"…g box.
+
+getSaveFileName returns a tuple where the first element is the file name. This first element should be passed to the open function.
+",0,1,[]
+30,78832993,154,1324413,2016-07-26 11:11:27,2016-09-18 09:48:09,closed,fix typo in zoom rectangle,"because of this typo, y axis is not being given the proper maximum value when user is drawing a rectangle.
+",3,1,[]
+31,77721551,151,1324413,2016-07-16 22:54:17,2016-09-18 13:39:31,closed,fix shift + scroll not handling every mouses and every trackpads,"In the Qt5 version of Veusz, the lateral scrolling in zoomed plots is lost for some hardwares.
+
+According to Qt doc, pixelDelta ""is provided on platforms that support high-resolution pixel-based delta values, such as OS X.""
+On the contrary, angleDelta is always returned. 
+",4,2,[]
+32,77027607,150,1324413,2016-07-11 21:36:45,2016-07-25 18:14:36,closed,Center the splash screen,"takes into account the size of the screen and the size of the splash screen to center it correctly on the screen.
+",2,2,[]
+33,75712554,149,1324413,2016-06-29 20:07:12,2016-07-09 17:12:08,closed,fix various crashes with qt5,"selectedFilter() doesn't seem to exist in pyQt 5. Replaced by selectedNameFilter in the code. 
+",4,3,[]
+34,65817037,145,1324413,2016-04-08 17:04:56,2016-04-25 16:53:51,closed,"Add toolbar button that resets axes limits to 'Auto', and also added a colormap","Clicking the button loops through the selected widgets (and recursively through their children) and resets the limits on any Axis widgets to 'Auto'. This is a convenient way to ""zoom back out"" after zooming in on a plot.
+
+Also added the ""cool-warm"" colormap from http://www.kennethmoreland.com/color-maps/ 
+This colormap is a ""diverging"" colormap, and has many good qualities for scientific plots: http://dx.doi.org/10.1007/978-3-642-10520-3_9
+",3,2,[]
+35,64607815,144,1324413,2016-03-30 10:56:47,2017-01-19 14:17:40,closed,Continuous integration via TravisCI,"- Added the magic .travis.yml which will cause TravisCI to automatically run tests upon each commit. 
+See ours here: https://travis-ci.org/tainstr/veusz
+- Added an alternative zoom-out icon and plugin in plugins/zoomaxes.py (alternative to #145 )
+- Added an undo icon
+![new_icons](https://cloud.githubusercontent.com/assets/1889232/22098741/4420b8da-de28-11e6-9801-1e51feb01188.png)
+- Added a new utility class OperationWrapper, which ease grouping multiple operations in toolsplugin.
+
+
+",1,65,[]
+36,62751415,142,1324413,2016-03-14 13:58:04,2016-03-25 15:56:11,closed,fix typo,"Fix a typo in the variable named `distdir`
+",0,1,[]
+37,62750794,141,1324413,2016-03-14 13:54:07,2016-03-25 15:56:11,closed,Change splash screen to use QLabels,"This change allows the splash screen text to automatically render at high resolution on HiDPI displays.
+",1,4,[]
+38,56861807,136,1324413,2016-01-22 09:02:27,2016-02-01 18:43:23,closed,Allow to have plotted children of a plotter,"At the moment, if you add a child in a plotter, it is not drawn.
+With this change, children of a plotter will be drawn as well.
+
+This is very useful to us, because we created objects related to a curve which have to be children of it.
+For example we created a datapoint object used to find and describe some particular points of a curve (minimum, maximum, etc...). 
+
+![draw_children](https://cloud.githubusercontent.com/assets/944279/12506582/5bce8a26-c0f0-11e5-94c4-c09622f8fc4a.png)
+",2,1,[]
+39,44330754,127,1324413,2015-09-07 08:25:17,2015-10-27 18:36:03,closed,cross cursor is selected when in 'Zoom into graph' mode,"We had some problems with users that, after a zoom with 'Zoom into graph', didn't understand that they were still in 'Zoom into graph' mode: they thought that selection didn't work any more, given that the cursor was the default one.
+To avoid this misunderstanding, we changed the cursor with the cross one.
+
+Probably a better solution would be to find a cursor with an arrow and a magnifying glass, but it isn't included in Qt defaults.
+",2,2,[]
+40,43522651,125,1324413,2015-08-27 14:20:34,2015-08-30 08:41:53,closed,Save crash report to file,"With this commit, the user will be able to choose to save a crash report to a file, instead of sending it via email.
+
+Our application uses Veusz and, sometimes, it crashes due to our code. So, to avoid you to receive bug reports related to our application, we added the ability to remove the ""Send"" button from the exception report dialog.
+",1,1,[]
+41,40547141,124,1324413,2015-07-22 09:44:54,2015-08-11 14:14:26,closed,Make _linearInterpolWarning vals argument iterable,"A non-iterable is passed to _linearInterpolWarning during updateControlItem of BoxShape if the AxisFunction is used as X/Y axis position reference (refs #123)
+Made it iterable if its shape is null.
+",0,1,[]
+42,36093286,118,1324413,2015-05-23 20:34:45,2015-05-30 13:21:31,closed,Fix export image compression,"This branch fixes image compression for PNG export (which has been broken since at least 9f0810c992 in 2011) and also enables LZW compression for TIFF export.
+
+Using 300 DPI exports of `broken_axis.vsz` to test:
+
+| Format | Before | After |
+| --- | --: | --: |
+| PNG | 7822679 | 210885 |
+| TIFF | 7808954 | 311248 |
+",2,2,[]
+43,34702924,116,1324413,2015-05-05 08:05:20,2015-05-10 16:56:47,closed,pyqt_find_translatable accepts forced function names,"Added --defn optional arguments to accept forced translation function names. These will be used when no definition with the same name is found in the current source file (eg: in case the function is imported from a common module). Global definitions will be overridden by any homonym found in the current source file. 
+Eg: 
+`pyqt_find_translatable --defn _:foo source.py`
+Will consider ""_"" as defined with ""foo"" context and default argument ids _(text, disambiguation,context) also if it is not defined in source.py, but only imported from a common module.
+",1,1,[]
+44,28604502,99,1324413,2015-02-04 00:54:33,2015-02-28 09:25:44,closed,typo (plural),,1,1,[]
+45,22214565,86,1324413,2014-10-03 16:40:55,2014-10-04 16:38:33,closed,Enable SAMP from astropy.io.samp,"This is my first attempt at a pull request. I made these modification in order to be able to receive SAMP tables using astropy instead of sampy. I have tested these changes using python 3.3.5 and 2.7.8, and it seems to work, but some more testing is probably nedded.
+",0,1,[]
+46,20352655,79,1324413,2014-08-27 04:49:14,2014-09-02 19:11:06,closed,Resolves #78,"I filed #78 because it was holding me up at work. It turned out to be rather easy to fix. Let me know what you think. 
+",2,2,[]
+47,17949230,71,1324413,2014-07-03 15:00:59,2014-07-20 12:04:07,closed,Update datasetplugin.py,"Modified code for 2D dataset plugins, so that getDataset for 2D will also copy edges and centers.
+",0,1,[]
+48,15742292,64,1324413,2014-05-11 12:27:38,2014-05-11 14:03:56,closed,Update embed.py,"Add searching for ~/Applications/Veusz.app in Mac OS X, since there are people who prefer to install software in their home directory
+",2,1,[]
+49,12512267,57,1324413,2014-02-13 14:48:18,2015-04-04 13:27:06,closed,Setuptools,"Utilize setuptools to make it more windows friendly:
+- declare all optional dependencies
+- use entrypoiints for scripts
+- COPYING was not installed when installing from source.
+
+Hopefully the macosx was kept intact.
+",2,2,[]
+50,12133917,53,1324413,2014-02-03 14:06:50,2014-02-08 10:31:42,closed,Changed lower limit on formatGeneral to call formatSciNotation,"This commit seems to fix #13 
+",1,1,[]
+51,10660873,51,1324413,2013-12-09 20:56:36,2013-12-24 18:50:20,closed,Import improvement: added code and ui for extra parameters,"I started changing the ui and code logic to allow for extra parameters to be specified during hdf5 import. I'm not sure the best way to implement this, but perhaps this code will be useful for you. So far, it allow the user to add a custom xrange and yrange to 2D datasets. There is an input box for ""custom slicing"", but I'm not quite sure how to implement that. I'll come back to that when next I get a chance.
+",5,6,[]
+52,10244977,47,1324413,2013-11-24 21:35:44,2013-11-25 09:34:58,closed,Use Astropy by default instead of PyFITS,"As @mindw mentioned in https://github.com/astropy/astropy/pull/1493, it is not currently possible to use Astropy instead of PyFITS for veusz. PyFITS is going to be deprecated on a timescale of a ~year so it is now time to switch to using `astropy.io.fits` whenever possible. I wasn't sure whether it would make sense to have the fallback on PyFITS if Astropy is not installed or whether we should do a clean break and simply require Astropy? (I'm happy to update this PR).
+
+I had issues building veusz (will open a separate issue) so cannot test that this works correctly at the moment - but maybe you make use of Travis?
+",10,1,[]
+53,10037014,46,1324413,2013-11-18 02:38:16,2013-11-18 08:51:14,closed,Fix compilation error with msvc on py3.x,,1,1,[]
+54,4178479,28,1324413,2013-02-16 17:21:00,2013-02-16 17:21:42,closed,Axisimprovements,"Apply axis improvements branch
+",0,27,[]
+55,3684397,27,1324413,2013-01-15 16:31:05,2013-01-15 18:51:11,closed,Small update to add shift+scroll to zoomed graphs,"Tweaked the wheel event handler to allow Shift+Scroll to move
+horizontally when zoomed in, a common behaviour of graphical packages
+(GIMP and Inkscape for example)
+",1,1,[]
+56,3060568,26,1324413,2012-11-20 04:35:33,2012-12-16 18:45:11,closed,SAMP (and VO table support),"Here are two patches with a basic implementation of [Issue 16](https://github.com/jeremysanders/veusz/issues/16), support for SAMP.
+
+I just implemented the table.load.votable SAMP call, so that data can be sent from applications such as Topcat.  I noticed that the D-Bus interface appears to register each window, but for simplicity I started with just registering once with SAMP for the whole application, and loading the data into the first available window.
+
+Then I had to add a plugin to actually read the VO table files, which checks that the astropy modules are available to do so.  The VO table file could potentially include several tables, but I wasn't sure whether I should attempt to separate the datasets loaded from the different tables.  Currently the plugin just returns all of the individual datasets with their original names.
+",4,2,[]
+57,1242652,20,1324413,2012-04-26 21:25:32,2012-04-28 17:17:22,closed,allow *args and **kwargs for custom functions,"Modify the validation regexp to take _args or *_kwargs.
+",0,1,[]
+58,1064788,18,1324413,2012-03-28 18:23:08,2012-03-28 19:13:37,closed,add an optional title to the Key widget,"This branch adds a 'title' setting to the key widget, which is layout-ed as a centered
+string above the legend items.
+",1,1,[]
+59,270006,11,1324413,2011-08-13 11:21:23,2011-08-14 10:56:48,closed,Fix Issue #10,"Export stylesheet function includes a ""Date"" field which may contain
+different encodings depending on the locales. In some case, it may
+not been possible to load the saved stylesheet because of missmatch
+encodings (see PEP 0263). The Date field has been simplified to avoid
+any problem.
+
+Note: the ""User"" field may cause the same problem in some case.
+",0,1,[]
+60,167710,9,1324413,2011-06-01 21:49:23,2011-06-05 15:49:45,closed,text renderer: support a few more symbols,"Add support for \cdot (centered dot), \nabla, and a few more arrows.
+",1,1,[]
+61,93128,8,1324413,2011-03-15 00:43:43,2011-03-16 12:18:13,closed,Another minuit fix,"Separate hesse() errors from minos() errors -- this seems to be more useful in real usage.
+",0,1,[]
+62,89627,7,1324413,2011-03-09 22:09:57,2011-03-10 22:22:43,closed,Fix the console to scroll to the bottom when it gets new output,"a bugfix from the previous work
+",0,1,[]
+63,89624,6,1324413,2011-03-09 22:08:53,2011-03-11 06:26:00,closed,Fix the 'New' button in the data edit dialog,,1,1,[]
+64,79411,4,1324413,2011-02-23 19:16:29,2011-02-24 20:22:05,closed,Console fixes,"A fix to make sure that console output is always appended (right now, if you select some text in the consolewindow, the next output will be inserted there!) and a feature addition to make the console command history work like Matlab, which only scrolls through history items which have your entered text as a prefix
+",1,2,[]
+65,79407,3,1324413,2011-02-23 19:14:26,2011-02-24 20:14:40,closed,Minuit fixes,"A couple of minor tweaks to the Minuit fitting support.
+",0,2,[]
+66,69328,2,1324413,2011-02-08 20:42:17,2011-02-09 06:22:07,closed,fix the picker to not assert on single-item datasets,"Single-item datasets don't have enough items to establish an ordering, so pickable.py:_chooseOrderingSign() was asserting. Fix that.
+",1,1,[]
+67,68638,1,1324413,2011-02-07 22:37:41,2011-02-08 09:41:37,closed,Gitignore,"Add a basic .gitignore and a pointer to GitHub in the README.
+",0,1,[]
