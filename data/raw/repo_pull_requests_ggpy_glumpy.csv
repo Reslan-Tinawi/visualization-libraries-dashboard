@@ -1,0 +1,2050 @@
+index,id,number,repo_id,created_at,closed_at,state,title,body,total_comments,total_commits,labels
+0,651253749,676,13384593,2021-05-24 11:21:29,,open,Changes in utils and smoothers files,Removes tsilb from pandas Timestamp class as is removed from current versions.,0,1,[]
+1,621715738,675,13384593,2021-04-23 02:03:11,,open,fix(docs): Corrected typos in project documentation,Scope of changes restricted to docs,0,1,[]
+2,551109071,672,13384593,2021-01-07 14:57:55,,open,"Link to an actively developed project called ""plotnine"" which provides ggplot functionality in python.","Link to an actively developed project called ""plotnine"" which provides ggplot functionality in python.",0,1,[]
+3,368100372,669,13384593,2020-01-28 16:10:45,,open,Add a dynamic import of timestamp from pandas,"Pandas seems to have moved the timestamp import over version, see this [issue] on stack overflow (https://stackoverflow.com/questions/50591982/importerror-cannot-import-name-timestamp)
+
+Note that I had this issue separately from the SO question so it's at least somewhat widespread",0,1,[]
+4,358311151,668,13384593,2019-12-31 09:01:44,,open,fix pandas tslib error,,1,1,[]
+5,350831059,667,13384593,2019-12-09 17:20:55,,open,add scale_y_date,Adapted the template from scale_x_date function to scale the y-axis instead.,0,1,[]
+6,286478556,664,13384593,2019-06-09 15:36:05,,open,[*.py] Upgrade to latest version of pandas; Python 2/3 compatibility,"You'll also want to:
+```
+pip install statsmodels==0.10.0rc2 --pre
+```
+
+As per: https://github.com/statsmodels/statsmodels/issues/5747",6,17,[]
+7,240015698,658,13384593,2018-12-20 00:22:06,,open,Update smoothers.py,This PR resolves timestamp error due to 'pandas.lib' error.,1,1,[]
+8,220806781,656,13384593,2018-10-05 19:50:52,,open,Working copy of ggpy,"## What is this PR
+This repository seems dead and I can't be bothered to keep waiting for the repo's owner to reply us. So, I've made a fork of the repo [here](www.github.com/sushinoya/ggpy) and I intend to fix or at least try to fix whatever issues remain with the current state of ggpy.
+
+I am starting by fixing the most fundamental issue - pandas Timestamp import. I know that #643 and #647 address this.
+
+I have no hopes of this PR getting merged since none of the others have been merged or even looked at. 
+
+## Installation
+Instead of `pip3 install ggpy` use `pip3 install git+https://github.com/sushinoya/ggpy`
+
+## Contributing
+If you all don't mind, you can make PRs and issues at www.github.com/sushinoya/ggpy and we can work together towards fixing them so that at least we have a proper working copy for our projects. Let me know if you have any suggestions or a better way to deal with this.",0,18,[]
+9,201147000,650,13384593,2018-07-12 22:53:50,,open,Fixed 'make a histogram' link in README.md (issue #637),,0,1,[]
+10,200196723,649,13384593,2018-07-09 19:28:29,,open,Updated geom_text.py,"geom_text() does not draw lines any more, resolving issue #595.",0,1,[]
+11,198548019,648,13384593,2018-07-01 23:14:42,,open,Include LICENSE file in wheels,The license requires that all copies of the software include the license.  This makes sure the license is included in the wheels.  See the wheel documentation [here](https://wheel.readthedocs.io/en/stable/#including-the-license-in-the-generated-wheel-file) for more information.,0,1,[]
+12,196495105,647,13384593,2018-06-21 15:40:41,,open,fixing incompatibility with pandas>=0.20.0,"Pandas made some modules private and deprecated: https://pandas.pydata.org/pandas-docs/stable/whatsnew.html#modules-privacy-has-changed
+The moved Timestamp class is available from top-level namespace.
+
+This patch fixes #617 and #618. I have tested it with pandas back to version v0.17.0 (October 9, 2015) under Python 3.6 .
+Older versions were not tested as they do not compile on my machine out-of-the-box. Test reports with older versions are appreciated.",7,1,[]
+13,192187991,643,13384593,2018-06-02 08:49:21,,open,change to imports for pandas Timestamp module,"pandas 0.23.0
+ggplot 0.11.5
+
+changed `from pandas.lib import Timestamp` to `from pandas import Timestamp`, might break compability with old pandas.
+
+an alternative may be to do a try except....? which might look pretty bad, but I haven't really researched into how to support multiple pandas versions with different import endpoints.
+
+reference: https://stackoverflow.com/questions/50591982/importerror-cannot-import-name-timestamp",5,1,[]
+14,178427513,638,13384593,2018-03-29 20:03:23,2018-10-12 16:34:38,closed,Patch error when labeling axes,"Dirty fix for ""NameError: name 'xlabel' is not defined""",0,0,[]
+15,169032633,636,13384593,2018-02-14 06:37:47,,open,Make save_as_base64 python 3 compatible,"`six.BytesIO` is a fake file object for binary data. In Python 2, it’s an alias for StringIO.StringIO, but in Python 3, it’s an alias for io.BytesIO.",0,2,[]
+16,161654692,633,13384593,2018-01-08 15:30:22,2019-07-16 15:12:49,closed,`save_as_base64` function does not work on python 3,"I am unsure about the compatibility of this patch with python 2 but I wanted to submit it for review. This is issue #593 
+  ",1,1,[]
+17,146767375,626,13384593,2017-10-16 12:07:39,2019-01-19 14:37:06,closed,Update README,fixing not linked topics in quick start and how to sections.,0,1,[]
+18,143799967,623,13384593,2017-09-29 03:19:56,,open,Fix docs associated with hline and vline commit #622,"Old reference for vline and xline to x and y changed to xintercept and yintercept, respectively.
+
+This is related to commit #622 and issue #597.",0,2,[]
+19,143798494,622,13384593,2017-09-29 03:02:25,,open,Make geom_hline and geom_vline consistent with documentation and with R's ggplot2,"This change fixes #597 and #545, both to match the docs, and to make it more consistent with [ggplot2 ](http://www.cookbook-r.com/Graphs/Lines_(ggplot2)/)(it uses 'yintercept' and 'xintercept', which is why [some docs ](http://ggplot.yhathq.com/docs/geom_hline.html)do too), while maintaining backward compatibility with those who have used the 'x' or 'y' param, since that's all you could do to get it working previously. 
+
+Also toss a ValueError if neither x/y nor xintercept/yintercept are set when plotting (instead of ambiguous and unhelpful type comparison exception).
+
+Looks like that makes [this doc](http://yhat.github.io/ggpy/notebook.html?page=build/docs/examples/Plotting%20a%20Horizontal%20Line.html) incorrect, though. Will fix that one next.",0,1,[]
+20,140858904,621,13384593,2017-09-13 15:30:28,,open,Broken link fix,Contributors link was broken.,0,1,[]
+21,132141020,615,13384593,2017-07-24 20:45:19,,open,pandas-0.19 compatibility,"sort was completely removed from the Pandas 0.20.0
+ 
+fix issue similar to:
+https://github.com/yhat/ggpy/commit/9d00182343eccca6486beabd256e8c89fb0c59e8
+
+encounter with this issue when in python3.6, I was trying to run: 
+https://stackoverflow.com/a/37491952/4642669",0,1,[]
+22,132140689,614,13384593,2017-07-24 20:43:41,,open,pandas v0.19 sort_values compatibility (Fixes #612),"Backwards compatible fix for pandas switching to `.sort_values()` from `.sort()` after version 0.19
+
+Solves Issue #612 ",2,1,[]
+23,119213033,604,13384593,2017-05-05 16:33:39,,open,Update qplot.py,fix NameError: global name 'xlabel' is not defined,0,1,[]
+24,114988376,603,13384593,2017-04-09 14:37:38,,open,Fix broken links in README.md,Markdown-links with spaces inside () aren't interpreted as markdown links in GitHub. Replacing ' ' with '%20' fixes this problem.,0,1,[]
+25,108981599,598,13384593,2017-03-03 14:20:39,,open,geom_bar: document `weight` aesthetic,,0,1,[]
+26,107281804,596,13384593,2017-02-21 21:24:21,,open,Fix dead link to contributors list,,0,1,[]
+27,102602836,590,13384593,2017-01-22 01:14:03,,open,fixes #589,,0,3,[]
+28,100245914,581,13384593,2017-01-05 07:36:03,,open,resolves issue  #580,"1) amends `__radd__` for `geom_ribbon` so that it transfers `aes(fill=...)` to the `ggplot` class object 
+
+2) moves expression parsing from `ggplot.__init__` to `_construct_plot_data` to allow parsing of the `fill` (and possibly other aesthetics supplied in subsequent geometries).",0,2,[]
+29,99704643,577,13384593,2016-12-29 22:23:13,,open,fill aesthetics for geom_boxplot,"This PR adds `fill` aesthetics for `geom_boxplot`, e.g.:
+
+```
+ggplot(diamonds, aes(""color"", ""depth"", fill = ""cut"")) + \
+  geom_boxplot(aes(width = 0.6, spacing=0.02) )
+```",0,16,[]
+30,94950002,567,13384593,2016-11-23 06:17:14,,open,Fix fill randomly not working in geom_bar + geom_histogram,"This code randomly produces one of two graphs:
+```py
+ggplot(diamonds, aes(x='clarity', fill='cut')) + geom_bar()
+```
+
+| sometimes good | sometimes bad
+|---|---
+| ![fig-20161123t060033416866](https://cloud.githubusercontent.com/assets/627486/20552470/3b6e98a6-b100-11e6-9159-f3e966c58840.png) | ![fig-20161123t052330808668](https://cloud.githubusercontent.com/assets/627486/20552471/3e9ef53e-b100-11e6-8c33-4f9eb114f3c3.png)
+
+Problem: `geom._get_plot_args` renames keys in `mpl_params` according to `_aes_renames`, but not in a deterministic order. In particular, `geom_bar` and `geom_histogram` both include renames:
+
+- `color` -> `edgecolor`
+- `fill` -> `color`
+
+which when done in that order are fine but in the other order causes `color` to get dropped.
+
+Solution: use `OrderedDict` in `geom_bar` and `geom_histogram` to ensure that the `color` -> `edgecolor` rename happens before the `fill` -> `color` rename.",2,1,[]
+31,94488844,564,13384593,2016-11-19 17:39:12,2016-11-20 21:35:50,closed,pandas-0.19 compatibility,,0,1,[]
+32,94327331,563,13384593,2016-11-18 09:22:28,2016-11-20 21:36:02,closed,Add missing import,"Line 21 fails in the current build, as cycler has not been imported.
+This imports cycler.",0,1,[]
+33,89546272,556,13384593,2016-10-17 00:16:56,2016-11-20 21:36:14,closed,Create MANIFEST.in,"Add explicit MANIFEST so that LICENSE gets bundled in the source distribution.
+",0,1,[]
+34,84963808,541,13384593,2016-09-12 23:43:40,,open,Allow user to pass x/ytick_formatter argument to scale_x/y_continuous() for lambda function tick formatting,"Hi all,
+
+As far as I could tell, there isn't an easy way to use a lambda function to format the axis tick labels outside of setting the ggplot.x/ytick_formatter directly (please correct me if I'm wrong). I baked this into the scale_x/y_continuous classes, as this seemed to me like the most reasonable place for it. Feedback is welcome and appreciated! Thanks!
+",0,1,[]
+35,83714491,538,13384593,2016-09-01 21:59:32,2016-11-20 21:37:05,closed,Fixed stats_smooth.py to ensure that dataframes with NaN values are r…,"…endered correctly.  Proir to this fix, no fit line was drawn when using the 'lm' method.  Two lines have been added to drop NA values from a filtered version of the dataframe to ensure that all lines are drawn.
+",0,1,[]
+36,83281875,535,13384593,2016-08-30 14:28:01,2016-11-20 21:36:40,closed,Update theme_538.py,"Theme 538 missing cycler import
+",0,1,[]
+37,81966817,530,13384593,2016-08-19 11:31:54,,open,Stacked bar plots don't become narrower,"With position dodge, bar plots need their bars to become narrower to fit them all. With position stack or fill, that doesn't need to happen, but it was happening anyway.
+",0,4,[]
+38,81487299,528,13384593,2016-08-16 15:00:12,2016-08-17 13:49:39,closed,Fix bar graphs.,"It looks like 2f0afb74a3 broke them, facetgroup is no longer a defined variable (only relevant when faceting), and geom_bar.plot doesn't accept kwarg `lookup` (should be `lookups`).
+",2,2,[]
+39,80335226,524,13384593,2016-08-06 08:58:01,2016-08-12 20:36:55,closed,boxplot/errorbar/violin: sort Categorical x aesthetics,"When the x aesthetic of these geoms refers to an ordered pd.Categorical,
+they should sort according to that ordering. Previously they were simply
+ordering according to a simple sort of the values.
+
+x.drop_duplicates() might seem more natural than Series(x.unique()). But
+I did some testing, and drop_duplicates is considerably (2-10x) slower
+in most cases.
+
+(The exceptions were with non-categorical string data: they were about
+even with a lot of levels, and drop_duplicates was about 2x _faster_
+with only a small number of levels. But with non-categorical numeric
+data, or categorical numeric or string data, unique is faster.)
+",0,1,[]
+40,80315082,523,13384593,2016-08-05 22:20:11,2016-08-06 07:49:10,closed,"geoms boxplot, errorbar, violin: remove special casing in ggplot.py, and sort categorical variables",,1,3,[]
+41,79840864,518,13384593,2016-08-03 02:52:48,2016-08-03 13:55:58,closed,Fix #517: Apply limits to all facets,"Fixes https://github.com/yhat/ggplot/issues/517:
+
+``` python
+(ggplot(diamonds, aes(x='carat')) +
+    geom_histogram() +
+    ylim(low=-1000) +
+    facet_wrap(x='cut') +                 # Good: ylim applies to all facets
+    #facet_wrap(x='cut', scales='free') + # Fixed: ylim applies to all facets
+    geom_blank()
+)
+```
+
+![image](https://cloud.githubusercontent.com/assets/627486/17352325/a3050dba-58ea-11e6-8fae-3bf30e7ff268.png)
+
+``` python
+(ggplot(diamonds, aes(x='carat')) +
+    geom_histogram() +
+    ylim(low=-1000) +
+    #facet_wrap(x='cut') +               # Good: ylim applies to all facets
+    facet_wrap(x='cut', scales='free') + # Fixed: ylim applies to all facets
+    geom_blank()
+)
+```
+
+![image](https://cloud.githubusercontent.com/assets/627486/17352326/a51ff27c-58ea-11e6-9ea2-b815265af3c7.png)
+",0,1,[]
+42,79465311,514,13384593,2016-07-30 19:08:02,2016-07-30 20:51:46,closed,StringIO.StringIO() -> six.StringIO(),"py3k doesn't have StringIO, so use six.StringIO to find the right target.
+",0,1,[]
+43,79032139,511,13384593,2016-07-27 14:17:53,2016-07-31 16:18:58,closed,Enables data and mapping keywords for geoms,,0,2,[]
+44,78600014,509,13384593,2016-07-24 14:44:03,2016-07-25 00:01:31,closed,Update ggplot.py,"correct the docstrings for the ""height"" in ""def save"".
+",0,1,[]
+45,76841584,504,13384593,2016-07-09 08:14:35,2016-07-11 13:22:13,closed,Removing contrasting edges in scatter plots by default,"The matplotlib documentation for the `edgecolors` parameter of the
+`scatter` method states the following:
+
+> ""If None, defaults to (patch.edgecolor). ... If it is ‘none’, the
+> patch boundary will not be drawn.""
+
+The default value is currently `None` which makes all of the points in
+a scatter plot show a contrasting edge. This does not match the style
+of ggplot2 and has a very ""noisy"" look. This change switches the
+`edgecolors` parameter to `'none'`, which removes the edge completely
+makes the plot match ggplot2's look and also reduces visual noise in
+the graph.
+## Scatter plot before the change:
+
+![before](https://cloud.githubusercontent.com/assets/10200/16706891/8e8ea37c-458b-11e6-972b-4f24bd04e438.png)
+## Scatter plot after the change:
+
+![after](https://cloud.githubusercontent.com/assets/10200/16706892/977b016a-458b-11e6-81d5-0219b8f38c08.png)
+",2,1,[]
+46,76784749,502,13384593,2016-07-08 17:14:41,2016-07-11 14:32:21,closed,Universal wheels,"Because the source is 2/3 compatible, this cfg flag will tell `bdist_wheel` to build a universal wheel.
+
+See https://wheel.readthedocs.io/en/latest/#defining-the-python-version
+",1,1,[]
+47,76783361,501,13384593,2016-07-08 17:03:04,2016-07-11 13:22:38,closed,Python 3 compat tweaks (unicode/str/UserDict),"Fixes #500 and simplifies an explicit version check for UserDict using the magic of `six`
+",2,1,[]
+48,74094273,493,13384593,2016-06-16 14:48:52,2016-06-16 21:52:37,closed,store version only in ggplot package,"This largely reverts 5d2f1b2ebc3647cca919ef49ca5a87924a4c61ee
+
+Effects:
+- only one place to store version (ggplot 0.9.4 `__version__` reports itself as 0.9.3)
+- avoids importing ggplot in setup, which requires all dependencies,
+  which may not be installed yet when setup.py is run to determine what the dependencies are.
+",0,1,[]
+49,73653733,491,13384593,2016-06-13 22:29:34,2016-06-14 20:45:57,closed,Fix command to install from github,"... for lazy developers which copy commands without thinking
+",1,1,[]
+50,73120267,490,13384593,2016-06-08 21:05:51,2016-06-08 21:26:38,closed,"Spelling and minor formatting changes to ""intro""","Spelling and formatting fixes.
+
+Driveby fix to this very promising library.
+",0,1,[]
+51,70386469,480,13384593,2016-05-17 16:17:04,2016-05-17 20:29:24,closed,Timezone optional argument in date_format.py,"Included a new argument tz to date_format, with value None by default. 
+tz is used as tz argument for DateFormatter, and it must be an instance of datetime.tzinfo
+
+This allows to specify a timezone for the date format.
+",0,1,[]
+52,70255837,479,13384593,2016-05-16 20:28:29,2016-05-31 20:31:31,closed,Smoothers shouldn't convert x series from dates to ordinals,"Smoothers convert x-axis dates into numbers so they can do their math. Since the smoothers pass the x-series back out (in case the values have been adjusted) these changes make sure that the values are converted back if necessary before they're returned. Fixes issue #477.
+",0,1,[]
+53,65809450,474,13384593,2016-04-08 16:07:05,2016-05-31 20:31:30,closed,Use axes.prop_cycle,"`axes.color_cycle` was deprecated in matplotlib 1.5:
+
+> ### Added `axes.prop_cycle` key to rcParams
+> 
+> This is a more generic form of the now-deprecated `axes.color_cycle param`. Now, we can cycle more than just colors, but also linestyles, hatches, and just about any other artist property. Cycler notation is used for defining property cycles. Adding cyclers together will be like you are zip()-ing together two or more property cycles together:
+
+http://matplotlib.org/users/whats_new.html?highlight=prop_cycle#added-axes-prop-cycle-key-to-rcparams
+",0,1,[]
+54,62885511,472,13384593,2016-03-15 10:45:15,2016-05-31 20:31:30,closed,legend-functionality for facet-grid,"I have improved the legend-function to provide a legend for the facet-grid. It can be chosen whether the legend should be above or at the side of the drawing.
+",0,3,[]
+55,51746158,462,13384593,2015-11-25 02:42:24,2016-05-31 20:31:30,closed,fix issue with patsy compatibility,"This uses the newer Patsy API, and requires its use for in setup.py.
+",2,1,[]
+56,46471359,454,13384593,2015-09-30 23:50:13,2016-05-31 20:31:30,closed,Update contributing.rst,"Minor spelling and grammar corrections to the contributions doc. No changes were made to the meaning, only corrected plural/singular forms and a couple of items that were obviously typos. (This was less about the need for these changes to happen, and more about my getting comfortable with becoming a new contributor to ggplot!)
+",0,1,[]
+57,46032924,453,13384593,2015-09-25 16:46:10,2016-05-31 20:31:30,closed,"Use ""is"" instead of  ""=="" for numpy array comparison","numpy will be using ""=="" for elementwise comparisons in the future for numpy arrays. As as a consequence the following warning pops up when creating a plot with this class:
+
+FutureWarning: comparison to `None` will result in an elementwise object comparison in the future.
+
+Changing ""=="" to ""is"" for this case.
+",2,1,[]
+58,43728865,451,13384593,2015-08-31 03:19:09,2016-05-31 20:31:30,closed,making figure an attribute of the class,"I believe this modification can make easy to access to the matplotlib figurecanvas when embeding different figures in an app is required. http://matplotlib.org/examples/user_interfaces/embedding_in_gtk3.html .
+
+p = ggplot(mtcars, aes('cyl'))
+p.draw()
+print(""figurecanvas"", p.figure.canvas)
+
+p.figure.canvas can be added as a widget depending on the backend being used.
+",0,1,[]
+59,42632336,446,13384593,2015-08-17 20:48:22,2016-05-31 20:31:30,closed,Remove unused code from smoothers,"I was looking at the code to generate smoothed confidence intervals and realized that one line was just dead code that was not removed from a previous update.
+",1,1,[]
+60,40119145,440,13384593,2015-07-16 11:25:49,2015-08-20 13:39:50,closed,Fixed tests code and bug #428,"Refreshed the base images to support new version of pandas and fixed the bug causing the error message:
+
+```
+TypeError: pivot_table() got an unexpected keyword argument 'rows'
+```
+
+This error was mentioned in issue #428 and #430 
+#434 has similar fix, but in addition to that, I have also added some code to get Travis CI to pass.
+",0,3,[]
+61,40107450,439,13384593,2015-07-16 08:55:17,2015-07-16 11:22:48,closed,Fix: Changed statbin2d to use index instead of rows to fix #434,"In addition to the fix by @roblevy I also changed statbin2d to use index option instead of rows.
+",0,3,[]
+62,39228543,436,13384593,2015-07-05 23:11:00,2016-05-31 20:31:30,closed,Fix readme for PyPI,"Pandoc doesn't generate valid RST files. You have to hand author them
+",1,1,[]
+63,37707683,434,13384593,2015-06-15 16:04:30,2016-05-31 20:31:30,closed,Changed pd.pivot_table call to use index keyword,"This is a (very very easy) fix for [Issue 428](https://github.com/yhat/ggplot/issues/428) which states that the pandas API has changed.
+
+But it's just the name of the keyword command which has changed from `rows` to `index` for consistency with the `pivot()` function.
+",1,1,[]
+64,37422218,433,13384593,2015-06-11 01:46:24,2015-06-11 14:12:41,closed,Fix y axis tick labels for boxplot,"A small fix for y axis tick labels. The original code set `yticklabels` before making `boxplot`, in which case `boxplot` will override the ticks to `1,2,3,...`.
+",0,1,[]
+65,35748042,430,13384593,2015-05-19 16:17:51,2016-05-31 20:31:30,closed,Issue #428 - Pandas API has changed,"Fixes Issue #428.  As of about Pandas 16.0, the API for pivot_tables has changed.  The keyword arguments 'rows' and 'cols' have changed to 'index' and 'columns'
+",0,1,[]
+66,31279857,413,13384593,2015-03-16 20:12:12,2016-05-31 20:31:30,closed,fix legend not being displayed due to wrong axes reference,"Over here legend was not being displayed. Debugging the behaviour showed me, that the references to the axes seemed to be different. The legend box was added correctly to the `ax` object in the `if self.legend:` block, but the `ax = axs[0][self.n_rows - 1]` object seemed to be different from the `for ax in plt.gcf().axes` references (both `plt.gcf().axes` and `axs` had only one element).
+
+One was printed as `Axes(0.125,0.1;0.62x0.8)`, the other was printed as `Axes(0.125,0.1;0.775x0.8)`. So the reference seemed to be different, the legend was added to the wrong element.
+
+The line replacement from the pull request works on my PC (but I do not know if it has any side effects on other visualizations!).
+",0,1,[]
+67,30886644,412,13384593,2015-03-10 19:59:54,2016-05-31 20:31:30,closed,Update ggplot.py,"Changed six import to improve 2to3 compatibility.
+",0,1,[]
+68,30003359,409,13384593,2015-02-25 16:45:11,2016-05-31 20:31:30,closed,pad histogram. see issue #404,"This pads the histogram with extra bins. The patch is only for the numeric case with binwidth set.
+",2,1,[]
+69,28550453,405,13384593,2015-02-03 13:05:13,2016-05-31 20:31:29,closed,add husl requirement,,4,1,[]
+70,28144792,403,13384593,2015-01-27 21:12:21,2015-01-27 22:01:10,closed,typo fix,,1,1,[]
+71,24969502,390,13384593,2014-11-24 22:30:10,2016-05-31 20:31:29,closed,Fixed bug causing legends to print first 3 items only,"When using scale_colour_brewer legends would consists only of the first
+3 items because of the evaluation order of a python get statement.
+
+The code `a.get('color', a['fill'])` would throw a `KeyError`
+when the key `fill` wasn't present even when `color` was present and
+there wasn't any reason to evaluate the second argument of `get` per se.
+
+I'm to blame for this bug myself.
+",0,1,[]
+72,23723884,384,13384593,2014-11-01 20:40:31,2014-11-02 18:26:44,closed, Fixed issue for data frames with no 0 index,"Saving a dataframe with no 0-indices results in a KeyError. This is
+because calling `[0]` on a dataframe doesn't return the first row but instead
+the row assigned to 0-index. If no 0-index exists then using `[0]`
+throws a `KeyError`. For example:
+
+``` python
+df = pd.DataFrame({ 999 : { ""test"": 0 }})
+df[0] # Results in KeyError
+df.iloc[0] # Returns the proper line with index 999
+```
+
+The usage of `[0]` has been changed to `.iloc[0]` to fix this issue.
+",1,3,[]
+73,23134579,380,13384593,2014-10-22 04:31:25,2014-11-22 12:28:10,closed,Fix for #376. ,"The axis handles that the legend script uses are made old if no facets are used. This change updates the axs variable to point to the new axis handles.
+",0,1,[]
+74,22586131,378,13384593,2014-10-10 20:24:34,2014-11-22 12:28:29,closed,Implemented a baseline geom_tile.,"This was made to address #301 by adding some basic capability.
+It doesn't completely address #293 since I was lazy and didn't
+write any unit tests. :-)
+
+The tile geom now creates a tiled geom similar to R ggplot2 with
+some caveats:
+- If you add the fill parameter to the ggplot aes wrapper, ggplot
+  will arbitrarily map colors without taking into account ordering
+  of the fill values, which can't (as far as I know) be stopped
+  by the geom coming down the pipe. If sent this way, the geom gets
+  the already mapped fill values and is unable to recover their
+  numeric values to make a heat map image, so all geom_tile plots
+  drawn like this are deemed 'categorical'.
+- If you add the fill parameter to geom_tile's aes wrapper, the
+  actuall fill values are sent, so geom_tile can use them to make
+  a heatmap. This is the only way to do that.
+- If you want to set the color range for a heat map, you have to
+  do it before sending the geom.
+
+So as far as useability is concerned:
+- If you want to tile categorical data, you must put the fill in
+  the ggplot aes.
+- If you want to make a heat map, you must put the fill in the
+  geom aes.
+- For heat maps, send color gradients before the geom.
+
+(Technically one can get around the first restriction by duplicating
+code in the geom, but I chose to issue an Exception instead to avoid
+duplicating code).
+
+Some examples of use:
+
+```
+# For categorical data, put in the ggplot aes wrapper.
+ggplot(aes(x='x', y='y', fill='fill'), data=df) + geom_tile()
+
+# For a heat map, put in geom aes wrapper.
+ggplot(aes(x='x', y='y'), data=df) + geom_tile(aes(fill='fill'))
+
+# If fill is sent in both wrappers, a categorical view will be
+# chosen.
+
+# Send color gradients for the heat map first.
+ggplot(aes(x='x', y='y'), data=df) + scale_color_gradient(low='blue', mid='white', high='red') + geom_tile(aes(fill='fill'))
+```
+",5,1,[]
+75,22060907,374,13384593,2014-10-01 09:29:47,2014-11-22 12:28:41,closed,Fix for py 3,"py 3 install gives an error on import:
+
+```
+/usr/local/lib/python3.4/dist-packages/ggplot/components/palettes.py in <module>()
+      9 from six.moves import range
+     10 
+---> 11 import husl
+     12 from .xkcd_rgb import xkcd_rgb
+     13 
+
+
+ImportError: No module named 'husl'
+```
+",2,1,[]
+76,21590279,371,13384593,2014-09-22 16:12:15,2014-10-20 14:08:48,closed,allow 'python setup.py sdist bdist_wheel',"add missing file to get an universal  .whl package on pypi
+",0,1,[]
+77,21381475,369,13384593,2014-09-17 17:14:06,2014-11-22 12:29:00,closed,Fixed compatibility with python 3.x,"Python 3.x will not load the husl module unless it is specified that its location is relative to the palettes.py file.
+",0,1,[]
+78,20282029,365,13384593,2014-08-26 00:47:36,2014-09-09 03:16:12,closed,Overlapping legend boxes fix,"I humbly offer a one-line fix.
+
+I came across a small bug today with overlapping legend boxes. It turns out that when a new column is needed for the legend boxes, the running count of legend rows is erroneously reset to zero.
+
+If there is sufficient room below the last created legend and if the last created legend was put on a new column, the running sum of rows would be set to zero and the next legend would be placed on the top of the column instead of below the last created legend.
+
+![before](https://cloud.githubusercontent.com/assets/2652029/4038562/9a953bb6-2cb7-11e4-914c-54b654f1b34f.png)
+
+(The script used to generate these plots can be found at https://gist.github.com/KelvinLu/eb48e9b0e147953d455c)
+
+Changing the one line results in:
+
+![after](https://cloud.githubusercontent.com/assets/2652029/4038561/9a95027c-2cb7-11e4-8ef8-cabcc84cfa99.png)
+
+tests.py encountered one error about not being able to find a new dotplot geom module, which I don't believe is about this issue. All the images looked OK in my spot check of the results.
+
+![capture](https://cloud.githubusercontent.com/assets/2652029/4038700/7f75a778-2cba-11e4-80fa-98455811480c.PNG)
+",2,1,[]
+79,19895364,360,13384593,2014-08-18 00:40:51,2016-05-31 20:31:29,closed,WIP: Monolithic Rewrite,"Covers #283 and touches on stuff discussed in #259 and #221.
+
+This is a complete rewrite of ~~the plotting pipeline~~ nearly everything so as to not to violate the [layered-grammar](http://vita.had.co.nz/papers/layered-grammar.pdf). As such there is a close adherence to the ggplot2 ~~plot building pipeline~~ code base.
+
+It is far from being done, the following need to be addressed:
+- [x] scale transformations e.g. `log10, sqrt` (concerns in #283)
+- [x] matplotlib subplotting stuff
+- [x] Legend
+- [x] Rebase and apply changes
+- [ ] Theme all elements of the plot
+- [ ] Fix qplot
+- [ ] Replace test infrastructure with newest from MPL. (At present it is acting up)
+- [x] Get it working with Python 3
+- [ ] Comprehensive tests
+- [ ] Code profiling
+- [ ] pep8
+
+**Testing and Contributing**
+- Install the rewrite branch, `pip install git+https://github.com/has2k1/ggplot.git@rewrite`
+- Please report issues at https://github.com/has2k1/ggplot/issues and pull requests at https://github.com/has2k1/ggplot/pulls
+- Thanks
+",28,79,[]
+80,19575257,358,13384593,2014-08-10 17:18:37,2014-08-10 17:35:34,closed,"Date histograms, better colors",,0,10,[]
+81,18713479,348,13384593,2014-07-22 13:30:38,2014-07-22 13:44:17,closed,Stat summary,"Hi,
+
+I implemented the stat `stat_summary` (http://docs.ggplot2.org/current/stat_summary.html). I also implemented the default functions that are provided in R, i.e. `mean_cl_boot`, `mean_cl_normal`, `mean_sdl`, `median_hilow` and `mean_se`. As the syntax `fun.data = 'mean_cl_boot'` is not valid in python, I changed it to `fun_data = ...`.
+
+Besides these predefined functions that can be given as string, one can provide arbitrary functions that take a series and return a series containing `y`, `ymin` and `ymax` (for `fun_data`) resp. a scalar (for `fun_y`, `fun_ymin` and `fun_ymax`). Examples are provided in the docstring.
+
+At the moment, these functions `mean_cl_boot` etc. are implemented in `ggplot/stats/stat_summary.py`. Probably it is a good idea to move them somewhere else to make them available easier in case one wants to change the default parameters. But I am not sure where the right place for them would be. I will add tests for these functions too, as soon as they are at their final place. For stat_summary, I already wrote tests.
+### Example
+
+```
+from ggplot import *
+ggplot(aes=(x='cut', y='carat'), data=diamonds) + stat_summary(fun_data = 'mean_cl_boot')
+```
+
+![default](https://cloud.githubusercontent.com/assets/4093707/3658465/e1ec74ae-11a3-11e4-82b2-61561b3a2a38.png)
+",1,8,[]
+82,18620468,344,13384593,2014-07-19 12:50:07,2014-07-20 10:04:17,closed,Fixes...,"Passing in a numpy array instead of a list fails checks like `if values:`
+as numpy arrays raise an Exception: ""ValueError: The truth value of an
+array with more than one element is ambiguous. Use a.any() or a.all()""
+
+Not sure if I got all instances...
+
+Closes: #333 
+
+Also reexport all scales (scale_x_discrete was missing and some color/colour variants).
+",4,4,[]
+83,18545413,343,13384593,2014-07-17 18:26:33,2014-07-17 21:30:15,closed,Dotplot,,2,15,[]
+84,18110539,339,13384593,2014-07-08 15:50:13,2014-07-17 17:01:36,closed,Geom pointrange,"Hi,
+
+I implemented the geoms geom_linerange and geom_pointrange which are needed for stat_summary (which I already started to implement). I hope my implementation is okay, I will be happy to change everything that you wish.
+
+At the moment, geom_linerange and geom_pointrange are implemented independent. That is not as elegant as it could be, as geom_pointrange is essentially just geom_point+geom_line. However, I am not sure how I could implement it this way. Any advice would be appreciated.
+### Example
+
+![test](https://cloud.githubusercontent.com/assets/4093707/3512173/b96855ea-06b6-11e4-83f0-1a381813ff55.png)
+",9,12,[]
+85,17867212,336,13384593,2014-07-02 04:14:06,2014-07-09 20:53:36,closed,Fixing a typo in the exception message. Fixes #335,"Fixing a small typo in the exception message. 
+
+Note: I forgot to create a bugfix branch .. is it ok to commit directly on master for such a small thing?
+
+Ref: https://github.com/yhat/ggplot/issues/335#issuecomment-47712170
+",0,1,[]
+86,17140662,327,13384593,2014-06-14 06:03:28,2014-06-26 18:54:57,closed,Legend rework,"## Rework of legend
+
+As shown in yhat#304 and yhat#89 the current legend is drawn once per aesthetic (outside of x and y). This behaviour creates duplicate information when we use for example color and fill along the
+same variable.
+
+I've reworked the legend to group information per variable and display for example one line showing both shape, color and alpha information. The reworked legend also address: yhat#273.
+### New Features
+- Group legend information per variable
+- Implement alpha
+- Better position legend (The vertical position was centered according to the top of the frame before)
+- Fixed issue with legend overlapping
+- Fixed problem with legend inventing numeric values. For numeric columns with less than 5 unique values, the current legend would interpolate them to write 5 continuous values
+### Things that don't work
+- No custom rearrangement (say, making swapping line 1 and 2 in the legend)
+- Legend might be longer than plot. Currently it breaks in to two columns, but if the plot is drawn smaller then I can't see a way to adjust the legend to this behaviour
+### Changes
+- I've personally had the problem that the legend would interpolate between numeric values even when there were less than 5 unique values  in the data. I've changed this behaviour so the legend puts a label  for every value when there are less than 8. Currently the color scheme in this case is discrete, but I'm not convinced this is the best solution. I generally think distinguishing between discrete and continuous data types makes sense, but for some continuous cases we might want to use the set of values that are present in the data instead of interpolating. I'm unsure whether the way I've changed this is the right way to do it, so I welcome comments on this matter.
+- For the labels to be consistent across groups I had to make sure they were calculated in one place instead of across different files (`components/colors.py`, `components/alphas.py`, `components/sizes.py` etc) as it's currently done. To do so I've added a function called `get_labels` to `components/legend.py` and call it from the respective files. I think this counts as a work around and potentially a refactoring of the codebase would eliminate the need for a `get_labels` function, but currently I don't see any other obvious way of doing it.
+### Examples
+
+![legend_alpha](https://cloud.githubusercontent.com/assets/1090038/3277679/76dfd8d2-f389-11e3-9eb4-6777a32672ad.png)
+![legend_alpha_rect](https://cloud.githubusercontent.com/assets/1090038/3277680/76e0e3a8-f389-11e3-9f15-f4e650842722.png)
+![legend_linetype](https://cloud.githubusercontent.com/assets/1090038/3277678/76df5998-f389-11e3-9a71-a2ee90baa058.png)
+",2,3,[]
+87,17094082,326,13384593,2014-06-13 05:56:41,2014-06-26 18:55:43,closed,Fix issue with color brewer,"Whenever we don't have a color specified or use 'fill' but not color,
+colorbrewer will throw an exception because it can't figure out how many
+colors we are using. Particularly for the case of 'fill' this is a
+problem since bar plots for example often will specify 'fill' without
+specifying 'color'.
+
+Now color brewer checks for 'fill' as well and if it finds neither
+'fill' nor color it just asks for 3 colors from the color theme (any
+less will cause an exception).
+",1,1,[]
+88,17053153,325,13384593,2014-06-12 12:59:53,2014-06-26 18:56:32,closed,Reworked bar plot,"## Rework of bar plot
+
+I realize that @EricChiang just added another pull request for something similar here: https://github.com/yhat/ggplot/pull/324 so in light of that I'm putting this up here so that we might merge the two. The differences as I can see between the two patches are:
+- Eric's add position=""dodge"" (mine doesn't)
+- Mine fix problem with bar plots and facets and add custom label order
+### It is now possible to:
+- Stack bars of different colors. In fact this is the default behaviour
+  when a color of fill is specified (like R's ggplot)
+- Reorder columns in a bar plot by adding a label parameter as so:
+  geom_bar(labels=[""blip"",""blop"",""dyt"",""båt""]) as discussed here:
+  https://github.com/yhat/ggplot/issues/315
+- Show only a select few of the columns (as above, just don't include
+  all possible x-values)
+- Use bar plots when faceting (although faceting overwrites the
+  x-labels for some reason: https://github.com/yhat/ggplot/issues/319)
+  This addresses https://github.com/yhat/ggplot/issues/196
+### In order to do this I had to make a few changes.
+- Most importantly I added a method '_calculate_global' to stats.py. It
+  is not required to implement it in subclasses but for stat_bin it
+  makes it possible to read in all labels ahead of time and then when we
+  are processing separate groups fill the labels not represented with
+  0's.
+- I added a new stat class 'stat_bar' which for simple x/y bar plots
+  (not histograms) take advantage of '_calculate_global' to deliver
+  consistent bar plots when using facets or when stacking colors
+- I changed geom_bar to use stat_bar per default and geom_histogram to
+  use stat_bin. This differentiates the bar plot and the histogram in a
+  way that makes intuitive sense (I would think at least)
+- I disabled sorting the x-axis by default to preserve user specified
+  label orders. As far as I can see only geom_area needs the x-axis to
+  be ordered. I've added code to sort the x-axis inside geom_area.
+
+Examples
+![facet_colors](https://cloud.githubusercontent.com/assets/1090038/3257734/9b69bf06-f230-11e3-91cc-3d4f91761a0f.png)
+
+``` python
+    gg = ggplot(diamonds, aes(x = 'clarity', fill = 'cut', color='cut')) +\
+            stat_bin(binwidth=1200) + facet_wrap(""color"")
+```
+
+![labels_manual](https://cloud.githubusercontent.com/assets/1090038/3257744/afc31ccc-f230-11e3-925c-33ec06cce9ae.png)
+
+``` python
+    df = pd.DataFrame({ ""y"" : [3.362, 1.2, 3.424, 2.574, 0.679],
+                        ""x"" : [""BF"",""BF"",""Flann"",""FastMatch"",""FastMatch2""],
+                        ""c"" : [""a"", ""b"", ""a"", ""a"",""a""]})
+    p = ggplot(df, aes(x = 'x', y = 'y', fill=""c""))
+    gg2 = p + geom_bar(stat=""bar"", labels=[""BF"",""Flann"",""FastMatch""])
+```
+
+![faceting_grid_discrete](https://cloud.githubusercontent.com/assets/1090038/3257764/fef401e4-f230-11e3-856b-205c9d74acfd.png)
+
+``` python
+    df = pd.DataFrame({
+        ""x"": np.arange(0, 10),
+        ""y"": np.arange(0, 10),
+        ""z"": np.arange(0, 10),
+        ""a"": [1,1,1,1,1,2,2,2,3,3],
+        ""b"": [""a"",""a"",""a"",""a"",""a"",""b"",""b"",""b"",""c"",""c""]
+    })
+    df['facets'] = np.where(df.x > 4, 'over', 'under')
+    df['facets2'] = np.where((df.x % 2) == 0, 'even', 'uneven')
+    df = _build_testing_df()
+    gg = ggplot(aes(x='a', y='y', fill='y'), data=df)
+```
+
+(from https://github.com/yhat/ggplot/issues/196 but modified to show color)
+",16,5,[]
+89,17028688,324,13384593,2014-06-11 22:42:39,2014-06-26 18:57:03,closed,multi bar plots added,"Multibar graphs added
+## NOT READY TO PULL
+
+Still need to add docs and tests, but wanted to share this for code review.
+
+```
+from ggplot import *
+ggplot(diamonds,aes(""clarity"",fill=""cut"")) + geom_bar()
+```
+
+![multibar](https://cloud.githubusercontent.com/assets/2342749/3251965/800f0ef4-f1b9-11e3-8d0a-1c2190b532ce.png)
+
+```
+from ggplot import *
+ggplot(diamonds,aes(""clarity"",fill=""cut"")) + geom_bar(position=""dodge"")
+```
+
+![multibar_dodge](https://cloud.githubusercontent.com/assets/2342749/3251970/988be0ce-f1b9-11e3-84b6-15f32bdf38d4.png)
+",2,1,[]
+90,16413192,313,13384593,2014-05-28 07:47:04,2014-05-28 11:56:23,closed,Fixed issue with partial xlim or ylim and facets,"Because the earlier submitted patch was using plt.xlim() to get length
+of the auto adjusted axes length, all axes in a facets plot would end up
+with the same upper limit when setting only the lower limit and vice
+versa. The same is was true for the y-limit.
+",3,2,[]
+91,16359314,311,13384593,2014-05-27 08:22:37,2014-05-27 09:29:13,closed,Limits,"I've added partial axis limits to xlim and ylim geoms
+
+if 'g' is a plot, then we can specify partial limits as:
+- g + xlim(0) # For a lower x limit of 0
+- g + ylim(high = 4) # for a higher y limit of 0
+- g + xlim(None, 42) # for a higher x limit of 42
+- g + ylim(low = 2) # for a lower y limit of 2
+
+The unspecified limit is set as it would have been in a plot without explicit limits added. I.e if 'g' is plotted without setting xlimits and the plot range from 0 to 6, then plotting 'g + xlim(low = 4)' would adjust the xlimits to 4 to 6
+
+I've included a test case covering this addition.
+
+I've tried to follow the git part of the [contribute guide](https://github.com/yhat/ggplot/blob/master/docs/contributing.rst) to the best of my abilities, but if I've fallen short on some aspects, just let me know and I'll do my best to modify things.
+
+Jonas
+",1,2,[]
+92,16106503,305,13384593,2014-05-20 13:27:18,2014-05-20 13:38:23,closed,Update README.md,"Link for contributing document has been fixed.
+",0,1,[]
+93,15480502,299,13384593,2014-05-05 05:37:53,2014-05-05 13:39:23,closed,add boxplot support,"Basic support for boxplots
+
+In theory this resolves #253
+",1,1,[]
+94,15480410,298,13384593,2014-05-05 05:29:37,2014-05-05 05:35:21,closed,add boxplot support #253,"Basic support for boxplots
+
+In theory this resolves #253
+",0,1,[]
+95,15184716,287,13384593,2014-04-25 18:47:54,2014-04-25 18:50:20,closed,geom_abline fixed,"ab_line was broken
+
+this is a simple fix so it now works with basic lines. `data` param not supported
+",1,1,[]
+96,15015639,282,13384593,2014-04-22 14:29:15,2014-04-22 16:24:06,closed,Adding binwidth to parameter list,"Otherwise calling geom_histogram(binwidth=something) raises ""Exception: Cannot recognize argument: binwidth""
+",0,2,[]
+97,14947295,280,13384593,2014-04-19 21:27:05,2014-04-23 19:11:01,closed,Updated geom_hist() with geom_histogram(),"I was going over the site and geom_hist() wasn't working and i found out that it's now called geom_histogram
+",2,1,[]
+98,14722965,277,13384593,2014-04-14 15:08:12,2014-04-14 15:25:38,closed,fix imports and namespaces in qplot,"- Move tests from wrong directory
+- Faulty identification of geom_bar ""fixed"" by removing the
+  guess and the test, after-all geom_bar is the same as
+  geom_histogram and the current difference will be fixed in
+  an upcoming commit (PR #266)
+",0,1,[]
+99,14545785,271,13384593,2014-04-09 11:13:14,2014-04-11 18:14:39,closed,Change legend and handle fill and alpha mapping,"- legends nolonger added to ggplot object
+- fill aesthetic mapping implemented
+- alpha aesthetic mapping implemented
+- moved legend code from ggplot.py to legend.py
+- ':::*_mapping:::' hack to avoid collisions
+
+closes #270
+",2,1,[]
+100,14482764,268,13384593,2014-04-08 04:18:15,2014-04-08 10:04:14,closed,fix imports in geom files,"Removing unused imports, adding the token from **future** imports and some slight syntax fixes.
+",4,1,[]
+101,14482273,267,13384593,2014-04-08 03:47:42,2014-04-08 12:57:57,closed,fix typo in word Exception,"This is a really minor change fixing a spelling mistake.
+",5,1,[]
+102,14480581,266,13384593,2014-04-08 02:13:53,2014-04-30 07:48:37,closed, WIP: Refactor layers like ggplot2 [No. 2],"This is a continuation of #252.
+
+There is still some relevant discussion that happened at #221 that will guide the direction.
+
+This PR is a work in progress. Some comments will include highlights of the status, the immediate direction and maybe a desired objective outcome.
+",18,16,[]
+103,14436393,265,13384593,2014-04-07 08:05:38,2016-05-31 20:31:29,closed,Unicode Legend Labels,,2,2,[]
+104,14412641,264,13384593,2014-04-05 05:45:43,2014-04-05 14:13:17,closed,Update scale_y_continuous.py,"Parameter 'labels' can be used to manually designate labels in R.
+",0,1,[]
+105,14228636,261,13384593,2014-04-01 14:09:18,2016-05-31 20:31:29,closed, WIP: Documentation,"I wasn't really sure how to format the dictionary. All informations are inside file as comments.
+
+Things needs to be figured out:
+- There is problem with adding default values (they vary somewhere), e.g geom_rect has default 'color': '#333333 and geom_abline 'color': 'black'
+- Some of the parameters can be required in some geom but are optional for others. Numpy documentation standard doesn't notice adding bold font to required parameters to higlight them.
+
+I have some time now, so don't hesitate to ask for next help. 
+
+P.S This is my first commit/PR ever, so thank you for your patience and let me know if I do something wrong.
+",8,3,[]
+106,14094029,258,13384593,2014-03-28 03:33:53,2014-03-30 16:51:52,closed,Add checks to chart components on init.,"Check for components that should never be None and check for components that should be of a numeric type. I figure it makes more sense to throw the error early. This is in response to https://github.com/yhat/ggplot/issues/255
+",2,1,[]
+107,14035649,256,13384593,2014-03-26 23:27:43,2014-03-27 12:38:01,closed,Add more granular date breaks,"Expose support for minute & hour locators
+",0,1,[]
+108,13989318,254,13384593,2014-03-26 04:12:13,2014-03-27 12:37:31,closed,Treat bool columns as discrete values for coloring,"This is a fix for https://github.com/yhat/ggplot/issues/244. Ran the tests, they all passed. Ran the code snippet in the issue and the fix seems to work.
+",6,1,[]
+109,13847312,252,13384593,2014-03-21 17:38:52,2014-03-31 16:28:20,closed,WIP: Refactor layers like ggplot2,"Related to:
+- issue #221
+- issue #160
+
+Sharing code with
+- PR #235
+
+This PR is a work in progress, its direction is discussed at #221.
+",10,8,[]
+110,13463983,246,13384593,2014-03-12 10:38:34,2014-03-21 17:41:04,closed,Geom improvements,"This PR addresses the first 3 points of issue #175.
+
+In the case that I may have to rebase on top of master, here are the commit messages that summarize what has happened.
+
+---
+
+**_commit 1:  AESTHETICS lists as sets_**
+
+**Issue**
+AESTHETICS variables in ggplot and the geoms are
+declared as lists.
+
+**Problem**
+The AESTHETICS variables are also used as tables for
+lookup. This leads to unnecessary list travesal, an
+O(n) operation.
+
+**Solution**
+Use sets.
+
+**Fix tests**
+
+Fix `stat_bin2d` test
+
+Previous test depended on the generated layer order generated
+by `ggplot._get_layers()`.
+
+---
+
+**_commit2: Rename geom_xxx.plot_layer & create geom.plot_layer_**
+
+Go through the geom base class, and do the
+common preprocessing steps. Reduces code duplication
+througout the geoms.
+
+---
+
+**_commit3: Better geom arguments and try to match ggplot2 api_**
+
+**What happened**
+- Try to match ggplot2 api using `VALID_AES`, `REQUIRED_AES`
+  and `PARAMS` geom class variables.
+- Introduce `geom.params` to hold the none aesthetic
+  geom parameters
+- Introduce `TRANSLATIONS` geom class variable to help
+  automate the renaming between ggplot2 API aesthetics
+  names and matplotlib plotting arguments.
+- Strip duplicate code from the geoms and remove
+  unused imports
+- Fix up a few tests to match the changes.
+
+---
+",7,6,[]
+111,13359589,242,13384593,2014-03-10 05:46:43,2014-03-11 14:23:46,closed,Add documentation for scale_colour_gradient,"Not sure about the docs for the `name` or the `limits` parameters...
+",1,1,[]
+112,13189106,235,13384593,2014-03-04 23:47:02,2014-03-31 16:47:45,closed,WIP: Pyplot refactoring,"This is a branch which will implement the refactoring planned in https://github.com/yhat/ggplot/issues/160#issuecomment-35838994
+
+It also holds two fixes for problems mentioned in #47
+
+This is WIP, please do not pull :-) (or only cherry pick the two fixes)
+",11,3,[]
+113,13128261,234,13384593,2014-03-03 19:18:22,2014-03-03 19:50:32,closed,Fix: py3 unfriendly imports in qplot,"**Issue**
+Python 3 tests fails at
+
+`from ggplot import xlab as xlabel`
+
+in qplot.py
+
+**Problem**
+xlab is imported into ggplot as a `*`. This is not
+an explicit import and python 3 does not like it.
+
+**Solution**
+Change the import statements to import xlab and ylab
+from where they are explicitly defined
+",0,1,[]
+114,13103051,232,13384593,2014-03-03 07:20:54,2014-08-19 06:15:37,closed,Bugfix: Apply visual mapping for geom aesthetics,"**Issue**
+
+Aesthetics `aes` for colors, shapes, size and linestyles
+applied to geoms lead to an error.
+
+This code fails.
+
+``` python
+N = 25
+df = pd.DataFrame(np.random.rand(N, 2), columns=list('xy'))
+df['area'] = np.random.rand(N) * 100
+
+(ggplot(df, aes('x', 'y', size='area')) +
+ geom_point(aes(alpha=0.8)))
+```
+
+**Problem**
+The line of code that assigns visual aesthetics is
+in the wrong place.
+
+**Solution**
+Move the line of code so that it also applies to
+geom aesthetics.
+",4,1,[]
+115,13096732,231,13384593,2014-03-02 22:49:04,2014-06-03 11:45:40,closed,geom_bar expanded,"Attempting to recreate more of the [ggplot2 geom_bar()](http://docs.ggplot2.org/0.9.3.1/geom_bar.html) functionality
+
+Multicolor bar graphs expanded:
+`ggplot(mtcars,aes(x='cyl',fill='factor(cyl)')) + geom_bar()`
+
+![bar_factor](https://f.cloud.github.com/assets/2342749/2305544/cdfef9ec-a25b-11e3-956d-0c96afb79ecb.png)
+
+Stacked bar graphs:
+`ggplot(diamonds, aes(x='clarity',fill='cut')) + geom_bar()`
+
+![stacked_bar](https://f.cloud.github.com/assets/2342749/2305547/149d2e50-a25c-11e3-9656-f25e42b91852.png)
+
+Side by side bar graphs:
+`ggplot(diamonds, aes(x='clarity',fill='cut')) + geom_bar(position='dodge')`
+
+![dodge_bar](https://f.cloud.github.com/assets/2342749/2305546/02a92992-a25c-11e3-83ed-5c429f3c365b.png)
+
+Also, added 'count' to ylab by default:
+
+`ggplot(diamonds,aes(x='color')) + geom_bar()`
+
+![bar_count](https://f.cloud.github.com/assets/2342749/2305549/4f5f7a52-a25c-11e3-94ff-94cc54d3e46d.png)
+
+**ISSUES**:
+
+How do I make the legend appear correctly? The code all seems to be part of `ggplot.py`. Right now I'm hacking by returning the callback `{""function"": ""legend"",""args"":[]}`, but there must be a better way of doing this.
+
+Is there a better way to get a color cycle? Right now I'm hard coding the thing.
+",6,2,[]
+116,13085057,230,13384593,2014-03-01 18:42:57,2014-03-03 21:07:24,closed,"Fix leaky ""from ggplot import *""","## Issue
+
+`from ggplot import *`
+brings in module level global variables
+## Problem
+1. `__ALL__` is ignored by the \* import
+   2.
+   `from __future__ import unicode_literals`
+   makes all strings default to unicode. Therefore
+   variable names in `__ALL__` are unicode. But
+   python 2 variable names are not unicode
+## Solution
+
+1.`__all__` instead of `__ALL__`
+2. Encode strings in `__all__` as ascii
+## References
+1. Commit 0cedbacf6917c2ccd0cc81be2100cc747706984e
+2. Github Issue #207
+3. http://stackoverflow.com/questions/19913653/no-unicode-in-all-for-a-packages-init
+",8,1,[]
+117,13084530,229,13384593,2014-03-01 17:34:20,2014-03-01 22:40:50,closed,Module leaks fixed,"In response to issue #207 import statements have been restricted to prevent ""leaking"" of: `np, pd, sys, os, re, plt`
+",0,1,[]
+118,13048717,228,13384593,2014-02-28 12:28:18,2014-02-28 16:11:03,closed,"Various fixes, especially getting the tests running again","This branch includes various fixes for small things
+- get travis tests to pass
+- cherrypick python2.6 fixes (no tests as conda seems to not have a matplotlib packages for that python version)
+- small new features: only print warnings once per object and remove six (installed via matplotlib!) 
+",2,6,[]
+119,12837874,222,13384593,2014-02-24 00:58:23,2014-04-28 15:49:02,closed,Add element_text with ability to add theme to axis.title.x,"First pass at issue Label rotation #93. All keywords except lineheight seem to be working.
+
+```
+ggplot(df, aes('factor(approved_type_of_work)')) +\
+       geom_bar() +\
+           theme(axis_title_x=element_text(angle=45,
+                                           hjust=1,
+                                           family=""serif"",
+                                           face=""bold.italic"",
+                                           color=""green"",
+                                           size=20,
+                                           vjust=1,
+                                           lineheight=1.2))
+```
+
+![element_text](https://f.cloud.github.com/assets/2405373/2241985/98af4390-9cee-11e3-97dc-6d6434feb687.png)
+",34,27,[]
+120,12693045,218,13384593,2014-02-19 11:08:55,2014-02-26 22:59:01,closed,bugfix for geom_text with regression test.,,0,1,[]
+121,12687656,217,13384593,2014-02-19 08:01:03,2014-02-26 22:58:23,closed,PY3 compatibility,"change true division to floor division. Ensure that the step argument is > 0.
+",1,2,[]
+122,12489370,214,13384593,2014-02-12 23:45:58,2014-02-17 15:38:33,closed,Fixes mavg smoother and unsorted x values with smoothers,"This should fix issue #162. I changed the movnig avg 'se' to use rolling_std along with rolling_mean, instead of expanding_std, which is not quite the expected behavior.
+",1,1,[]
+123,12443392,213,13384593,2014-02-12 00:29:35,2014-02-27 16:04:22,closed,Preliminary support for xtick updates after xlim(),"An attempt to fix issue #186 - works fine for the example given in the issue. May be good to add smarter formatting of the recomputed tick labels for ugly decimal numbers. 
+
+I'm sure somewhere in the bowels of matplotlib there is probably a 'sensible tick label formatter', anyone happen to know where it is?
+",2,2,[]
+124,12363754,209,13384593,2014-02-10 09:32:46,2014-03-10 06:42:34,closed,To fix issue #100 convert dict comprehension to generator expression for 2.6,"to fix issue #100
+
+https://github.com/yhat/ggplot/issues/100
+
+I am a n00b to ggplot, tried to play ggplot on an old machine with python 2.6 manually fixed the issue, my initial tests are ok-ish
+
+Please kindly consider this merge, I am sorry if I broke something I am unaware of.
+",22,3,[]
+125,12290982,201,13384593,2014-02-06 22:38:09,2014-02-07 03:19:06,closed,ENH: Better transformations and don't deepcopy data,"Data transformation in aes (`aes(x=""np.log(column)"")' now uses
+patsy.eval.EvalEnvironment. This should enable things like
+`np.log(column)`.
+
+Closes: yhat/ggplot#188, yhat/ggplot#136
+
+The changes also let some bug in the current unittests show up:
+setting a aes mapping (`aes(fill=True)`) was considered equivalent
+to setting this values in the geom `geom_density(fill=True)`). Now
+this will result in the same weired result as in ggplot (if we
+would have already implemented fill... -> #191). The affected
+unittests (test_basic.py, test_readme_examples.py) were changed.
+
+Also implement `__depcopy__()` for `aes` and ´ggplot` to not
+deepcopy the needed eval environment as deepcopy failed with
+the above change. ggplot deepcopy now does _not_ copy the
+dataframe, so this should result in some speedups. Also adjusted
+the unittest in test_geom.py to fit this new model.
+
+Closes: yhat/ggplot#145
+
+Added unittests (test_ggplot_internals.py) to make sure that the
+original data is not changed and also that no data is changed
+after a geom addition.
+",4,2,[]
+126,12100771,195,13384593,2014-01-31 23:53:13,2014-02-01 19:34:08,closed,changed geom_bar's defaults to be thicker and black,"geom_bar visual update: it is now wider and black by default.
+",0,1,[]
+127,12099500,194,13384593,2014-01-31 23:07:44,2014-02-01 19:34:46,closed,"geom_rect: added default colour, bug fix for setting xmax, ymax outside ...","This started as a unit test update, but I've included a couple bug fixes. I also tried making a ""nice"" image.
+",0,1,[]
+128,12077157,193,13384593,2014-01-31 13:07:23,2014-02-03 04:07:41,closed,Fix unittests in python3.3 and python2.7,"This is a branch which tries to fix all unittests under py3.3 and afterwards py2.7 and the old matplotlob version. 
+
+Current status:
+- [x] faceting will produce different ylims in some cases under py3.3
+- [x] Fix for overploting the upper row of a faceted plot with the complete data
+- [x] Unittests under py2.7
+- [x] Unittests under py3.3
+- [x] Unicode fixes and other stuff (#167 -> ""Add all the `from future...` imports..."")
+- [x] install brewer2mpl in travis
+",5,13,[]
+129,12065173,192,13384593,2014-01-31 02:27:05,2014-02-01 19:35:03,closed,removed embedded formatting in README.rst hyperlinks,"rst files don't seem to like embedded formatting in hyperlinks
+",0,1,[]
+130,11976602,187,13384593,2014-01-29 02:48:41,2014-02-01 19:35:15,closed,updated subdir extraction in ggplot/tests/__init__.py to handle .pyc files,"On my system, running the tests twice in a row will cause many errors. This is because .pyc files are being used the second time around which causes the extracted subdir to be incorrect.
+",4,2,[]
+131,11928129,184,13384593,2014-01-28 00:31:53,2014-01-30 22:08:22,closed,added geom_rect. addresses #171,"An implementation of geom_rect. I noticed that when setting linetype in the aesthetics it doesn't get passed in the layers but it will show up in the legend. Also, fill isn't treated as a factor -- it doesn't get included in the legend and values are passed straight to plt.bar.
+",18,4,[]
+132,11878130,180,13384593,2014-01-25 23:30:19,2014-01-26 17:37:23,closed,Add changes to make docs compile on readthedocs,"At least in my account the docs compile after the changes in this PR
+
+Closes #142
+",0,5,[]
+133,11833140,177,13384593,2014-01-24 05:28:10,2014-01-25 05:46:36,closed,"removed marker from geom_point aes, shape aes now works. addresses #154",,2,1,[]
+134,11736552,173,13384593,2014-01-21 23:12:57,2014-01-22 13:59:25,closed,FIX/TST: pil is only needed with older matplotlib,"So, don't install it together with newer matplotlib versions and especially not with py3.3
+",2,1,[]
+135,11724181,170,13384593,2014-01-21 18:10:56,2014-01-23 19:09:30,closed,stat_function added,"stat function added
+
+Sorry but I've lost track of the test standards (it's been a while since I contributed). Anyone want to point me to documentation?
+
+```
+from ggplot import *
+import pandas as pd
+import numpy as np
+
+n = 100
+x = np.random.randn(n)
+fun = lambda x: x*5
+y = x * 5
+y += np.random.randn(n)
+
+data = pd.DataFrame({'x':x,'y':y})
+
+pp = ggplot(aes(x='x',y='y'),data=data) + geom_point()
+pp = pp + stat_function(aes(fun=fun))
+
+print(pp)
+```
+
+![x _times_5](https://f.cloud.github.com/assets/2342749/1966350/1364ea3c-82c7-11e3-92da-37c81d692377.png)
+
+```
+from ggplot import *
+import pandas as pd
+import numpy as np
+
+n = 100
+x = np.random.normal(size=(n))
+def pdf(x):
+    return (1.0 / np.sqrt(2 * np.pi)) * (np.e ** (-0.5 * (x ** 2)))
+data = pd.DataFrame({'x':x})
+
+pp = ggplot(aes(x='x'),data=data) + geom_density()
+pp = pp + stat_function(aes(fun=pdf))
+
+print(pp)
+```
+
+![pdf](https://f.cloud.github.com/assets/2342749/1966345/0e1ae9b4-82c7-11e3-8d59-b47a7d28f7b8.png)
+",9,2,[]
+136,11659736,166,13384593,2014-01-19 22:11:50,2014-01-21 22:57:17,closed,New travis branch,"This is a rebase and update for https://github.com/yhat/ggplot/pull/81
+
+Closes #81, #45 
+
+This branch also includes PR 165 and therefore
+closes: #165, #143
+
+Also closes: #140 as the fix was just sitting around in my build environment...
+",7,20,[]
+137,11659486,165,13384593,2014-01-19 21:43:26,2014-01-21 23:04:11,closed,Use out own image testing framework for anti-aliased text,"Currently baseline images, which were generated on _ix(?)
+systems fail on windows computer as windows systems produces
+different baseline images which are *NOT_ anti-aliased.
+I traced that to a line in matplotlib, which setups the
+rc context to not use anti aliasing and it seems that the
+rc-context used during `ggplot.draw()` which uses
+anti-aliased fonts is not used when the image is
+saved in the `image_comparison` decorator.
+
+I see multiple options:
+- Use a higher tolerance
+  - makes most of the the unittests which would need this worthless, as real errors would probably also not be catched
+  - If I make images they won't look good and we use base_line images in the readme
+- use our own `image_comparison` decorator
+  - code duplication with matplotlib
+  - probably the easiest way
+- build `assert_same_images()` 
+  - I like this most
+  - slightly complicated because the 
+
+This implements replicates the matplotlib testing framework, but
+sets anti-aliased to true and also uses only pngs.
+
+There are now two ways to test for same image:
+- `@image_comparison` decorator (similar as in matplotlib)
+- `assert_same_images()`
+
+fixes: https://github.com/yhat/ggplot/issues/143
+",3,1,[]
+138,11659269,164,13384593,2014-01-19 21:17:37,2014-01-21 17:24:23,closed,Two fixes,"This fixes two things:
+- The title in facet plots is centered https://github.com/yhat/ggplot/issues/47#issuecomment-30340126
+- Closes https://github.com/yhat/ggplot/issues/33 -> now legends show up in ipython
+
+There should probably some unittets images updates, but currently my system rpduces not antialised images and so they will fail on systems which do (I traced that problem to a line in mathplotlibs tests setup, which ggplot uses).
+",0,2,[]
+139,11174950,149,13384593,2014-01-02 06:49:27,2014-01-02 16:06:04,closed,Add log scale,"This PR adds a log scale.
+
+I've added `scale_log.py` using `scale_reverse.py` as a template.  I've also added the appropriate unit tests.  The logarithm base can be specified by the user, but log10 is the default.  i.e.:
+
+``` python
+print(gg + scale_y_log())  # log10 scale
+print(gg + scale_y_log(2))  # log2 scale
+```
+
+I've had to hack `theme_gray.py` to prevent the log ticker from being clobbered when applying the theme.  I couldn't see any way around this without passing the ggplot object to the relevant post callback function though.
+
+This is my first pull request for an open source project so any feedback and/or suggested improvements would be welcomed!
+",0,3,[]
+140,11127082,144,13384593,2013-12-28 21:17:46,2013-12-31 23:20:08,closed,fixed link to contributing doc on README.md,,0,1,[]
+141,10835647,131,13384593,2013-12-15 06:11:58,2013-12-16 03:31:36,closed,updated labs to be more consistent with ggplot2,"This addresses issue #119. Note that the keyword args are changed from xlab, ylab to x, y.
+",0,2,[]
+142,10828699,129,13384593,2013-12-14 05:46:43,2013-12-14 23:57:05,closed,Update internal_utils.py,"Missing semicolon.
+",1,1,[]
+143,10820900,128,13384593,2013-12-13 21:12:55,2013-12-22 19:04:15,closed,force array containing figure axes to be 2d,"First I want to say, I'm really grateful for the code so far! I came across an error when trying to plot all of my subplots in one row, instead of a 2D layout.
+
+```
+from pandas import DataFrame
+from numpy.random import randn
+from ggplot import *
+letters = ['a','a','a','b','b','b','c','c','c','d','d','d']
+colors = ['r','g','b','r','g','b','r','g','b','r','g','b']
+values1 = randn(12)
+values2 = randn(12)
+df = pd.DataFrame({'letter': letters, 'color': colors, \
+    'value1': values1, 'value2': values2})
+
+ggplot(aes(x='value1', y='value2', color='color'), df) \
+ + geom_point() \
+ + facet_wrap('letter', ncol=4)
+```
+
+raises the error:
+
+```
+//anaconda/lib/python2.7/site-packages/ggplot/ggplot.pyc in draw(self)
+    326             if self.legend:
+    327                 if self.facets:
+--> 328                     ax = axs[0][self.n_wide - 1]
+    329                     box = ax.get_position()
+    330                     ax.set_position([box.x0, box.y0, box.width * 0.8, box.height])
+
+TypeError: 'AxesSubplot' object does not support indexing
+```
+
+The same thing happens when I try nrow=4. It has to do with the fact that plt.subplots() can return either a 1D or 2D array, but ggplot expects all 2D arrays. My quick, one-line fix was to just force the axis array to be 2D. I don't know the code all that well, so I don't know if this is a good fix (doesn't seem to break anything in my non-exhaustive tests), but mostly I wanted to bring this to your attention. Thanks again for your work!
+",2,4,[]
+144,10798291,127,13384593,2013-12-13 09:03:33,2013-12-14 13:41:17,closed,Remove depricated file.,,2,1,[]
+145,10787812,126,13384593,2013-12-12 23:02:31,2013-12-14 13:40:38,closed,Minor grid to theme_gray,"Darkened the gray in theme_gray to match R ggplot2, added minor grid lines.
+",2,3,[]
+146,10705512,124,13384593,2013-12-10 22:16:25,2013-12-11 13:58:34,closed,Geom data,"Implement a way to specify `+ geom_something(data=df, aes(...))`. An example can be found in the tests:
+
+``` python
+gg = ggplot(mtcars, aes(""wt"", ""mpg"")) + geom_point()
+g2 = gg + geom_text(aes(label=""name""), data=mtcars[mtcars.cyl == 6])
+print(g2)
+```
+
+closes: https://github.com/yhat/ggplot/issues/116
+
+Also included:
+- add pycharm files/dir to .gitignore
+- shorten the one long running test 
+- fix some small syntax errors in the manual tests
+",2,4,[]
+147,10607922,120,13384593,2013-12-06 20:37:09,2013-12-09 23:21:29,closed,Fix unittests,"Fix all failing unit tests. Fixes #118
+",2,9,[]
+148,10520622,117,13384593,2013-12-04 16:59:43,2013-12-05 18:14:18,closed,Fix plot display in IPython notebook,"It seems that calling figure.show() is not working in IPython notebook.
+
+Closes #115
+",0,1,[]
+149,10491290,113,13384593,2013-12-03 21:55:15,2013-12-03 22:16:04,closed,Only load data sets on use and not on import,"Use a lazy load proxy for the datasets, which is some kind of hack
+(see `ggplot/exampeldata/__init__.py` for the details) and means that
+the data sets now need to be explicit imported (and not via `*`).
+
+Closes: #111
+",1,1,[]
+150,10490978,112,13384593,2013-12-03 21:47:48,2013-12-05 18:14:37,closed,fixed typo/bug in ggsave,"unit to units. before it tries to lookup the dict incorreectly and raises a ""unit not global"" error.
+",2,2,[]
+151,10416765,109,13384593,2013-12-01 17:39:09,2013-12-11 14:02:26,closed,Documentation building and some doc additions,"Try to add some documentation build: mostly reused from pandas.
+-  Adding three new sections to contributing: ""How to contribute via pull requests"", ""how to add unittests"" and ""some git commands""
+-  add `__ALL__` property to each python file to declutter the namespace after a `from ggplot import *`
+
+**Open Issues**:
+- [x] decide on one dialect for docstrings -> numpydocs
+- [x] check some errors in the current doc strings
+- [x] find out why ggplot.\* methods are not added to the docs -> it seems that this was a problem with the order the sphinxext are set in conf.py -> all problems with this are gone
+- [x] fix the build warnings -> see above
+- [x] add a ggplot.**version**, which is then used in docs/make.py and also in setup.py
+
+-> Ready to merge :-)
+",12,6,[]
+152,10406728,107,13384593,2013-11-30 02:09:46,2013-12-01 22:06:46,closed,scale_face_wrap implementation,"I implemented the scale_facet_wrap function based on my understanding of how ggplot2 works. Let me know if there's anything wrong, I'm happy to fix it.
+",4,5,[]
+153,10399902,106,13384593,2013-11-29 16:18:04,2013-12-01 19:01:38,closed,Add ggsave function and some redone tests,"basically add a ggsave function as in ggplot2
+
+closes https://github.com/yhat/ggplot/issues/96
+
+The ""TST:*"" commits are fixing some failure sin the test suite. There are still two main errors.
+",0,6,[]
+154,10365392,104,13384593,2013-11-28 09:11:18,2013-11-28 16:25:17,closed,geom_text added,"geom_text added. Internally uses <code>pyplot.text</code> to map labels onto graph. Tested with mtcars dataset. Internal aes object still not working, ex: <code>geom_text(aes(size=wt))</code>. But I think this will have to be remedied outside of this module.
+",5,2,[]
+155,10197614,102,13384593,2013-11-22 03:23:24,2013-11-23 19:27:49,closed,geom_line: Fix size parameter,"The size parameter should control the `linewidth` for this type of plot. This will allow users to control the width of the lines on the chart.
+
+Fixes #101
+",1,1,[]
+156,9999573,98,13384593,2013-11-15 13:45:04,2013-11-15 14:25:43,closed,Add grouping for geom_line.,"Fixes #87.
+",1,1,[]
+157,9589149,88,13384593,2013-11-01 04:20:56,2013-11-05 03:16:32,closed,scale_colour_manual,"Added a manual scales file `scale_colour_manual.py`
+
+It'll take a manual list of colours and apply them in place of the default colors found in ggplot/components/colors.py.
+
+It doesn't yet do everything scale_colour_manual does in ggplot2, but it does discrete variable colors. 
+
+example:
+
+``` python
+from ggplot import *
+
+color_list = ['#FFAAAA', '#ff5b00', '#c760ff', '#f43605', '#00FF00', '#0000FF', '#4c9085']
+lng = pd.melt(meat, ['date'])
+
+print ggplot(lng, aes('date', 'value', color='variable')) + \
+    geom_point() + \
+    scale_colour_manual(values=color_list) + \
+    ggtitle('With manual colors')
+```
+",0,2,[]
+158,9451991,81,13384593,2013-10-28 14:55:40,2014-01-21 22:57:17,closed,Add support for Travis and Coveralls in a future-compatible way,"This pull request is an alternative to yhat/ggplot#45. The main differences are that we fully embrace `setuptools` and `pip`, which are what most people use for package management these days, instead of trying to get by with `distutils`. According to [PEP 453](http://www.python.org/dev/peps/pep-0453/), `pip` will be included with Python starting on November 20th, and all official documentation (even for Python 2.7) will be updated to recommend using that instead of `distutils`.
+
+Like yhat/ggplot#45, this PR also adds support for using Travis and Coveralls for automatic unit testing and coverage information. We greatly simplify the Travis installation by using `conda` to install the latest binary versions of all requirements.
+
+As a bonus, I also removed `README.md` (because GitHub will just render `README.rst` without it) and updated `README.rst` to have all the same information (and images) as the previous version of `README.md`.
+",16,12,[]
+159,9427589,80,13384593,2013-10-26 16:45:32,2013-10-26 17:00:32,closed,New tests,"This adds new unittests and some fixes which I discovered with this tests.
+
+The images are not included, so all tests will fail. I currently do not have a themend environment so all images would fail in such an environment. Please include the images (test_basic dir) from the result_images directory to ggplot/tests.
+
+I haven't looked closely at the images, but some seem to be ""wrong"", so there are still problems in the code.
+",1,5,[]
+160,9426645,79,13384593,2013-10-26 14:05:00,2013-10-26 15:21:38,closed,other Python3 fixes,"A few more fixes for the 0.3 version
+",1,2,[]
+161,9424021,78,13384593,2013-10-26 03:32:01,2013-10-26 15:12:45,closed,Vertical align facet grid labels,"Implemented vertical alignment of plot labels for facet_grid
+",3,2,[]
+162,9419065,77,13384593,2013-10-25 21:34:07,2013-10-25 21:50:03,closed,Initial version of testing framework,"The testing framework is mostly a copy of the matplotlib framework
+and uses most of the testing facility of matplotlib.
+
+To write tests see the examples in  ggplot/tests/ or matplotlib/tests
+and the matplotlib testing documentation:
+http://matplotlib.org/devel/testing.html#testing
+Add new tests to default_test_modules in ggplot.tests.**init**.py
+
+To run the tests:
+cd temp
+python -c ""import ggplot.tests;ggplot.tests.test()""
+OR
+python tests.py -v -d
+
+Closes: #17
+",0,1,[]
+163,9384840,75,13384593,2013-10-24 21:38:37,2013-11-24 20:16:38,closed,Theme as contextmanager,"New try to get theming in a context manager
+
+New in this PR:
+- rcParams are now added one by one to get these params validated
+- adding rcParams is now wraped in a try:...except: to get a better error message when something is wrong
+- the default rcParams are unchanged to the old theming (string vs int/tupple) and the matplotlib internal validation during setting them is convertig them to the real values
+
+Old:
+- use a context manager during plotting (Closes: #42, #64)
+- set default values, no more rc files (closes: #15, #7)
+- removed the MacOSx backend (Closes: #23)
+",11,8,[]
+164,9377600,74,13384593,2013-10-24 18:23:38,2013-10-24 21:18:19,closed,fixed spacing in docstring,,0,1,[]
+165,9364917,72,13384593,2013-10-24 12:27:56,2013-10-24 21:17:55,closed,Typo,"I just sent you an email (Marc) and would be interested in helping with more than just typos!
+",1,1,[]
+166,9308593,69,13384593,2013-10-22 20:47:42,2013-10-22 21:19:44,closed,adding binwidth to geom_histogram with default range/30,"Adding the ability to set the bin width.
+The example plot in the readme should be updated, but maybe that can wait until the themes have been sorted out (my axis text is black right now instead of grey).
+",0,1,[]
+167,9290927,68,13384593,2013-10-22 12:38:05,2013-10-22 12:56:23,closed,Fix: allow string keys in size legend,"`__main__` test in components/legend.py doesn't crash anymore
+",0,1,[]
+168,9290892,67,13384593,2013-10-22 12:36:47,2013-10-22 12:56:33,closed,Hide legend borders and don't use colons in their labels,"This makes legends a little bit more like in R ggplot2.
+
+TODO has been updated with further suggestions to imporove legends.
+",0,3,[]
+169,9290779,66,13384593,2013-10-22 12:33:06,2013-10-22 12:55:46,closed,Feature: var names in legends,"Make the title of each legend the variable, not the aes.
+
+For example, `ggplot(mtcars, aes(x='qsec', y='mpg', color='cyl', size='hp')) + geom_point()` will produce two legends. Their captions will be ""Cyl"" and ""Hp"" respectively.
+",0,2,[]
+170,9253199,65,13384593,2013-10-21 12:16:44,2013-10-21 13:08:21,closed,fix aes(): allow mixed positional and keyword arguments,"aes() used to silently ignore additional keyword argument if some
+positional arguments were used.
+
+aes(""x"", ""y"", color=""color"") is now valid code and equivalent to
+aes(""x"", ""y"", ""color"") or aes(x=""x"", y=""y"", color=""color"")
+",0,1,[]
+171,9241482,64,13384593,2013-10-20 21:50:30,2013-10-22 12:43:02,closed,Themes as context manager,"Implements the themes with matplotlib context managers
+
+Also adds a xkcd theme :-)
+
+Closes: yhat/ggplot#42
+",9,3,[]
+172,9238272,63,13384593,2013-10-20 13:28:01,2013-10-26 15:22:53,closed,"make ggplot\example.py code runable under ipython, or from another user directory","Hello,
+
+A new user trying to copy/paste under Ipython the code from ""example.py"" will get two errors (below).
+The patch should avoid the two errors, and allows to register the example anywhere in the user's computer.
+
+NOTA
+To get the directory of a module, It seems we need to import it under a name.
+==> So I imported it a second time with ""import ggplot as gg"".
+==> Maybe there is a better way ?
+
+```
+:\Users\famille\Documents\winpython\WinPython-32bit-3.3.2.3ggplot\python-3.3.2\lib\site-packages\matplotlib\pyplot.py in show(*args, **kw)
+    143     """"""
+    144     global _show
+--> 145     _show(*args, **kw)
+    146 
+    147 
+
+TypeError: show() got an unexpected keyword argument 'block'
+```
+
+```
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-5-586fe923539b> in <module>()
+      5 from ggplot import *
+      6 
+----> 7 meat = pd.read_csv(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'ggplot', 'exampledata', 'meat.csv'))
+      8 meat['date'] = pd.to_datetime(meat.date)
+      9 
+
+NameError: name '__file__' is not defined
+
+```
+",0,1,[]
+173,9230791,62,13384593,2013-10-19 10:37:55,2013-10-19 14:51:35,closed,make all examples compatible with python3,"all changes in only one commit, replace #48 to #55
+",0,1,[]
+174,9220242,61,13384593,2013-10-18 19:33:33,2013-10-22 12:58:02,closed,add geom_tile layer.,"Here is a first pass at a geom_tile layer.  I haven't tested it with color pallets and currently it only accepts int or float arguments to fill.
+",1,1,[]
+175,9216792,58,13384593,2013-10-18 17:48:07,2013-10-22 12:57:22,closed,remove duplicate black in color list,"last PR fixed actual errors, but wasn't quite right, leaving black as the first two colors.
+",1,1,[]
+176,9216298,56,13384593,2013-10-18 17:31:18,2013-10-18 17:37:48,closed,add missing comma in colors list,"resulted in first color being 'black#000000' causing errors
+",0,1,[]
+177,9215504,55,13384593,2013-10-18 17:05:20,2013-10-19 11:51:36,closed,Python3 compatibility of examples,,0,1,[]
+178,9215478,54,13384593,2013-10-18 17:04:28,2013-10-19 11:51:19,closed,Python3 compatibility of examples,,0,1,[]
+179,9215456,53,13384593,2013-10-18 17:03:41,2013-10-19 11:51:57,closed,Python3 compatibility of examples,,0,1,[]
+180,9215436,52,13384593,2013-10-18 17:02:55,2013-10-19 11:52:04,closed,Python3 compatibility of examples,,0,1,[]
+181,9215413,51,13384593,2013-10-18 17:02:13,2013-10-19 11:52:15,closed,Python3 compatibility of examples,,0,1,[]
+182,9215394,50,13384593,2013-10-18 17:01:19,2013-10-19 11:52:22,closed,Python3 compatibility of examples,,0,1,[]
+183,9215352,49,13384593,2013-10-18 16:59:53,2013-10-19 11:52:29,closed,Python3 compatibility of tests,,0,1,[]
+184,9215318,48,13384593,2013-10-18 16:58:48,2013-10-19 11:52:36,closed,Python3 compatibility of tests,,1,1,[]
+185,9199706,46,13384593,2013-10-18 07:10:43,2013-10-22 13:01:40,closed,Renaming geom_hist to geom_histogram for consistency with R ggplot2.,"For consistency with the R ggplot2 implementation:
+http://docs.ggplot2.org/current/geom_histogram.html
+",0,4,[]
+186,9197426,45,13384593,2013-10-18 03:53:17,2014-02-27 16:03:14,closed,Enh: travis and  coveralls support + moving from setuptools to pure distutils (closes #41),"also removed some not needed shebangs
+
+example travis reports
+https://travis-ci.org/yarikoptic/ggplot/builds
+someone would need to simply enable now for yhat/ggplot on travis.ci.org to take in effect... and then on coveralls.io (forgot to enable in advance so not sure yet if works ok here ;) )
+",22,7,[]
+187,9196448,44,13384593,2013-10-18 02:24:46,2013-10-18 02:24:57,closed,removed annoying print statement. sorry about it,"removed annoying print statement. sorry about it
+",0,1,[]
+188,9196381,43,13384593,2013-10-18 02:20:22,2013-10-18 02:21:26,closed,stat_smooth with method='lm' now supports proper confidence region for se=True,"I modified the lm() function in components/smoothers.py
+
+Confidence intervals for OLS fitted values are in statsmodels, but they are buried in a function i'd never used before:
+
+``` python
+from statsmodels.stats.outliers_influence import summary_table
+```
+
+see this answer on stackoverflow for more info:
+
+[confidence and prediction intervals with StatsModels](http://stackoverflow.com/a/17560456/359786)
+",0,2,[]
+189,9195386,39,13384593,2013-10-18 01:03:25,2013-11-21 03:39:37,closed,Geom_boxplot: Started a rough outline of how geom_boxplot will be implemented.,"Currently does nothing close to ggplot2's geom_boxplot().
+
+I think this is ready to merge at this point if you want. It does work for a single boxplot, see the test case in test/test_geom_boxplot.py. There is one problem I ran into though. Is there anyway to access the whole dataframe that gets passed into ggplot(..) ? My new strategy for implementing the geom_boxplot is to use to http://pandas.pydata.org/pandas-docs/stable/visualization.html#box-plotting which is much more similar to ggplot2's than http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.boxplot. Let me know your thoughts on this.
+",0,2,[]
+190,9185446,38,13384593,2013-10-17 19:14:35,2013-10-22 13:02:49,closed,Python3 compatibility work for basestring type,"This is the method described at http://stackoverflow.com/questions/4232111/stringtype-and-nonetype-in-python3-x
+",7,2,[]
+191,9184973,37,13384593,2013-10-17 19:02:03,2013-10-17 19:07:49,closed,remove double import of scale module,"I remove the one import not compatible with python3
+",0,1,[]
+192,9184725,36,13384593,2013-10-17 18:57:00,2013-10-17 19:00:12,closed,Python3 compatibility,"continuation of the action #21
+",0,1,[]
+193,9180223,35,13384593,2013-10-17 16:46:32,2013-10-17 18:56:47,closed,TST: copy example.py into a cruel test_basic.py for smoke testing,"could be ran in headless/non-interactive mode with
+
+MATPLOTLIB_BACKEND=agg nosetests -s -v ggplot
+",1,3,[]
+194,9127087,34,13384593,2013-10-16 07:20:52,2013-10-16 19:10:13,closed,Fix the broken link to matplotlibrc files.,,0,1,[]
+195,9114915,32,13384593,2013-10-15 20:27:14,2013-10-17 01:30:14,closed,Reverse axis.,"Hi, I'm not a python expert, neither a big ggplot user (nor experience in PRs).  Still, I decided to give it a try.
+
+I missed the reverse axis feature.  Therefore, I'm making this Pull Request to initiate a discussion (and possible implementation) of this feature.
+
+Thanks for the ggplot module,
+
+-Filipe
+",2,1,[]
+196,9109326,30,13384593,2013-10-15 17:48:06,2013-10-15 19:03:24,closed,Add missing requirements to setup.py,"ggplot's requirements are currently missing, which makes pip installs appear to succeed (when they will not work).
+
+I also bumped the version number up so that you can successfully add this updated setup.py file to pypi.
+",0,1,[]
+197,9107679,29,13384593,2013-10-15 16:57:01,2013-10-15 17:41:59,closed,Added the matplotlibrc file so the change is visible through the zip,"Fixes issue #28. I added the matplotlibrc file so you can see the changes I made, I commented out the default graphics line which was messing with my linux system. The zip in the pull request is different, but I don't think that github understands that. Feel free the use the matplotlibrc file I attached and make a new zip.
+",1,1,[]
+198,9100759,26,13384593,2013-10-15 13:51:06,2013-10-15 13:51:39,closed,scale_x_date + scale_y_continuous,"stopped hijacking the YearLocator class which was pretty hacky
+",1,10,[]
+199,9087615,22,13384593,2013-10-15 02:11:40,2013-10-15 02:32:03,closed,"add nav links to install & examples, adjust colors",,0,4,[]
+200,9086873,21,13384593,2013-10-15 01:11:56,2013-10-16 19:19:05,closed,Initial steps to python3 compatabilityPython3 compatability...,"Made the necessary edits to get the example.py file to run on:
+Python 3.3.2
+matplotlib 1.3.1
+pandas 0.12.0
+
+Clearly more testing is required, but at least now the example file runs :)
+",1,1,[]
+201,9079679,16,13384593,2013-10-14 20:13:37,2013-10-14 20:25:15,closed,new github pages page,"Basic styling for gh-pages page.
+",1,1,[]
+202,9077617,14,13384593,2013-10-14 19:01:20,2013-10-14 22:18:17,closed,fixed readme reference in setup.py,"you were referencing the README as README.rst and it should have been README.md.
+
+best,
+jason
+",2,1,[]
+203,9077143,12,13384593,2013-10-14 18:45:46,2013-10-24 02:15:48,closed,Use mpltools for loading the ggplot style,,1,1,[]
+204,9077041,11,13384593,2013-10-14 18:42:22,2013-10-14 19:43:56,closed,Link to Gohlke's site for unofficial windows binaries of python packages,,0,1,[]
+205,9071810,8,13384593,2013-10-14 15:48:57,2013-10-14 16:03:45,closed,Update README.md,"Fix spelling & add links.
+",0,1,[]
+206,9058179,6,13384593,2013-10-14 03:11:31,2013-10-15 03:49:59,closed,slightly better sample for the pageviews data set,"uploaded a slightly better sample of pageviews data
+",0,9,[]
+207,9051443,5,13384593,2013-10-13 04:14:39,2013-10-13 13:28:23,closed,breaks and labels working with scale_x_continuous,"scale_x_continuous now supports
+- breaks (list)
+- labels (list)
+
+added comments to several functions
+- scale_x_date
+- scale_x_continuous
+- ggplot
+",0,2,[]
+208,9050264,4,13384593,2013-10-12 22:56:38,2013-10-12 23:15:36,closed,scale x date supports date breaks like '10 years' ,"scale x date works a bit better. supports date breaks like '10 years' and such.
+",0,1,[]
+209,9049666,3,13384593,2013-10-12 21:09:21,2013-10-12 21:10:09,closed,scale_x_date and scale_y_continuous improvements,"added scale_x_date
+
+added the ability to auto format labels in both
+- scale_x_date
+- and scale_y_continuous
+
+for example you can do 
+
+``` python
+ggplot(aes(x='date', y='beef'), data=meat) + geom_line() + \
+    scale_x_date('date', labels=""%Y-%m-%d"") + \
+    scale_y_continuous('beef', labels='comma')
+```
+
+this kind of stuff to format the date and put the y axis in a comma sep number format.
+",0,3,[]
+210,9042386,2,13384593,2013-10-11 23:20:52,2013-10-11 23:38:05,closed,Better support for dates in 2 geoms. New example data set for time series.,"Improved date support for
+- geom_abline
+- geom_bar
+
+Added new example data set for demo TimeSeries data
+",0,3,[]
+211,9013527,1,13384593,2013-10-11 03:34:10,2013-10-11 15:58:58,closed,smoothers,"linear model
+lowess
+moving average
+
+lm(x, y)
+lowess(x, y)
+mavg(x,y)
+",0,1,[]
+0,695613074,294,23520171,2021-07-23 01:49:35,2021-07-23 01:50:21,closed,Glsl compatibility check,,1,8,[]
+1,684057863,292,23520171,2021-07-06 04:52:14,,open,Implementation of simple imgui integration suggestion in Issue #290,Implementation of suggestion in Issue #290,2,9,[]
+2,680395811,291,23520171,2021-06-29 22:09:56,2021-07-05 07:28:47,closed,Bugfix issue #287,"When assigning a numpy 1d array to a uniform variable, everything goes fine on the first time, but a bug happens on the second assignment. This PR fixes that issue.",1,1,[]
+3,630480137,284,23520171,2021-05-05 10:31:10,2021-05-15 07:19:22,closed,Fix deprecated Python 2 attribute naming,`func_name` and `func_code` have been renamed to `__name__` and `__code__` in Python 3,1,1,[]
+4,629742598,283,23520171,2021-05-04 12:00:07,2021-05-15 06:32:34,closed,Fix math of quadric filter function,"The comment above it clearly indicates that this constant should be 0.5,
+not 0.75. The use of 0.75 in its place seems to have been a simple
+mistake, perhaps due to the 0.75 constant after it. The corrected value
+of 0.5 matches the implementation in AGG, ImageMagick, and elsewhere.
+
+cf. https://sourceforge.net/p/agg/svn/HEAD/tree/agg-2.4/include/agg_image_filters.h
+cf. https://github.com/ImageMagick/ImageMagick/blob/main/MagickCore/resize.c#L415",1,1,[]
+5,608189627,281,23520171,2021-04-02 19:11:34,2021-04-09 07:21:22,closed,Fixes to window get_title & set_title,"Fixed get_title window method for all backends.
+
+Fixed glfw set_title only working with bytes object, now set_title works with str input (same approach as it was already being done done in glfwCreateWindow).
+
+also changed glfwCreateWindow title encoding from 'ascii' to 'utf-8' to support more characters, and because glfwCreateWindow and glfwSetWindowTitle take an encoded utf-8 input anyway (https://www.glfw.org/docs/3.3/group__window.html).",1,1,[]
+6,597552273,280,23520171,2021-03-21 19:58:42,2021-03-29 05:35:21,closed,Activate window on resize,Fixes #277 ,1,1,[]
+7,597543437,279,23520171,2021-03-21 19:05:15,2021-03-21 19:52:53,closed,Activate window on resize,"---Ignore PR--- messed up commits
+---Replaced by #280 ",0,4,[]
+8,593564244,278,23520171,2021-03-16 04:36:50,2021-03-19 05:53:00,closed,Expose native window as property,Sometimes you want to access the native window to modify properties so it would be good to expose it. This is born when answering [this post](https://stackoverflow.com/q/66647769/6622587) 😄 ,2,1,[]
+9,581552769,276,23520171,2021-02-28 17:08:51,2021-03-08 09:41:10,closed,TrackballPan panning on shift ,"Hi,
+
+I noticed that the TrackballPan transformation only pans when the shift key is held as a modifier and not when it is pressed as a primary key.
+
+I have modified it to check if the key being pressed is a shift key so that if the shift is held as a primary or modifier key it will pan correctly.
+
+In addition I also updated the GLFW backend to map left and right shift keys into window.key.LSHIFT and .RSHIFT respectively. Previously they were mapped as window.key.UNKNOWN.
+
+Best,
+David
+
+P.S. Apologies for the double submission of the pull request. I am somewhat new to pull requests and did not realize that pushing new commits to master would automatically get included in the pending request.",1,4,[]
+10,581434760,275,23520171,2021-02-28 01:37:44,2021-02-28 07:10:49,closed,Updating TrackballPan to always pan when shift is pressed,"Hi,
+
+I noticed that the TrackballPan transformation only pans when the shift key is held as a modifier and not when it is pressed as a primary key.
+
+I have modified it to check if the key being pressed is a shift key so that if the shift is held as a primary or modifier key it will pan correctly.
+
+In addition I also updated the GLFW backend to map left and right shift keys into window.key.LSHIFT and .RSHIFT respectively.  Previously they were mapped as window.key.UNKNOWN.
+
+Best,
+David
+",1,5,[]
+11,572461810,273,23520171,2021-02-12 11:42:16,2021-02-15 09:08:57,closed,Remove gtk from docs,"Ref. https://github.com/glumpy/glumpy/issues/253
+
+I did not update the architecture schematics which mention GTK tho. Not sure if this is necessary.",1,3,[]
+12,528585763,271,23520171,2020-11-27 12:27:45,,open,Texture3 d,"Hi Nicolas, 
+
+I added support for 3D Textures. I mimicked your 2D texture class. The only part where I had problems is with your partial updates to the GPU mem using glTexSubImage2D. I don't get the logic of this part and simply upload the full 3D texture in this case. It is tested with different power-of-two dimensions on the different axes and should be ok. Non-power-of-two leads to artifacts and should be treated in future. 
+
+You now have sampler3D available in the shader and can use it as usual. 
+
+best,
+
+Ivo",2,3,[]
+13,527554228,269,23520171,2020-11-25 16:13:21,2020-12-04 09:09:17,closed,BUGFIX: https://github.com/glumpy/glumpy/issues/268,,2,2,[]
+14,471535694,262,23520171,2020-08-21 09:56:52,2020-08-21 12:05:06,closed,Fix glfwGetVideoMode binding; limited GLFW fullscreen support,"Follow-up of https://github.com/glumpy/glumpy/pull/226
+
+* Fix glfwGetVideoMode: previously wrongly called _glfw.glfwGetVideoModes
+
+Adds limited fullscreen support for glfw:
+* real fullscreen mode is only possible upon creation of window in glfw; fullscreen will be opened on the monitor specified by screen kwarg
+* set_fullscreen can only be used to toggle a windowed fullscreen mode; but so far it only works for the primary screen (index 0), because glfw throws an Accesss Violation when trying to call glfwSetWindowMonitor for any secondary screens;",0,1,[]
+15,456576933,257,23520171,2020-07-25 06:43:36,2020-07-28 08:16:52,closed,Fix syntax error in translate.glsl,"Problem:
+- The translate.glsl file has an errant ')' in two methods that prevents
+  the shader from compiling.
+
+Solution:
+- Remove the ')'.",1,1,[]
+16,456383763,256,23520171,2020-07-24 16:39:24,2020-07-28 08:11:06,closed,imgui_demo added,"Hi Nicolas, 
+
+here is the pull request for the imgui demo. I have adapted mlviz'es demo, separated parts a bit to make it more reusable and added interaction demos (keystrokes, mouse motion, buttons, scroll + some buttons and sliders). I kept everything in one file to make it easily understandable. Tested on Win10 with anaconda (Nvidia P3000) and Debian Linux (Bullseye, Nvidia GTX980) with anaconda. It also demos glsl version=130 as opposed to most other shaders.
+
+hope that works for you. I really like the new functionality. 
+
+best,
+
+Ivo",3,1,[]
+17,436023745,255,23520171,2020-06-17 18:30:27,2020-06-23 14:56:41,closed,Added fetch_build_eggs to setup.py for isolated builds,"Hi there! I love the package, but I was having difficulty installing it in an isolated environment like tox or a CI system. Unfortunately, the requirements file is not enough because `glumpy` is alphabetically before `numpy` and the setup will fail with the following error:
+
+```
+Collecting glumpy==1.1.0
+  Using cached glumpy-1.1.0.tar.gz (503 kB)
+    ERROR: Command errored out with exit status 1:
+     command: [REDACTED]/.tox/py36/bin/python -c 'import sys, setuptools, tokenize; sys.argv[0] = '""'""'/tmp/pip-install-s9j9mhqj/glumpy/setup.py'""'""'; __file__='""'""'/tmp/pip-install-s9j9mhqj/glumpy/setup.py'""'""';f=getattr(tokenize, '""'""'open'""'""', open)(__file__);code=f.read().replace('""'""'\r\n'""'""', '""'""'\n'""'""');f.close();exec(compile(code, __file__, '""'""'exec'""'""'))' egg_info --egg-base /tmp/pip-pip-egg-info-lc7irsba
+         cwd: /tmp/pip-install-s9j9mhqj/glumpy/
+    Complete output (5 lines):
+    Traceback (most recent call last):
+      File ""<string>"", line 1, in <module>
+      File ""/tmp/pip-install-s9j9mhqj/glumpy/setup.py"", line 8, in <module>
+        import numpy
+    ModuleNotFoundError: No module named 'numpy'
+```
+
+I added one line in the `setup.py` to install cython and numpy if it doesn't already exist.",2,1,[]
+18,408725680,248,23520171,2020-04-24 19:27:07,2020-04-27 05:16:50,closed,backend pyside2,,0,3,[]
+19,392062214,242,23520171,2020-03-22 20:02:36,2020-03-30 07:11:11,closed,Update __init__.py,"1. Fixes bug where default GL version is hard coded by use function.
+2. Fixes bug where config settings of window are set by gl_get_configuration() instead of saving actual settings",2,1,[]
+20,384420950,241,23520171,2020-03-05 17:59:04,2020-03-10 10:10:07,closed,Bugfix for Issue #234,"In reference to this comment;
+
+https://github.com/glumpy/glumpy/issues/234#issuecomment-590427568",1,2,[]
+21,379130209,240,23520171,2020-02-24 18:03:26,2020-02-28 12:49:29,closed,Added simple glumpy/Qt5 integration exemple,,0,1,[]
+22,376737633,238,23520171,2020-02-18 17:14:11,2020-02-28 12:46:41,closed,Changed time.clock function for time.perf_counter,"While trying to run a glumpy application using Python 3.8, I've received the following error:
+
+**AttributeError: module 'time' has no attribute 'clock'**
+
+I then modified the function **time.clock** for **time.perf_counter**, as mentioned in this [post](https://stackoverflow.com/questions/58569361/attributeerror-module-time-has-no-attribute-clock-in-python-3-8), and it fixed the problem.",3,3,[]
+23,341411745,231,23520171,2019-11-15 10:55:49,2019-12-01 11:42:46,closed,Untested...,#113,1,1,[]
+24,340840818,230,23520171,2019-11-14 08:08:39,2019-11-14 17:54:27,closed,sdl2 namespace missing for SDL_WINDOW_HIDDEN variable,"In backend_sdl2.py, line 216
+
+This:
+flags |= SDL_WINDOW_HIDDEN
+
+Should've been:
+flags |= sdl2.SDL_WINDOW_HIDDEN
+
+I found this when I tried to set the visible flag to false when creating a window.",1,1,[]
+25,316049832,226,23520171,2019-09-10 15:20:53,2020-08-21 07:18:03,closed,Added screen kwarg for backend_pyglet.set_fullscreen & backend_qt5 fullscreen getter/setter,"With these changes 
+
+1. the **pyglet backend** would allow for the selection of a screen when switching fullscreen on (this would resolve #225 )
+and
+2. fullscreen would be enabled for the **qt5 backend** (I was wondering why this doesn't seem to be implemented although it states in the documentation that it should be). I also added separate setter/getter for the screen and an opt. argument for selecting the screen when calling set_fullscreen",8,4,[]
+26,290674312,221,23520171,2019-06-21 16:34:24,2019-08-23 09:34:29,closed,Two fixes:,"  - In AggGlyphCollection, incorrect key is referenced when checking for a fragment shader
+  - In Attribute, if the handle was 0 then glDisableVertexAttribArray wasn't called",3,1,[]
+27,274209533,217,23520171,2019-04-28 21:18:19,2019-05-23 16:33:54,closed,Support graphics/collection adding vertex shader from external script file,"The `Collection` class in `graphics/collections/collection.py` has a `vertex` arg that only allows for pure string shader code like
+```
+vertex = """"""
+uniform float rows, cols;
+varying float v_x;
+varying vec4 v_color;
+void main()
+{
+...
+}
+""""""
+```
+, but not the filename of an external shader script file as
+```
+vertex = './shader.vert'
+```
+due to some attributes are to be inserted in the `Collection` class initialization.
+
+By simply calling `saved = library.get(vertex)` rather than `saved = vertex`, this class can support shader script filename as an input just like the `Program` class.",1,1,[]
+28,272589011,216,23520171,2019-04-23 05:36:19,2019-04-23 10:33:27,closed,Fix dimension mismatch error in the triangle library by ensuring that,segments are a two dimensional array.,1,1,[]
+29,272319675,215,23520171,2019-04-22 09:00:54,2019-04-22 09:12:49,closed,Modified an element in glm.frustum(...),"I find the definition of the perspective projection matrix from [https://www.scratchapixel.com/lessons/3d-basic-rendering/perspective-and-orthographic-projection-matrix/opengl-perspective-projection-matrix](url)
+in which 
+    **M[3, 1] = (top + bottom) / (top - bottom)** # this line should be M[2,1] = ...",1,1,[]
+30,262808021,210,23520171,2019-03-20 10:39:39,,open,Add support for double and dvec uniform,This change adds GL_DOUBLE (np.float64) support to uniform types.,10,1,[]
+31,259707599,209,23520171,2019-03-09 18:36:03,2019-03-15 13:07:43,closed,Minor typo on easyway.rst,"""Exercices"" should be ""Exercises""",1,1,[]
+32,255576235,207,23520171,2019-02-23 00:57:51,2019-03-15 13:11:03,closed,"Add TrackballPan transform, a pan-able Trackball","The TrackballPan transform is similar to the basic Trackball transform.
+However, when the user holds the shift button, dragging the mouse will result in panning the screen (after
+projection).
+An example of its usage is included.
+
+Resolves glumpy/glumpy#94",1,1,[]
+33,255014686,206,23520171,2019-02-21 13:03:57,2019-03-15 13:08:14,closed,Fixed spelling mistake.,,1,1,[]
+34,251040618,200,23520171,2019-02-07 09:20:46,2019-02-08 17:10:30,closed,Fix full screen bug when using GLFW backend,"The fullscreen parameter does not work in 193 line of backend_glfw.py.
+```
+class Window(window.Window):
+
+    def __init__( self, width=512, height=512, title=None, visible=True, aspect=None,
+                  decoration=True, fullscreen=False, config=None, context=None, color=(0,0,0,1), vsync=False):
+```",1,1,[]
+35,249890363,199,23520171,2019-02-03 17:17:32,2019-02-05 21:34:52,closed,added underscore to include regex,,1,1,[]
+36,247971045,196,23520171,2019-01-27 18:17:17,2019-01-28 08:16:04,closed,"""Open GL"" -> ""OpenGL"" in docs.",,0,1,[]
+37,246805593,194,23520171,2019-01-23 01:08:55,2019-01-24 06:56:34,closed,"Added ""with"" capability to globject.","Now with this change you can write e.g.:
+```
+with framebuffer:
+    DO SOMETHING WITH FRAMEBUFFER
+```
+instead of:
+```
+framebuffer.activate()
+try:
+    DO SOMETHING WITH FRAMEBUFFER
+finally:
+    framebuffer.deactivate()
+```
+It is much quicker and less error prone to write code in this way. (Especially because many users wouldn't think to put the deactivate in a try...finally block)",1,1,[]
+38,246799451,193,23520171,2019-01-23 00:31:13,,open,Added multisample capabillity to renderbuffer.,"This change also fixes the issue mentioned in https://github.com/glumpy/glumpy/pull/191 and https://github.com/glumpy/glumpy/pull/192
+
+It simply makes multisampling possible by the third argument for the renderbuffer classes. Code was edited on the Github website, so it is not fully tested. It worked perfectly when I ran it locally though. (Through subclassing all the buffer types.)",3,1,[]
+39,246797738,192,23520171,2019-01-23 00:20:52,2019-01-23 12:56:26,closed,"Changed framebuffer width, height default to None.","I changed the framebuffer width and height default value to none, and corrected the checks in the color, depth and stencil setters accordingly. The reason None is better is because it is possible to have a renderbuffer with e.g. 0 width and 10 height.
+Compare np.zeros((0, 10)), which is allowed in numpy. According to the opengl documentation the only limitation is that it should be nonnegative.",1,1,[]
+40,246746922,191,23520171,2019-01-22 20:46:35,2019-01-23 12:55:43,closed,Removed defaults from renderbuffer base class.,Since it is a base class it does not need default values.,1,1,[]
+41,246740263,190,23520171,2019-01-22 20:21:44,,open,Added clear function to FrameBuffer.,"Instead of calling window.clear() when we have a framebuffer activated we should call framebuffer.clear().
+Then it makes sure to clear the renderbuffers that are set.
+This also fixes: https://github.com/glumpy/glumpy/pull/189",10,4,[]
+42,246733027,189,23520171,2019-01-22 19:56:43,2019-01-23 12:27:40,closed,Moved clear after activate in framebuffer.py doc.,"You have to clear when the framebuffer is bound, or else it is just clearing the window and not your renderbuffers.",1,1,[]
+43,246125787,188,23520171,2019-01-20 18:19:45,2019-01-21 12:59:41,closed,Removed usage default from Buffer in buffer.py.,"Since the Buffer is a generic object it should not have the default usage argument.
+Note how the usage has a default value in VertexBuffer and IndexBuffer, so it is redundant to add it in Buffer also. ",1,1,[]
+44,246111562,187,23520171,2019-01-20 14:08:29,2019-01-21 12:58:52,closed,Fixed zfar mistakes.,"It seems the code for zfar was copy-pasted from the code for znear, but the author forgot to change the variable name ""znear"" to ""zfar"" a few places.",0,1,[]
+45,245565463,186,23520171,2019-01-17 16:32:06,2019-01-17 17:38:06,closed,Fix FrameBuffer.delete call to nonexistant gl func,Fixes #184,1,1,[]
+46,239455820,181,23520171,2018-12-18 11:33:00,2018-12-19 12:18:52,closed,added compatibility with latest python3,#176 ,1,1,[]
+47,235918504,178,23520171,2018-12-04 18:45:59,,open,fix framebuffer resize,,1,2,[]
+48,235308338,177,23520171,2018-12-03 02:18:27,,open,Pyimgui,"As mentionned in my answer on the thread,
+
+I made a branch with a first experimental imgui backend and 2 examples. The only problem is that I needed to modify 2 of the files in the external libraries to make it work, if you can find a way to handle that for a build that would be great.
+
+imgui/integrations/opengl.py
+we need at line 205 to typecast (I used numpy but  probably would be better to do it with ctype):
+```
+        ortho_projection = np.array([
+            [ 2.0/display_width, 0.0,                   0.0, 0.0],
+            [ 0.0,               2.0/-display_height,   0.0, 0.0],
+            [ 0.0,               0.0,                  -1.0, 0.0],
+            [-1.0,               1.0,                   0.0, 1.0]], dtype=np.float32)
+```
+and something similar in:
+
+baseplatform.py from PyOpengl.
+
+Otherwise I added the examples in the sub-directory examples/imgui.
+
+I tested it on windows, but it would be a good idea to test it on osx and linux.
+
+Also how can we adress the problem mentioned before with external files?
+It seems to be the cython compiler that complains so it might be possible to correct it without modifying the files but by dealing with cython but I am not familiar with it enough. The only thing I can confirm is that its possible to make it work.
+
+Aussi un bonjour en français de Montréal, ma langue maternelle est le français.
+
+A+
+Martin",20,7,[]
+49,222899912,170,23520171,2018-10-15 13:08:59,2018-11-03 07:45:00,closed,Update shadertoy template,"This change updates the shadertoy template to use the iTime and to keep
+the mainImage signature entrypoint.",1,1,[]
+50,220709854,169,23520171,2018-10-05 13:53:26,2018-11-03 07:42:59,closed,Index computation simplified for clarity,"I noticed that index computation was a bit convoluted, so I simplified it a bit. Hopefully, it is a bit clearer.",3,1,[]
+51,217439211,168,23520171,2018-09-22 04:49:34,2018-11-03 07:42:28,closed,glfw: do not DestroyWindow onclose to avoid segfault in PollEvents,"It seems like calling DestroyWindow during PollEvents cause a Segfault.
+This change delay the actual destruction after the PollEvents call
+to avoid the segfault.",3,1,[]
+52,207818129,163,23520171,2018-08-12 12:04:33,2018-08-24 10:26:21,closed,Improve shader compilation error message parsing,"The pull request contains fix for the issue #162 .
+
+It adds parsing of the all errors in the shader error message to show all compilation errors.",2,1,[]
+53,206785508,160,23520171,2018-08-07 18:21:07,2018-08-08 08:35:56,closed,Import numpy,Fixes dependency error due to numpy being referenced.,1,1,[]
+54,206718944,159,23520171,2018-08-07 14:31:54,2018-08-07 18:18:12,closed,Minor typo fix in usage example,"Line 36, changed # or program[""transform""] = Position(""vec2(position.y,position.x"")) to # or program[""transform""] = Position(""vec2(position.y,position.x)"").
+
+Very ,very minor typo but has been bothering me. ",2,1,[]
+55,182658553,151,23520171,2018-04-19 03:43:46,2018-04-23 07:32:26,closed,"implement vsync for all backends except freeglut, osxglut","vsync available via command line option and window keyword arg.
+
+not clear how to implement for freeglut and osxglut, so just log a warning if vsync is True. (though I don't see tearing with osxglut at all).
+
+tested for qt5, glfw, osxglut. the other backends do not work for me for various reasons.
+
+closes #145 ",0,2,[]
+56,182652818,150,23520171,2018-04-19 02:52:03,2018-04-23 07:23:50,closed,Pyglet docgen fix,"fixes pyglet error seen here:
+https://bitbucket.org/pyglet/pyglet/issues/185/notimplementederror-abstract
+
+pyglet apparently checks `sys.modules` for sphinx and sets a flag which prevents the backend from being imported. this unsets the flag.",3,2,[]
+57,181947023,148,23520171,2018-04-16 18:14:34,2018-04-23 18:52:29,closed,Bugfixes,,2,2,[]
+58,171217605,144,23520171,2018-02-25 07:31:13,2018-02-27 06:52:30,closed,Add drag event to update the mouse,as the motion event doesn't get called when mouse button is down,0,1,[]
+59,171215235,143,23520171,2018-02-25 06:03:50,2018-02-25 06:42:37,closed,Fix depth test in picking example,"As mentioned in #142, the picking example depth buffer isn't set and depth test could not be properly executed.
+This patches the behaviour by adding depth buffer to the framebuffer object.",1,1,[]
+60,170680141,141,23520171,2018-02-22 08:03:36,2018-02-24 08:54:27,closed,backends: qt5: fix mouse wheel typo,Thanks @tobyclh for notifying!,0,1,[]
+61,170123008,140,23520171,2018-02-20 08:04:09,,open,Support TextureInteger* together with Uniforms,"Merge after #138 
+
+`TextureInteger*` can now be used as uniforms.
+Please check the example in this PR. (https://github.com/yuyu2172/glumpy/blob/0e85499cf7d3777fef52141e436457d22615d8cb/examples/integer-texture.py)
+",2,4,[]
+62,170122000,139,23520171,2018-02-20 07:57:30,,open,Support TextureInteger*,"This PR adds `TextureInteger*` classes.
+This modification alone would not let us use `IntegerTexture` with uniforms.
+I will send another PR that allows us to do that. I split the PR because I felt that the changes are large.
+
+This PR alone can let users use `IntegerTexture` with framebuffers.
+Here is an example.
+
+```python
+# -----------------------------------------------------------------------------
+# Copyright (c) 2009-2016 Nicolas P. Rougier. All rights reserved.
+# Distributed under the (new) BSD License.
+# -----------------------------------------------------------------------------
+import numpy as np
+from glumpy import app, gl, gloo
+
+vertex_1 = """"""
+in vec2 position;
+void main()
+{
+    gl_Position = vec4(position,0.0,1.0);
+}
+""""""
+fragment_1 = """"""
+
+layout(location = 0) out vec4 FragColor;
+layout(location = 1) out int v_int;
+void main()
+{
+    FragColor = vec4(10.0, 10.0, 10.0, 1.0);
+    v_int = 10;
+}
+""""""
+
+app.use('glfw', api='GL', major=4, minor=3, profile='core')
+window = app.Window(width=8, height=8)
+
+vao = gl.glGenVertexArrays(1)
+gl.glBindVertexArray(vao)
+
+@window.event
+def on_draw(dt):
+    window.clear()
+    framebuffer.activate()
+    quad_1.draw(gl.GL_TRIANGLE_STRIP)
+    out_texture = framebuffer.color[1].get()
+    print(out_texture[:, :, 0])
+
+texture_0 = np.zeros((window.height,window.width,4), np.float32).view(gloo.TextureFloat2D)
+texture_1 = np.zeros((window.height,window.width,1), np.int32).view(gloo.TextureInteger2D)
+framebuffer = gloo.FrameBuffer(color=[texture_0, texture_1])
+quad_1 = gloo.Program(vertex_1, fragment_1, count=4, version=""330"")
+quad_1[""position""] = (-1,-1), (-1,+1), (+1,-1), (+1,+1)
+
+app.run(framecount=1)
+```
+
+This example prints the contents of register buffer, which is an integer texture.
+You can check that the contents are updated.",5,2,[]
+63,170093552,138,23520171,2018-02-20 03:19:38,2018-02-24 08:48:34,closed,Add an example that uses two VAOs,"Suggested in https://github.com/glumpy/glumpy/issues/102#issuecomment-366777408
+
+Merge after #137",1,2,[]
+64,170093133,137,23520171,2018-02-20 03:14:15,2018-02-24 08:47:32,closed,Call VertexAttribPointer properly when two VAOs are used,"Related to a discussion in #102.
+
+This PR is necessary to make the example below to work (alternate between two colors).
+
+```python
+# modified examples/tutorial/quad-simple.py
+from glumpy import app, gloo, gl
+import numpy as np
+
+vertex = """"""
+  uniform float scale;
+  attribute vec2 position;
+  attribute vec4 color;
+  varying vec4 v_color;
+  void main()
+  {
+    gl_Position = vec4(scale*position, 0.0, 1.0);
+    v_color = color;
+  } """"""
+
+fragment = """"""
+  varying vec4 v_color;
+  void main()
+  {
+      gl_FragColor = v_color;
+  } """"""
+
+app.use('glfw', api='GL', major=3, minor=3, profile='core')
+
+# Create a window with a valid GL context
+window = app.Window()
+
+# Build the program and corresponding buffers (with 4 vertices)
+quad = gloo.Program(vertex, fragment, count=4)
+dtype = [('color', np.float32, 4),
+         ('position', np.float32, 2)]
+quad_arrays_0 = np.zeros(4, dtype).view(gloo.VertexArray)
+# Four colors
+quad_arrays_0['color'] = [ (1,0,0,1), (0,1,0,1), (0,0,1,1), (1,1,0,1) ]
+quad_arrays_0['position'] = [ (-1,-1),   (-1,+1),   (+1,-1),   (+1,+1)   ]
+
+quad_arrays_1 = np.zeros(4, dtype).view(gloo.VertexArray)
+# All red data
+quad_arrays_1['color'] = [ (1,0,0,1), (1,0,0,1), (1,0,0,1), (1,0,0,1) ]
+quad_arrays_1['position'] = [ (-1,-1),   (-1,+1),   (+1,-1),   (+1,+1)   ]
+
+quad['scale'] = 1.0
+
+
+# Tell glumpy what needs to be done at each redraw
+count = 0
+@window.event
+def on_draw(dt):
+    global count
+    window.clear()
+    if count % 2 == 0:
+        quad.bind(quad_arrays_0)
+        quad.draw(gl.GL_TRIANGLE_STRIP)
+    else:
+        quad.bind(quad_arrays_1)
+        quad.draw(gl.GL_TRIANGLE_STRIP)
+    count += 1
+
+# Run the app
+app.run(framerate=1)
+```
+
+The visualization works as expected for the first VAO, but fails to do so for the second one because `glVertexAttribPointer` is not called for it.
+
+I will explain the code above.
+`quad.bind` overrides the VAO that the attributes (`color` and `position`) point to.
+Inside the `quad.draw`, VAOs and VBOs are actually created and linked to the vertex shader.
+In order to achieve the desired behavior, `glBindVertexArray`, `glBindBuffer`, ` glBufferData` and `glVertexAttribPointer` need to be called in this order.
+I checked, and the commands other than the last are called properly.
+However, `glVertexAttribPointer` is not called when the second VAO is binded.
+
+`glVertexAttribPointer` can be called in `Attribute._update` (https://github.com/glumpy/glumpy/blob/master/glumpy/gloo/variable.py#L426).
+This method is not called when the second VAO is binded because the `_need_update` attribute of the `Attribute` is False at that time.
+
+This PR fixes this problem by calling `glVetexAttribPointer` in `activate` in the same way `VertexBuffer` does.
+",0,2,[]
+65,169881554,135,23520171,2018-02-19 05:33:05,2018-02-19 06:46:47,closed,Add get method for Texture,,1,1,[]
+66,169868373,134,23520171,2018-02-19 02:35:57,2018-02-19 06:45:41,closed,Set initial value of projection to reasonable value,"The current implementation of `Trackball` sets `projection` to identity matrix on initialization.
+This value does not reflect the values of `zoom`, `aspect`, `znear` and `zfar`.
+The value gets set to the correct value once setters for some properties are used (e.g. `theta`, `phi`, `zoom`).
+However, if users do not use these setters, the initial value is useless, and it is often difficult to debug.
+For these reasons, I suggest to change the initial value of `projection`.
+
+Here is an example script that shows the behavior. It is a modificaiton of `gloo-teapot.py`. Print messages are the only modifications.
+
+```python
+# -----------------------------------------------------------------------------
+# Copyright (c) 2009-2016 Nicolas P. Rougier. All rights reserved.
+# Distributed under the (new) BSD License.
+# -----------------------------------------------------------------------------
+import numpy as np
+from glumpy import app, gl, gloo
+from glumpy.geometry import primitives
+from glumpy.transforms import Trackball, Position
+
+
+vertex = """"""
+attribute vec3 position;
+attribute vec3 normal;
+varying vec3 v_position;
+varying vec3 v_normal;
+void main()
+{
+    v_position = position;
+    v_normal = normal;
+    gl_Position = <transform>;
+}
+""""""
+
+fragment = """"""
+uniform mat4 model;
+uniform mat4 view;
+uniform mat4 normal;
+uniform vec3 light_color[3];
+uniform vec3 light_position[3];
+varying vec3 v_position;
+varying vec3 v_normal;
+
+float lighting(vec3 v_normal, vec3 light_position)
+{
+    // Calculate normal in world coordinates
+    vec3 n = normalize(normal * vec4(v_normal,1.0)).xyz;
+
+    // Calculate the location of this fragment (pixel) in world coordinates
+    vec3 position = vec3(view * model * vec4(v_position, 1));
+
+    // Calculate the vector from this pixels surface to the light source
+    vec3 surface_to_light = light_position - position;
+
+    // Calculate the cosine of the angle of incidence (brightness)
+    float brightness = dot(n, surface_to_light) /
+                      (length(surface_to_light) * length(n));
+    brightness = max(min(brightness,1.0),0.0);
+    return brightness;
+}
+
+void main()
+{
+    vec4 color = vec4(1,1,1,1);
+    vec4 l1 = vec4(light_color[0] * lighting(v_normal, light_position[0]), 1);
+    vec4 l2 = vec4(light_color[1] * lighting(v_normal, light_position[1]), 1);
+    vec4 l3 = vec4(light_color[2] * lighting(v_normal, light_position[2]), 1);
+    gl_FragColor = mix(color,(l1+l2+l3), 0.85);
+}
+""""""
+
+window = app.Window(width=1024, height=1024,
+                    color=(0.30, 0.30, 0.35, 1.00))
+
+def update():
+    model = teapot['transform']['model'].reshape(4,4)
+    view  = teapot['transform']['view'].reshape(4,4)
+    teapot['view']  = view
+    teapot['model'] = model
+    teapot['normal'] = np.array(np.matrix(np.dot(view, model)).I.T)
+    
+
+@window.event
+def on_draw(dt):
+    window.clear()
+    teapot.draw(gl.GL_TRIANGLES, indices)
+
+@window.event
+def on_mouse_drag(x, y, dx, dy, button):
+    update()
+    
+@window.event
+def on_init():
+    gl.glEnable(gl.GL_DEPTH_TEST)
+    update()
+
+vertices, indices = primitives.teapot()
+teapot = gloo.Program(vertex, fragment)
+teapot.bind(vertices)
+trackball = Trackball(Position(""position""))
+teapot['transform'] = trackball
+print(teapot['transform']['projection'].reshape(4, 4).T)
+trackball.theta, trackball.phi, trackball.zoom = 40, 135, 25
+print(teapot['transform']['projection'].reshape(4, 4).T)
+
+teapot[""light_position[0]""] = 3, 0, 0+5
+teapot[""light_position[1]""] = 0, 3, 0+5
+teapot[""light_position[2]""] = -3, -3, +5
+teapot[""light_color[0]""]    = 1, 0, 0
+teapot[""light_color[1]""]    = 0, 1, 0
+teapot[""light_color[2]""]    = 0, 0, 1
+
+window.attach(teapot['transform'])
+app.run()
+```
+
+Without this PR, this script will print the following.
+
+```
+[i] Using GLFW (GL 4.5)
+[[ 1.  0.  0.  0.]
+ [ 0.  1.  0.  0.]
+ [ 0.  0.  1.  0.]
+ [ 0.  0.  0.  1.]]
+[[ 4.51070833  0.          0.          0.        ]
+ [ 0.          4.51070833  0.          0.        ]
+ [ 0.          0.         -1.00400805 -4.00801611]
+ [ 0.          0.         -1.          0.        ]]
+[i] Running at 60 frames/second
+```
+",1,1,[]
+67,168780814,133,23520171,2018-02-13 08:29:41,2018-02-14 07:46:37,closed,Change the default parameter value of GeometryShader,"I changed the `vertices_out` to take `None` by default so that it behaves nicely when working with modern GL with geometry sharers.
+
+With the current default value `0`, the program calls `glProgramParameteriEXT`. This style is obsolete, and the geometry shader information is encoded in the shader itself nowadays with commands such as `layout` and `Emitvertex`. By default, this function should not be called.
+
+Here is the link to the part of the code that gets affected by the value of `vertices_out`.
+
+https://github.com/glumpy/glumpy/blob/master/glumpy/gloo/program.py#L231
+
+Also, here is a simple example using a geometry shader.
+https://gist.github.com/yuyu2172/5297d243d45610f7806255e1a26e537a",1,1,[]
+68,168770376,132,23520171,2018-02-13 07:18:38,,open,Make geom-path example to work,"Currently, the example fails to execute.
+Related https://github.com/glumpy/glumpy/issues/109
+
+```
+$ python geom-path.py                                                             
+Traceback (most recent call last):
+  File ""geom-path.py"", line 313, in <module>
+    program = gloo.Program(vertex, fragment, geometry)
+  File ""/home/leus/playground/glumpy/glumpy/gloo/program.py"", line 77, in __init__
+    elif isinstance(fragment, FragmentShader, version=version):
+TypeError: isinstance() takes no keyword arguments
+```
+",1,1,[]
+69,166500555,131,23520171,2018-02-01 10:40:55,2018-02-02 09:45:23,closed,backends: qt5: fix mouse wheel,Fixes #99 ,2,1,[]
+70,159149899,128,23520171,2017-12-19 12:04:12,2017-12-20 10:08:38,closed,Define coding for non-ascii files without any.,"This commit adds a file encoding specification to each non-ascii python file currently without one.
+
+https://www.python.org/dev/peps/pep-0263/",2,1,[]
+71,157072147,127,23520171,2017-12-07 18:46:01,2017-12-09 09:07:57,closed,Fix shader compilation error messages,#114 This removes the double underscore preprocessor warning. Now shader compilation errors will show the actual offender and give context for the error in the shader program.,1,2,[]
+72,151482503,123,23520171,2017-11-08 20:07:49,2017-11-10 06:45:50,closed,fix print function not being in python2,"the png extension would not bytecode compile for python2. This one line change fixes it.
+
+the code in question wont get hit in normal library usage but it DOES get hit if you try and make an rpm or deb package, since they precompile everything",1,1,[]
+73,141591771,122,23520171,2017-09-18 12:39:09,2017-09-18 14:41:11,closed,Fix _fetch_file under Windows (#60).,"Using `urljoin` instead of `os.path.join` fixes issue #60 
+",1,1,[]
+74,141588254,121,23520171,2017-09-18 12:21:28,,open,Switch to FlorianRhiem/pyGLFW.,"From my last pull request I got the impression you're happy to move to this pyGLFW implementation. So this commit should do that.
+I ran most of the examples and they work fine with glfw backend.
+Let me know if it needs changes.",5,1,[]
+75,111400885,107,23520171,2017-03-18 07:35:09,2017-03-18 17:56:03,closed,Make ice symmetric with respect to fire.,"Make the ice color scheme look symmetric with respect to the fire one. At the moment when you plot using the icefire color scheme they do not look symmetric to each other. With this fix, things look symmetric like below
+
+![image](http://i.imgur.com/BRd7QVr.png)",1,1,[]
+76,108088215,105,23520171,2017-02-27 10:44:23,2017-02-27 13:02:57,closed,Improve GLFW loading.,Loading framework adapted from PyGLFW: https://github.com/FlorianRhiem/pyGLFW/,1,1,[]
+77,107487442,103,23520171,2017-02-22 20:06:52,2017-02-25 10:25:35,closed,Added specific Windows instructions,"As requested I’ve provided the steps I used to get glumpy running on a Windows x64 system using Python 3. Note that not all of the example code works after this (still missing something?), but glumpy base functionality works. I've tried my best at formatting this cleanly, but I'm not really familiar with the markup used here. Feel free to clean it up if you want.",1,1,[]
+78,106887040,101,23520171,2017-02-19 03:31:36,2017-02-19 09:17:38,closed,Fix for a bug in errror reporting when ffmpeg fails. Remove duplicate code. ,"Fix error reporting issue when ffmpeg fails.
+Remove duplicate code in quiver.py example. All of it is already included in the shader directory.",1,1,[]
+79,99069326,96,23520171,2016-12-22 09:02:51,2016-12-22 14:24:17,closed,Fix examples for python 3.5,"This PR has some fixes needed to run some of the examples with Python 3.5.2.
+
+Also has fixes to the hello-world example where the imports seemed to have been broken.
+
+Also has some fixes to the quickstart to clarify commands.  For example, I could not see the square in https://github.com/mtpatter/glumpy/blob/master/doc/quickstart.rst#displaying-a-quad because the quad color was set to black.
+
+Also since the quickstart says you can record animations with `--record filename`, added here a way to specify that filename output (instead of the default).
+
+Thanks for this project- very nice visualizations.
+",1,7,[]
+80,94731207,95,23520171,2016-11-22 01:24:57,2016-11-22 11:50:22,closed,mode lines and no exec perm for Makefile,to replace https://github.com/rougier/glumpy/pull/1,1,2,[]
+81,94554075,92,23520171,2016-11-21 04:50:34,2016-11-21 06:22:37,closed,Create a jet colormap.,The code for the jet colormap already exists in the examples. It's been factored out to `library/jet.glsl` so that it can be reused. ,5,2,[]
+82,76817907,82,23520171,2016-07-08 21:36:34,2016-07-09 05:48:47,closed,Fix faulty texture uint8 cast,"Automatic texture bit depth detection is already implemented and working. 
+The cast is superficial as the type is checked for OpenGL compatibility later.
+",1,1,[]
+83,76130786,80,23520171,2016-07-04 08:50:04,2016-07-04 08:50:53,closed,Avoid failure of objload with optional parameters,"[Optional parameters](https://en.wikipedia.org/wiki/Wavefront_.obj_file) in 'v' (u v [w])  and 'vt' (x y z [w]) previously led to errors in objload.
+With this fix, these are simply ignored.
+",1,1,[]
+84,60048757,73,23520171,2016-02-20 13:57:40,2016-02-20 14:57:26,closed,Fix qt5 resize event handler,"For reasons unknown, show() must be called after resizeGL is attached.
+",1,1,[]
+85,59268273,69,23520171,2016-02-13 14:30:29,2016-02-13 14:37:09,closed,Replace Texture2D with TextureFloat2D,"This makes the `font-agg.py`, `font-sdf.py`, `float-texture.py`  and `material-colors.py`  examples work correctly.
+
+Fixes #31 and fixes #68 
+",1,1,[]
+86,58481103,67,23520171,2016-02-05 20:37:00,2016-02-05 21:23:36,closed,Avoid using using double underscore to prefix preprocessor names (rebased).,"On some graphics cards this leads to an error:
+
+-> error C0118: macros prefixed with '__' are reserved
+
+...
+024 #ifndef GEO_POSITION_STRUCT
+025 #define GEO_POSITION_STRUCT
+026 struct GeoPosition
+027 {
+028 float longitude;
+...
+",1,1,[]
+87,58405791,66,23520171,2016-02-05 09:33:30,2016-02-05 20:37:58,closed,Avoid using using double underscore to prefix preprocessor names.," Avoid using using double underscore to prefix preprocessor names. 
+
+On some graphics cards this leads to an error:
+
+-> error C0118: macros prefixed with '__' are reserved
+
+ ...
+ 024 #ifndef **GEO_POSITION_STRUCT**
+ 025 #define **GEO_POSITION_STRUCT**
+ 026 struct GeoPosition
+ 027 {
+ 028     float longitude;
+ ...
+
+```
+86b020d
+```
+",2,6,[]
+88,56886418,65,23520171,2016-01-22 13:20:18,2016-01-22 14:09:14,closed,typo,,1,1,[]
+89,56886344,64,23520171,2016-01-22 13:19:38,2016-01-22 14:08:48,closed,typo,,1,1,[]
+90,51469255,61,23520171,2015-11-22 17:12:46,2015-11-22 19:12:27,closed,Update README.rst,"Spelling fix
+",1,1,[]
+91,45981110,57,23520171,2015-09-25 06:34:44,2015-09-25 07:18:18,closed,Rather than using the generic name 'movie.mp4' name the file based on,"the name ofthe script that is being run. For example running
+
+$ python protein.py --record
+
+would result in the movie file being saved to a file
+
+protein.mp4
+",0,1,[]
+92,45980742,56,23520171,2015-09-25 06:26:57,2015-09-25 06:32:27,closed,Add a triangular grid example.,"Add a triangular grid example.
+",0,1,[]
+93,45952718,55,23520171,2015-09-24 21:32:50,2015-09-25 06:27:56,closed,"Rather than using the generic name 'movie.mp4' , name the movie file based on…","… the name ofthe script that is being run. For example running
+
+$ python protein.py --record
+
+would result in the movie file being saved to a file
+
+protein.mp4
+",2,2,[]
+94,45867519,54,23520171,2015-09-24 07:41:45,2015-09-24 08:11:08,closed,Add the ability to write movies from within python,"Add the ability to write movies from within python (in addition to the existing functionality of doing it from the command line using --record).
+
+Any glumpy file can be recorded and converted into a movie file by simply modifying
+
+``` python
+app.run()
+```
+
+to
+
+``` python
+with recorder(window, 'movie.mp4', fps=60):
+    app.run()
+```
+
+Nothing else needs to be touched. The on_draw function gets modified automatically to record a frame every time it is called.
+
+See `examples/movie-writer.py` for a working example.
+
+The --record option to the command line works as before.
+",3,2,[]
+95,45613784,53,23520171,2015-09-21 23:40:45,2015-09-22 07:26:45,closed,Update to latest version of moviepy.,"Synchronize the glumpy/ext/ffmpeg_*.py files with their equivalents in the latest version of moviepy.
+",1,5,[]
+96,45365934,52,23520171,2015-09-18 03:32:30,2015-09-18 07:31:11,closed,Add .gitignore and a few more examples.,"Added a standard .gitignore for a python project. 
+Ported a few fluid animations from shadertoy. 
+Ported an animated contour plot from vispy.  
+",1,5,[]
+97,44993939,51,23520171,2015-09-14 23:37:52,2015-09-15 05:47:22,closed,Inability to parse arguments should not result in a failure,"This is a fix for Issue #50 
+",1,1,[]
+98,44505554,49,23520171,2015-09-09 02:50:26,2015-09-16 13:11:29,closed,Port glumpy to Python 3.,"Port all of glumpy to Python 3 while maintaing backward compatibility with Python 2. 
+It should now possible to run the examples under python 3. 
+",10,8,['enhancement']
+99,44497412,48,23520171,2015-09-09 00:03:22,2015-09-09 00:59:08,closed,Port print and raise statements to python 3.,,1,1,[]
+100,43944387,47,23520171,2015-09-02 01:03:44,2015-09-02 04:31:31,closed,Port examples to python 3.,"A first step towards porting glumpy to python 3. The new examples should work both in version 2 and 3.
+",1,1,[]
+101,32015097,39,23520171,2015-03-26 13:04:05,2015-03-26 16:29:31,closed,Fix problem with large shader string in Program._merge,,0,2,[]
+102,31901508,36,23520171,2015-03-25 08:29:29,2015-03-25 15:18:52,closed,"Fix error C2143 in sdf.c(619, 620) while compiling on windows 7 with msvs 2010 compiler.","<fix>
+Fix error C2143 in sdf.c(619, 620) while compiling on windows 7 with msvs 2010 compiler.
+In a C program, variables must be declared at the beginning of the function, and they cannot be declared after the function executes non-declaration instructions.
+""https://msdn.microsoft.com/ru-ru/library/0afb82ta.aspx""
+</fix>
+",0,2,[]
+103,21886571,2,23520171,2014-09-27 06:26:35,2014-09-27 06:45:30,closed,Only unpack the first two OpenGL version numbers,"Under NVIDIA and linux the version number was 4.4.0 which does not
+unpack.
+",0,1,[]
+104,21886539,1,23520171,2014-09-27 06:23:05,2014-09-27 06:46:30,closed,Add missing modules to setup.py,"Hi,
+
+i had to add these sub-modules to setup.py. I hope I did not miss any.
+",1,1,[]

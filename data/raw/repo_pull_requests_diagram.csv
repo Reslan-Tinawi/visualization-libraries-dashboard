@@ -1,0 +1,28 @@
+index,id,number,repo_id,created_at,closed_at,state,title,body,total_comments,total_commits,labels
+0,314169840,22,25441251,2019-09-04 18:32:07,2019-09-04 18:41:46,closed,Screen size extend fix rework,Reverts the language changes introduced in !20,0,2,[]
+1,236886819,20,25441251,2018-12-07 14:34:28,2019-09-04 18:41:47,closed,Bugfix: fixing screen rendering on some edge case + minor code refactoring + clarified --help,Take 2 after https://github.com/tehmaze/diagram/pull/18,4,1,['bug']
+2,236821128,18,25441251,2018-12-07 10:30:15,2018-12-07 11:55:19,closed,Screen size extend fix,"Examples that reproduce the initial bug:
+```
+$ echo -e '1\n2\n3\n2' | diagram -H
+$ echo -e '1\n2\n3\n2' | diagram -V
+```",4,1,[]
+3,236515263,17,25441251,2018-12-06 12:37:31,2018-12-07 11:28:31,closed,Adding --sort-by-column,"Example of output on an unordered input with `-kH --sort-by-column=1`:
+
+![sorted-diagram](https://user-images.githubusercontent.com/925560/49584574-12a65c00-f95c-11e8-8779-cd1fdc4afce1.png)
+",3,1,[]
+4,91279048,12,25441251,2016-10-27 20:55:49,2017-01-24 06:54:05,closed,Update diagram.py,"Hey man, you write some bad-ass software!
+
+Encoding defaulted to NONE on my machine for some reason, so I got run-time errors.
+Had  to add this to get it to work - and THEN I fell in love :D
+
+This stuff is _awesome_ !
+",1,1,[]
+5,74153225,11,25441251,2016-06-16 21:13:06,2017-05-31 06:28:26,closed,Library example to address issue #10,"Provide a simple wrapper showing how to use diagram as a library.
+",0,5,[]
+6,24312691,7,25441251,2014-11-12 18:13:15,2014-11-13 07:20:57,closed,Fix: write to file should handle bytes,"The previous code uses 'r' which I believe is a typo
+",0,1,[]
+7,24160352,6,25441251,2014-11-10 16:56:49,2014-11-12 00:23:01,closed,Add support for >=python-3.3,"Tested using `./bin/random 100 | python2.7 diagram.py` and `./bin/random
+100 | python3.3 diagram.py`
+",2,1,[]
+8,23664822,3,25441251,2014-10-31 09:36:13,2014-10-31 12:11:35,closed,Fixed warning message,,1,1,[]
+9,23104560,2,25441251,2014-10-21 17:56:02,2014-11-07 19:23:54,closed,README: how to install via pip/github,,1,1,[]

@@ -1,0 +1,946 @@
+index,id,number,repo_id,created_at,closed_at,state,title,body,total_comments,total_commits,labels
+0,597262990,130,149135719,2021-03-20 11:20:12,,open,Fixes #128,"<!--  Thanks for sending a pull request!  Here are some tips for you:
+1. If this is your first time, read our contributor guidelines <https://github.com/spotify/chartify/blob/master/CONTRIBUTING.rst>
+2. If the PR is unfinished, please prefix the subject line with [WIP], [DRAFT], or [RFC].
+-->
+
+**What this PR does / why we need it**:
+
+**Which issue(s) this PR fixes**
+<!-- optional; in `fixes #<issue number>, fixes #<issue_number>, ...` format, will close the issue(s) when PR gets merged: -->
+Fixes #
+
+**Special notes for your reviewer**:
+
+**Release note**:
+<!--  Write your release note:
+1. Enter your extended release note in the below block. If the PR requires additional action from users switching to the new release, start the release note with the string ""action required: "".
+2. If no release note is required, just write ""NONE"".
+-->
+```release-note
+
+```
+",1,1,[]
+1,586755757,129,149135719,2021-03-08 13:04:30,,open,Change bokeh version requirement,"Chartify doesn't work with bokeh 2.3.0, so require <2.3.0 for now, until a fix is in place.
+
+/Pelle
+
+<!--  Thanks for sending a pull request!  Here are some tips for you:
+1. If this is your first time, read our contributor guidelines <https://github.com/spotify/chartify/blob/master/CONTRIBUTING.rst>
+2. If the PR is unfinished, please prefix the subject line with [WIP], [DRAFT], or [RFC].
+-->
+
+**What this PR does / why we need it**:
+
+**Which issue(s) this PR fixes**
+<!-- optional; in `fixes #<issue number>, fixes #<issue_number>, ...` format, will close the issue(s) when PR gets merged: -->
+Fixes #
+
+**Special notes for your reviewer**:
+
+**Release note**:
+<!--  Write your release note:
+1. Enter your extended release note in the below block. If the PR requires additional action from users switching to the new release, start the release note with the string ""action required: "".
+2. If no release note is required, just write ""NONE"".
+-->
+```release-note
+
+```
+",1,1,[]
+2,584266376,127,149135719,2021-03-03 21:04:40,,open,Missed change - legend handling to adjust for deprecated legend keyword,"
+**Fixes legend error**:
+This change belongs with this commit but was likely missed.
+https://github.com/spotify/chartify/commit/3af29e8a47fa5257e6faf5f2dd47baa4db1344e3#diff-17b8994a0f281801a29c52fc0dc9491168ac64e795936bc9d6aa663f7892311c
+
+Problem reproduced when plotting with grouping and colors:
+```
+import chartify
+import pandas as pd
+df = pd.DataFrame.from_dict({""data"":[1,1,2,2,3,3], ""group"":[""a"",""a"",""a"",""b"",""b"",""b""]})
+ch = chartify.Chart(x_axis_type='categorical')
+ch.plot.scatter(
+data_frame=df,
+categorical_columns=""group"",
+numeric_column=""data"",
+color_column=""group"",
+)
+ch.show()
+```
+<details><summary>Error</summary>
+<p>
+
+```
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+<ipython-input-1-eae93029a0e8> in <module>
+      7 categorical_columns=""group"",
+      8 numeric_column=""data"",
+----> 9 color_column=""group"",
+     10 )
+     11 ch.show()
+
+~/.virtualenvs/murph_commonality/lib/python3.7/site-packages/chartify-3.0.3-py3.7.egg/chartify/_core/plot.py in scatter(self, data_frame, categorical_columns, numeric_column, size_column, color_column, color_order, categorical_order_by, categorical_order_ascending, alpha, marker)
+   2050                 source=source,
+   2051                 marker=marker,
+-> 2052                 alpha=alpha
+   2053                 )
+   2054 
+
+~/.virtualenvs/murph_commonality/lib/python3.7/site-packages/chartify-3.0.3-py3.7.egg/chartify/_core/plot.py in _plot_with_legend(method, **kwargs)
+    126 
+    127         if legend_label is not None:
+--> 128             return method(**kwargs, legend_label=legend_label)
+    129         elif legend_group is not None:
+    130             return method(**kwargs, legend_group=legend_group)
+
+~/.virtualenvs/murph_commonality/lib/python3.7/site-packages/bokeh/plotting/figure.py in scatter(self, *args, **kwargs)
+   1088             return self.circle(*args, **kwargs)
+   1089         else:
+-> 1090             return self._scatter(*args, marker=marker_type, **kwargs)
+   1091 
+   1092     def hexbin(self, x, y, size, orientation=""pointytop"", palette=""Viridis256"", line_color=None, fill_color=None, aspect_scale=1, **kwargs):
+
+~/.virtualenvs/murph_commonality/lib/python3.7/site-packages/bokeh/plotting/_decorators.py in wrapped(self, *args, **kwargs)
+     52             for arg, param in zip(args, sigparams[1:]):
+     53                 kwargs[param.name] = arg
+---> 54             return create_renderer(glyphclass, self, **kwargs)
+     55 
+     56         wrapped.__signature__ = Signature(parameters=sigparams)
+
+~/.virtualenvs/murph_commonality/lib/python3.7/site-packages/bokeh/plotting/_renderer.py in create_renderer(glyphclass, plot, **kwargs)
+    129         # if it creates a new `LegendItem`, the referenced
+    130         # renderer must already be present.
+--> 131         update_legend(plot, legend_kwarg, glyph_renderer)
+    132 
+    133     return glyph_renderer
+
+~/.virtualenvs/murph_commonality/lib/python3.7/site-packages/bokeh/plotting/_legends.py in update_legend(plot, legend_kwarg, glyph_renderer)
+     54     kwarg, value = list(legend_kwarg.items())[0]
+     55 
+---> 56     _LEGEND_KWARG_HANDLERS[kwarg](value, legend, glyph_renderer)
+     57 
+     58 #-----------------------------------------------------------------------------
+
+~/.virtualenvs/murph_commonality/lib/python3.7/site-packages/bokeh/plotting/_legends.py in _handle_legend_label(label, legend, glyph_renderer)
+    129 def _handle_legend_label(label, legend, glyph_renderer):
+    130     if not isinstance(label, str):
+--> 131         raise ValueError(""legend_label value must be a string"")
+    132     label = value(label)
+    133     item = _find_legend_item(label, legend)
+
+ValueError: legend_label value must be a string
+```
+
+**Special notes for your reviewer**:
+
+**Release note**:
+<!--  Write your release note:
+1. Enter your extended release note in the below block. If the PR requires additional action from users switching to the new release, start the release note with the string ""action required: "".
+2. If no release note is required, just write ""NONE"".
+-->
+```release-note
+
+```
+
+</p>
+</details>
+
+
+According to this Bokeh release 1.4.0 when using explicit legend_label, you can no longer pass legend label as a dictionary with ""value"" key.
+https://docs.bokeh.org/en/latest/docs/releases.html#release-1-4-0",0,1,[]
+3,568536726,125,149135719,2021-02-05 18:32:13,2021-02-05 18:36:42,closed,test,"<!--  Thanks for sending a pull request!  Here are some tips for you:
+1. If this is your first time, read our contributor guidelines <https://github.com/spotify/chartify/blob/master/CONTRIBUTING.rst>
+2. If the PR is unfinished, please prefix the subject line with [WIP], [DRAFT], or [RFC].
+-->
+
+**What this PR does / why we need it**:
+
+**Which issue(s) this PR fixes**
+<!-- optional; in `fixes #<issue number>, fixes #<issue_number>, ...` format, will close the issue(s) when PR gets merged: -->
+Fixes #
+
+**Special notes for your reviewer**:
+
+**Release note**:
+<!--  Write your release note:
+1. Enter your extended release note in the below block. If the PR requires additional action from users switching to the new release, start the release note with the string ""action required: "".
+2. If no release note is required, just write ""NONE"".
+-->
+```release-note
+
+```
+",0,1,[]
+4,556223804,124,149135719,2021-01-16 19:44:59,2021-02-05 18:44:35,closed,Update tox.yml,"<!--  Thanks for sending a pull request!  Here are some tips for you:
+1. If this is your first time, read our contributor guidelines <https://github.com/spotify/chartify/blob/master/CONTRIBUTING.rst>
+2. If the PR is unfinished, please prefix the subject line with [WIP], [DRAFT], or [RFC].
+-->
+
+**What this PR does / why we need it**:
+
+**Which issue(s) this PR fixes**
+<!-- optional; in `fixes #<issue number>, fixes #<issue_number>, ...` format, will close the issue(s) when PR gets merged: -->
+Fixes #
+
+**Special notes for your reviewer**:
+
+**Release note**:
+<!--  Write your release note:
+1. Enter your extended release note in the below block. If the PR requires additional action from users switching to the new release, start the release note with the string ""action required: "".
+2. If no release note is required, just write ""NONE"".
+-->
+```release-note
+NONE
+```
+",0,3,[]
+5,555506427,123,149135719,2021-01-15 07:12:31,,open,Security Fix for Insecure Deserialization - huntr.dev,"https://huntr.dev/users/Anon-Artist has fixed the Insecure Deserialization vulnerability 🔨. Think you could fix a vulnerability like this?
+
+Get involved at https://huntr.dev/
+
+Q | A
+Version Affected | ALL
+Bug Fix | YES
+Original Pull Request | https://github.com/418sec/chartify/pull/1
+Vulnerability README | https://github.com/418sec/huntr/blob/master/bounties/pip/chartify/1/README.md
+
+### User Comments:
+
+### 📊 Metadata *
+Arbitrary code exec vulnerability 
+
+#### Bounty URL:  https://www.huntr.dev/bounties/1-pip-chartify
+
+### ⚙️ Description *
+
+Chartify is a Python library that makes it easy for data scientists to create charts. This package was vulnerable to Arbitrary code execution via Insecure YAML deserialization due to the use of a known vulnerable function load() in yaml.
+
+### 💻 Technical Description *
+
+This package was vulnerable to Arbitrary code execution due to the use of a known vulnerable function load() in YAML. Changing that to safe_load or using SafeLoader will fix the issue.
+
+### 🐛 Proof of Concept (PoC) *
+
+Install the package and run the below code:
+```#!/usr/bin/env python3
+from chartify._core.colors import *
+
+payload = '''
+!!python/object/new:type
+  args: [""z"", !!python/tuple [], {""extend"": !!python/name:exec }]
+  listitems: ""__import__('os').system('calc.exe')""
+'''
+open('pwn.yml', 'w+').write(payload)
+
+CustomColors.from_yaml('hek', 'pwn.yml')
+print(""pwned 🏴"")
+```
+
+
+### 🔥 Proof of Fix (PoF) *
+
+After applying the fix, run the PoC again, `calc` wont pop and no code will be executed. Hence code exec is mitigated.
+
+
+### 👍 User Acceptance Testing (UAT)
+
+Only `SafeLoader` is used, which is the safer function, no breaking changes introduced.",1,6,[]
+6,545507848,122,149135719,2020-12-25 03:48:38,2021-02-05 18:49:03,closed,"docs: fix simple typo, quanity -> quantity","There is a small typo in chartify/examples.py.
+
+Should read `quantity` rather than `quanity`.
+
+
+Semi-automated pull request generated by
+https://github.com/timgates42/meticulous/blob/master/docs/NOTE.md",0,3,[]
+7,514359747,121,149135719,2020-11-02 22:07:24,2020-11-02 22:11:05,closed,release 3.0.3,"<!--  Thanks for sending a pull request!  Here are some tips for you:
+1. If this is your first time, read our contributor guidelines <https://github.com/spotify/chartify/blob/master/CONTRIBUTING.rst>
+2. If the PR is unfinished, please prefix the subject line with [WIP], [DRAFT], or [RFC].
+-->
+
+**What this PR does / why we need it**:
+
+**Which issue(s) this PR fixes**
+<!-- optional; in `fixes #<issue number>, fixes #<issue_number>, ...` format, will close the issue(s) when PR gets merged: -->
+Fixes #
+
+**Special notes for your reviewer**:
+
+**Release note**:
+<!--  Write your release note:
+1. Enter your extended release note in the below block. If the PR requires additional action from users switching to the new release, start the release note with the string ""action required: "".
+2. If no release note is required, just write ""NONE"".
+-->
+```release-note
+
+```
+",0,1,[]
+8,514352357,120,149135719,2020-11-02 21:57:35,2020-11-02 21:59:55,closed,gha: rename workflow to tox,"<!--  Thanks for sending a pull request!  Here are some tips for you:
+1. If this is your first time, read our contributor guidelines <https://github.com/spotify/chartify/blob/master/CONTRIBUTING.rst>
+2. If the PR is unfinished, please prefix the subject line with [WIP], [DRAFT], or [RFC].
+-->
+
+**What this PR does / why we need it**:
+
+**Which issue(s) this PR fixes**
+<!-- optional; in `fixes #<issue number>, fixes #<issue_number>, ...` format, will close the issue(s) when PR gets merged: -->
+Fixes #
+
+**Special notes for your reviewer**:
+
+**Release note**:
+<!--  Write your release note:
+1. Enter your extended release note in the below block. If the PR requires additional action from users switching to the new release, start the release note with the string ""action required: "".
+2. If no release note is required, just write ""NONE"".
+-->
+```release-note
+
+```
+",0,1,[]
+9,514271142,119,149135719,2020-11-02 19:28:28,2020-11-02 21:35:23,closed,test: run tox using github actions,"<!--  Thanks for sending a pull request!  Here are some tips for you:
+1. If this is your first time, read our contributor guidelines <https://github.com/spotify/chartify/blob/master/CONTRIBUTING.rst>
+2. If the PR is unfinished, please prefix the subject line with [WIP], [DRAFT], or [RFC].
+-->
+
+**What this PR does / why we need it**:
+
+**Which issue(s) this PR fixes**
+<!-- optional; in `fixes #<issue number>, fixes #<issue_number>, ...` format, will close the issue(s) when PR gets merged: -->
+Fixes #
+
+**Special notes for your reviewer**:
+
+**Release note**:
+<!--  Write your release note:
+1. Enter your extended release note in the below block. If the PR requires additional action from users switching to the new release, start the release note with the string ""action required: "".
+2. If no release note is required, just write ""NONE"".
+-->
+```release-note
+
+```
+",0,1,[]
+10,512577717,118,149135719,2020-10-29 21:23:14,2020-11-02 21:50:24,closed,fix deprecated yaml load,#117 with tests and additional fix + todo.,1,8,[]
+11,507831744,117,149135719,2020-10-21 20:03:44,2020-10-29 21:58:20,closed,Replace deprecated yaml FullLoader,"See https://github.com/yaml/pyyaml/wiki/PyYAML-yaml.load(input)-Deprecation
+
+---
+NOTE The FullLoader loader class and full_load function (the current default for load) should be avoided for now. New exploits in 5.3.1 were found in July 2020. These exploits will be addressed in the next release, but if further exploits are found then FullLoader may go away.
+---
+
+(The usage in options.py is also unsafe but is explicitly marked as such.)",1,1,[]
+12,507651533,116,149135719,2020-10-21 15:44:56,2020-10-21 17:11:19,closed,release 3.0.2,"<!--  Thanks for sending a pull request!  Here are some tips for you:
+1. If this is your first time, read our contributor guidelines <https://github.com/spotify/chartify/blob/master/CONTRIBUTING.rst>
+2. If the PR is unfinished, please prefix the subject line with [WIP], [DRAFT], or [RFC].
+-->
+
+**What this PR does / why we need it**:
+
+**Which issue(s) this PR fixes**
+<!-- optional; in `fixes #<issue number>, fixes #<issue_number>, ...` format, will close the issue(s) when PR gets merged: -->
+Fixes #
+
+**Special notes for your reviewer**:
+
+**Release note**:
+<!--  Write your release note:
+1. Enter your extended release note in the below block. If the PR requires additional action from users switching to the new release, start the release note with the string ""action required: "".
+2. If no release note is required, just write ""NONE"".
+-->
+```release-note
+
+```
+",0,1,[]
+13,505029083,115,149135719,2020-10-16 18:36:07,2020-10-16 19:27:10,closed,Support pyyaml 5.2+,"<!--  Thanks for sending a pull request!  Here are some tips for you:
+1. If this is your first time, read our contributor guidelines <https://github.com/spotify/chartify/blob/master/CONTRIBUTING.rst>
+2. If the PR is unfinished, please prefix the subject line with [WIP], [DRAFT], or [RFC].
+-->
+
+**What this PR does / why we need it**:
+
+Make chartify work with pyyaml >= 5.2.
+
+**Which issue(s) this PR fixes**
+<!-- optional; in `fixes #<issue number>, fixes #<issue_number>, ...` format, will close the issue(s) when PR gets merged: -->
+Fixes #102
+
+**Special notes for your reviewer**:
+
+See https://github.com/yaml/pyyaml/issues/355#issuecomment-561246757 
+
+**Release note**:
+<!--  Write your release note:
+1. Enter your extended release note in the below block. If the PR requires additional action from users switching to the new release, start the release note with the string ""action required: "".
+2. If no release note is required, just write ""NONE"".
+-->
+```release-note
+
+```
+",1,5,[]
+14,434012534,113,149135719,2020-06-13 14:23:14,2020-11-02 21:50:47,closed,Fixed typo,"<!--  Thanks for sending a pull request!  Here are some tips for you:
+1. If this is your first time, read our contributor guidelines <https://github.com/spotify/chartify/blob/master/CONTRIBUTING.rst>
+2. If the PR is unfinished, please prefix the subject line with [WIP], [DRAFT], or [RFC].
+-->
+
+**What this PR does / why we need it**:
+Just fixed some typo
+**Which issue(s) this PR fixes**
+<!-- optional; in `fixes #<issue number>, fixes #<issue_number>, ...` format, will close the issue(s) when PR gets merged: -->
+Fixes #
+
+**Special notes for your reviewer**:
+
+**Release note**:
+<!--  Write your release note:
+1. Enter your extended release note in the below block. If the PR requires additional action from users switching to the new release, start the release note with the string ""action required: "".
+2. If no release note is required, just write ""NONE"".
+-->
+```release-note
+NONE
+```
+",0,1,[]
+15,426846131,112,149135719,2020-06-02 21:46:10,2020-06-02 21:49:26,closed,Remove jupyter dependency,,0,1,[]
+16,425298097,111,149135719,2020-05-29 19:54:46,2020-05-29 19:58:58,closed,3.0 release,,0,1,[]
+17,425291803,110,149135719,2020-05-29 19:38:15,2020-05-29 19:51:24,closed,Remove colour dependency,,0,4,[]
+18,425276644,109,149135719,2020-05-29 19:10:07,2020-05-29 19:35:09,closed,Upgrade bokeh to 2.0+,,0,5,[]
+19,425266534,108,149135719,2020-05-29 18:45:01,2020-05-29 18:50:28,closed,Update pandas to 1.0 and python to 3.6,"Borrowed from #106 
+
+Thanks @tomasaschan!",0,7,[]
+20,423642555,107,149135719,2020-05-27 06:42:43,2020-05-29 17:53:01,closed,Fix broken link to documentation,"<!--  Thanks for sending a pull request!  Here are some tips for you:
+1. If this is your first time, read our contributor guidelines <https://github.com/spotify/chartify/blob/master/CONTRIBUTING.rst>
+2. If the PR is unfinished, please prefix the subject line with [WIP], [DRAFT], or [RFC].
+-->
+
+The title says it all. Previous link did not work because of the trailing slash: https://chartify.readthedocs.io/en/latest/index.html/",1,1,[]
+21,404948270,106,149135719,2020-04-17 06:31:49,2020-05-29 18:50:23,closed,Bump Pandas requirement to 1.0.0,"**What this PR does / why we need it**:
+
+Pandas 1.0 has been out for a few months, and seems stable enough that we should start supporting it!
+
+In addition, I noticed some inconsistencies between versions used in the package requirements itself,
+and in the requirements specified for local development. These have now been rectified (and future-proofed)
+by including the package `requirements.txt` from the dev one instead of specifying everything twice.
+
+**Special notes for your reviewer**:
+
+On my local setup (Windows with WSL) there are some problems with chromedriver that I haven't been
+able to figure out. Because of this, saving images as png doesn't work, and thus that test has been
+skipped when I've tested locally. I doubt that it would make a difference for this change, but might
+be worth double-checking in the PR builds.
+
+**Release note**:
+<!--  Write your release note:
+1. Enter your extended release note in the below block. If the PR requires additional action from users switching to the new release, start the release note with the string ""action required: "".
+2. If no release note is required, just write ""NONE"".
+-->
+```release-note
+Bump Pandas requirement to 1.0
+```",6,5,[]
+22,389369415,105,149135719,2020-03-16 16:47:33,2020-04-17 15:43:01,closed,Adding docs link to README,"<!--  Thanks for sending a pull request!  Here are some tips for you:
+1. If this is your first time, read our contributor guidelines <https://github.com/spotify/chartify/blob/master/CONTRIBUTING.rst>
+2. If the PR is unfinished, please prefix the subject line with [WIP], [DRAFT], or [RFC].
+-->
+
+**What this PR does / why we need it**:
+This PR intents to point users from readme to the docs as described at #103 
+**Which issue(s) this PR fixes**
+<!-- optional; in `fixes #<issue number>, fixes #<issue_number>, ...` format, will close the issue(s) when PR gets merged: -->
+Fixes #103
+
+**Special notes for your reviewer**:
+This is my first contrib to spotify code bases, if there's some additional action required for fixing this issue please let me know.
+",1,1,[]
+23,354110741,101,149135719,2019-12-17 13:41:32,2021-02-05 18:49:54,closed,Create pythonapp.yml,"<!--  Thanks for sending a pull request!  Here are some tips for you:
+1. If this is your first time, read our contributor guidelines <https://github.com/spotify/chartify/blob/master/CONTRIBUTING.rst>
+2. If the PR is unfinished, please prefix the subject line with [WIP], [DRAFT], or [RFC].
+-->
+
+**What this PR does / why we need it**:
+
+**Which issue(s) this PR fixes**
+<!-- optional; in `fixes #<issue number>, fixes #<issue_number>, ...` format, will close the issue(s) when PR gets merged: -->
+Fixes #
+
+**Special notes for your reviewer**:
+
+**Release note**:
+<!--  Write your release note:
+1. Enter your extended release note in the below block. If the PR requires additional action from users switching to the new release, start the release note with the string ""action required: "".
+2. If no release note is required, just write ""NONE"".
+-->
+```release-note
+
+```
+",1,1,[]
+24,346360300,100,149135719,2019-11-27 17:44:55,2019-11-27 20:26:58,closed,Update history for 2.7,Adds history for 2.7 release,0,3,[]
+25,346349034,99,149135719,2019-11-27 17:14:59,2020-05-29 18:51:19,closed,Bump pillow from 6.2.0 to 6.2.1,"Bumps [pillow](https://github.com/python-pillow/Pillow) from 6.2.0 to 6.2.1.
+<details>
+<summary>Release notes</summary>
+
+*Sourced from [pillow's releases](https://github.com/python-pillow/Pillow/releases).*
+
+> ## 6.2.1
+> https://pillow.readthedocs.io/en/stable/releasenotes/6.2.1.html
+</details>
+<details>
+<summary>Changelog</summary>
+
+*Sourced from [pillow's changelog](https://github.com/python-pillow/Pillow/blob/master/CHANGES.rst).*
+
+> 6.2.1 (2019-10-21)
+> ------------------
+> 
+> - This is the last Pillow release to support Python 2.7 [#3642](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/3642)
+> 
+> - Add support for Python 3.8 [#4141](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/4141)
+>   [hugovk]
+</details>
+<details>
+<summary>Commits</summary>
+
+- [`6e0f07b`](https://github.com/python-pillow/Pillow/commit/6e0f07bbe38def22d36ee176b2efd9ea74b453a6) Pillow 6.2.1 is the last to support Python 2.7
+- [`39d26d3`](https://github.com/python-pillow/Pillow/commit/39d26d3f903e151423a711f2f5eeac6168a97692) 6.2.1 version bump
+- [`ee9e21a`](https://github.com/python-pillow/Pillow/commit/ee9e21aff1cf0ec6c07dc68d6f266eee4c84f948) Add release notes for Pillow 6.2.1
+- [`efcfb91`](https://github.com/python-pillow/Pillow/commit/efcfb91b71955dff1d1fdd17da1147580f872859) Update CHANGES.rst [CI skip]
+- [`f97c4dd`](https://github.com/python-pillow/Pillow/commit/f97c4ddb0afde378a40a5f94ac88f25327387055) 6.2.x: Add support for Python 3.8 ([#4151](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/4151))
+- [`b78edcc`](https://github.com/python-pillow/Pillow/commit/b78edcc9e4bae68fb206e71895d6a9fd23d49f40) Add support for Python 3.8
+- See full diff in [compare view](https://github.com/python-pillow/Pillow/compare/6.2.0...6.2.1)
+</details>
+<br />
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=pillow&package-manager=pip&previous-version=6.2.0&new-version=6.2.1)](https://help.github.com/articles/configuring-automated-security-fixes)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot ignore this [patch|minor|major] version` will close this PR and stop Dependabot creating any more for this minor/major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot use these labels` will set the current labels as the default for future PRs for this repo and language
+- `@dependabot use these reviewers` will set the current reviewers as the default for future PRs for this repo and language
+- `@dependabot use these assignees` will set the current assignees as the default for future PRs for this repo and language
+- `@dependabot use this milestone` will set the current milestone as the default for future PRs for this repo and language
+
+You can disable automated security fix PRs for this repo from the [Security Alerts page](https://github.com/spotify/chartify/network/alerts).
+
+</details>",1,1,['dependencies']
+26,344664838,98,149135719,2019-11-22 19:25:54,2019-11-27 17:14:19,closed,Fix bokeh deprecated legend parameter,"- upgrade bokeh and pillow requirements
+- Add license to setup.py",0,6,[]
+27,344579200,97,149135719,2019-11-22 15:43:56,2019-11-27 17:43:43,closed,Include missing requirements file and other files,Also include additional test files and simplify some of the directory inclusion,1,2,[]
+28,335478967,95,149135719,2019-11-01 15:30:59,2019-11-27 17:15:02,closed,Bump pillow from 5.3.0 to 6.2.0,"Bumps [pillow](https://github.com/python-pillow/Pillow) from 5.3.0 to 6.2.0.
+<details>
+<summary>Release notes</summary>
+
+*Sourced from [pillow's releases](https://github.com/python-pillow/Pillow/releases).*
+
+> ## 6.2.0
+> https://pillow.readthedocs.io/en/stable/releasenotes/6.2.0.html
+> 
+> ## 6.1.0
+> https://pillow.readthedocs.io/en/stable/releasenotes/6.1.0.html
+> 
+> ## 6.0.0
+> No release notes provided.
+> 
+> ## 5.4.1
+> No release notes provided.
+> 
+> ## 5.4.0
+> No release notes provided.
+</details>
+<details>
+<summary>Changelog</summary>
+
+*Sourced from [pillow's changelog](https://github.com/python-pillow/Pillow/blob/master/CHANGES.rst).*
+
+> 6.2.0 (2019-10-01)
+> ------------------
+> 
+> - Catch buffer overruns [#4104](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/4104)
+>   [radarhere]
+> 
+> - Initialize rows_per_strip when RowsPerStrip tag is missing [#4034](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/4034)
+>   [cgohlke, radarhere]
+> 
+> - Raise error if TIFF dimension is a string [#4103](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/4103)
+>   [radarhere]
+> 
+> - Added decompression bomb checks [#4102](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/4102)
+>   [radarhere]
+> 
+> - Fix ImageGrab.grab DPI scaling on Windows 10 version 1607+ [#4000](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/4000)
+>   [nulano, radarhere]
+> 
+> - Corrected negative seeks [#4101](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/4101)
+>   [radarhere]
+> 
+> - Added argument to capture all screens on Windows [#3950](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/3950)
+>   [nulano, radarhere]
+> 
+> - Updated warning to specify when Image.frombuffer defaults will change [#4086](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/4086)
+>   [radarhere]
+> 
+> - Changed WindowsViewer format to PNG [#4080](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/4080)
+>   [radarhere]
+> 
+> - Use TIFF orientation [#4063](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/4063)
+>   [radarhere]
+> 
+> - Raise the same error if a truncated image is loaded a second time [#3965](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/3965)
+>   [radarhere]
+> 
+> - Lazily use ImageFileDirectory_v1 values from Exif [#4031](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/4031)
+>   [radarhere]
+> 
+> - Improved HSV conversion [#4004](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/4004)
+>   [radarhere]
+> 
+> - Added text stroking [#3978](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/3978)
+>   [radarhere, hugovk]
+> 
+> - No more deprecated bdist_wininst .exe installers [#4029](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/4029)
+>   [hugovk]
+> 
+> - Do not allow floodfill to extend into negative coordinates [#4017](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/4017)
+>   [radarhere]
+></tr></table> ... (truncated)
+</details>
+<details>
+<summary>Commits</summary>
+
+- [`8a30d13`](https://github.com/python-pillow/Pillow/commit/8a30d135378dc6a1c3c08fa4bb9fbc15370feedf) Updated CHANGES.rst [ci skip]
+- [`75602d1`](https://github.com/python-pillow/Pillow/commit/75602d12e1b6f2152ab5bd1acfb62a9c8a4a0432) 6.2.0 version bump
+- [`4756af9`](https://github.com/python-pillow/Pillow/commit/4756af9c1027ae620eaa9538d6b0dd9b0e844fca) Updated CHANGES.rst [ci skip]
+- [`cc16025`](https://github.com/python-pillow/Pillow/commit/cc16025e234b7a7a4dd3a86d2fdc0980698db9cc) Merge pull request [#4104](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/4104) from radarhere/overrun
+- [`fb84701`](https://github.com/python-pillow/Pillow/commit/fb8470187a45043c33b1c75e7dca48b38d5db7a6) Merge pull request [#4034](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/4034) from cgohlke/patch-1
+- [`b9693a5`](https://github.com/python-pillow/Pillow/commit/b9693a51c99c260bd66d1affeeab4a226cf7e5a5) Merge pull request [#4103](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/4103) from radarhere/dimension
+- [`f228d0c`](https://github.com/python-pillow/Pillow/commit/f228d0ccbf6bf9392d7fcd51356ef2cfda80c75a) Merge pull request [#4102](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/4102) from radarhere/decompression
+- [`aaf2c42`](https://github.com/python-pillow/Pillow/commit/aaf2c421564fcf96bd030487f09b648f7feb7b67) Merge pull request [#4000](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/4000) from nulano/dpi_fix
+- [`b36c1bc`](https://github.com/python-pillow/Pillow/commit/b36c1bc943d554ba223086c7efb502d080f73905) Merge pull request [#4101](https://github-redirect.dependabot.com/python-pillow/Pillow/issues/4101) from radarhere/negative_seek
+- [`9a977b9`](https://github.com/python-pillow/Pillow/commit/9a977b975cd871ef9a9128b72414c0de3a292591) Raise error if dimension is a string
+- Additional commits viewable in [compare view](https://github.com/python-pillow/Pillow/compare/5.3.0...6.2.0)
+</details>
+<br />
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=pillow&package-manager=pip&previous-version=5.3.0&new-version=6.2.0)](https://help.github.com/articles/configuring-automated-security-fixes)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot ignore this [patch|minor|major] version` will close this PR and stop Dependabot creating any more for this minor/major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot use these labels` will set the current labels as the default for future PRs for this repo and language
+- `@dependabot use these reviewers` will set the current reviewers as the default for future PRs for this repo and language
+- `@dependabot use these assignees` will set the current assignees as the default for future PRs for this repo and language
+- `@dependabot use this milestone` will set the current milestone as the default for future PRs for this repo and language
+
+You can disable automated security fix PRs for this repo from the [Security Alerts page](https://github.com/spotify/chartify/network/alerts).
+
+</details>",1,1,['dependencies']
+29,309667391,92,149135719,2019-08-21 20:10:23,2019-11-27 17:36:49,closed,Update default yaml loader,"@
+Fixes #78 
+
+yaml.load(input) was deprecated so update default loader to 'FullLoader' in ```options.py``` and 
+```colors.py```
+
+More info [here](https://github.com/yaml/pyyaml/wiki/PyYAML-yaml.load(input)-Deprecation)",1,6,[]
+30,309647610,91,149135719,2019-08-21 19:13:50,2019-08-21 19:50:57,closed,Default yaml loader,"Add default yaml loader to ```colors.py``` and ```options.py```
+
+info about yaml.load(input) deprecation [here](https://github.com/yaml/pyyaml/wiki/PyYAML-yaml.load(input)-Deprecation)
+
+```
+/python3.6/site-packages/chartify/_core/options.py:110: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+yaml_options = yaml.load(open(filename))
+/python3.6/site-packages/chartify/_core/colors.py:44: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+return yaml.load(open(filename))
+/python3.6/site-packages/chartify/_core/colors.py:275: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+palette_list = yaml.load(open(filename))
+```
+",0,2,[]
+31,309636770,90,149135719,2019-08-21 18:45:59,2019-08-21 18:52:30,closed,Default yaml loader,"Set default loader to 'FullLoader' in ```options.py``` and ```colors.py```
+
+More info on yaml.load(input)  deprecation [here](https://github.com/yaml/pyyaml/wiki/PyYAML-yaml.load(input)-Deprecation)
+
+```
+/python3.6/site-packages/chartify/_core/options.py:110: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+yaml_options = yaml.load(open(filename))
+/python3.6/site-packages/chartify/_core/colors.py:44: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+return yaml.load(open(filename))
+/python3.6/site-packages/chartify/_core/colors.py:275: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+palette_list = yaml.load(open(filename))
+```",0,2,[]
+32,307826678,88,149135719,2019-08-15 19:25:33,2019-08-15 19:27:51,closed,2.6.1,,0,1,[]
+33,304797768,87,149135719,2019-08-06 16:32:10,2019-08-15 19:17:56,closed,update packages to latest version of bokeh,"**What this PR does / why we need it**:
+Updates to the latest version of bokeh
+Fixes errors with setting legend location
+
+**Which issue(s) this PR fixes**
+Fixes #81
+
+**Special notes for your reviewer**:
+Update of scipy was also necessary
+
+**Release note**:
+NONE
+",0,1,[]
+34,300908854,85,149135719,2019-07-24 21:52:05,2019-07-25 18:13:26,closed,move package to requirements.txt and update setup file,"Move dependency to `requirements.txt` and have setup file read from it.
+
+Raise `RuntimeError` if packages are not bound:
+```python
+(env) Mollys-MacBook-Pro:~/repos/chartify (setup *)$ pip install -e .
+Obtaining file:///Users/mzhu/repos/chartify
+    Complete output from command python setup.py egg_info:
+    Traceback (most recent call last):
+      File ""<string>"", line 1, in <module>
+      File ""/Users/mzhu/repos/chartify/setup.py"", line 49, in <module>
+        raise RuntimeError(""All Packages in requirements.txt must be pinned"")
+    RuntimeError: All Packages in requirements.txt must be pinned
+    
+    ----------------------------------------
+Command ""python setup.py egg_info"" failed with error code 1 in /Users/mzhu/repos/chartify/
+```",1,4,[]
+35,277368763,79,149135719,2019-05-09 12:19:40,2019-07-25 18:02:56,closed,Fix bug in README while generating docs,"<!--  Thanks for sending a pull request!  Here are some tips for you:
+1. If this is your first time, read our contributor guidelines <https://github.com/spotify/chartify/blob/master/CONTRIBUTING.rst>
+2. If the PR is unfinished, please prefix the subject line with [WIP], [DRAFT], or [RFC].
+-->
+
+This PR fixes a bug in the generated HTML documentation
+
+**What this PR does / why we need it**:
+
+Image of readme.html in the documentation before the fix:
+![DocBugChartify](https://user-images.githubusercontent.com/13381361/57452710-1d09b080-7282-11e9-832d-de2e15c73f6f.png)
+Image of readme.html in documentation after the fix:
+![BugFixedChartify](https://user-images.githubusercontent.com/13381361/57452733-2dba2680-7282-11e9-878d-a02614df227d.png)
+
+(Kindly note the link in the address bar)
+
+
+**Which issue(s) this PR fixes**
+<!-- optional; in `fixes #<issue number>, fixes #<issue_number>, ...` format, will close the issue(s) when PR gets merged: -->
+No specific issue number, but fixes a bug in generated documentation
+
+**Special notes for your reviewer**:
+The correct README file was included in `docs/`, which was previously wrong
+
+**Release note**:
+<!--  Write your release note:
+1. Enter your extended release note in the below block. If the PR requires additional action from users switching to the new release, start the release note with the string ""action required: "".
+2. If no release note is required, just write ""NONE"".
+-->
+```release-note
+NONE
+```
+",1,1,[]
+36,259624351,72,149135719,2019-03-08 22:16:21,2019-03-08 22:28:58,closed,Better control over bar color,Lets users plot colors that aren't contained in the categorical axis,0,4,[]
+37,253736972,68,149135719,2019-02-17 20:22:59,2019-02-17 20:27:51,closed,Added radar chart,,0,2,[]
+38,253675100,67,149135719,2019-02-16 23:16:17,,open,Fix failing doc build,,0,3,[]
+39,251797163,65,149135719,2019-02-11 04:12:30,2019-02-16 22:44:27,closed,<docs>: mentioned how to save PNG output,"<!--  Thanks for sending a pull request!  Here are some tips for you:
+1. If this is your first time, read our contributor guidelines <https://github.com/spotify/chartify/blob/master/CONTRIBUTING.rst>
+
+
+2. If the PR is unfinished, please prefix the subject line with [WIP], [DRAFT], or [RFC].
+-->
+
+**What this PR does / why we need it**:
+
+The document is not every clear for beginner
+
+**Which issue(s) this PR fixes**
+
+no
+
+<!-- optional; in `fixes #<issue number>, fixes #<issue_number>, ...` format, will close the issue(s) when PR gets merged: -->
+Fixes #
+
+**Special notes for your reviewer**:
+
+**Release note**:
+<!--  Write your release note:
+1. Enter your extended release note in the below block. If the PR requires additional action from users switching to the new release, start the release note with the string ""action required: "".
+2. If no release note is required, just write ""NONE"".
+-->
+```release-note
+
+just add an instruction to tell beginner how to save png
+
+
+```
+",1,1,[]
+40,237544800,57,149135719,2018-12-11 04:08:37,2018-12-11 23:11:10,closed,Fix the axis precision when the max value equals to the min value,"**What this PR does / why we need it**:
+
+In the method BasePlot._axis_format_precision, when max_value = min_value, an OverflowError will be raised. We should pass a positive number to the log function here.
+
+**Which issue(s) this PR fixes**
+<!-- optional; in `fixes #<issue number>, fixes #<issue_number>, ...` format, will close the issue(s) when PR gets merged: -->
+Fixes #
+
+**Special notes for your reviewer**:
+
+**Release note**:
+<!--  Write your release note:
+1. Enter your extended release note in the below block. If the PR requires additional action from users switching to the new release, start the release note with the string ""action required: "".
+2. If no release note is required, just write ""NONE"".
+-->
+```release-note
+NONE
+```
+",1,2,[]
+41,235564072,52,149135719,2018-12-03 19:27:24,2018-12-12 15:06:12,closed,Improve docs with interactive tutorial,"**What this PR does / why we need it**: 
+Hey guys! I spent some time working on an ""interactive"" version of the [Chartify tutorial notebook](https://github.com/spotify/chartify/blob/master/examples/Chartify%20Tutorial.ipynb). We've created [RMOTR Notebooks](https://notebooks.rmotr.com/) for our students, to help them get started.
+
+With this version, anybody can just start working on the tutorial immediately in just a couple of seconds.
+
+**Special notes for your reviewer**: 
+I'm also working on the [Chartify examples notebook](https://notebooks.rmotr.com/spotify/interactive-chartify-examples-bedf977d), I'll update it as soon as it's done.
+
+Any feedback is greatly appreciated!
+
+**Release note**:
+
+```release-note
+NONE
+```",7,1,[]
+42,235299760,51,149135719,2018-12-03 00:44:04,,open,Add chromedriver-installer,"#20 
+
+Todo:
+- [ ] Verify that this works by installing from a test release",1,14,[]
+43,235296278,50,149135719,2018-12-03 00:01:35,2018-12-03 23:30:08,closed,Hide the 'BokehJS x.y.z successfully loaded.' from 'import chartify' expr output,"**What this PR does / why we need it**:
+Removes the ``BokehJS x.y.z successfully loaded.`` output from the ``import chartify`` expression.
+
+**Which issue(s) this PR fixes**
+Fixes #49 
+
+**Special notes for your reviewer**:
+
+**Release note**:
+```release-note
+NONE
+```
+",1,1,[]
+44,235295104,48,149135719,2018-12-02 23:43:23,2018-12-11 21:59:05,closed,Make 'import chartify' expr defer to previous call to 'bokeh.io.output_notebook',"**What this PR does / why we need it**:
+Allows users to specify their own Bokeh/notebook configurations (including specifying resources).
+
+Example code:
+```
+# loads resources from CDN
+from bokeh.io import output_notebook
+output_notebook()
+
+# load chartify package into namespace but defer to above bokeh.io.output_notebook call
+import chartify
+```
+
+**Which issue(s) this PR fixes**
+Fixes #47
+
+**Special notes for your reviewer**:
+It's unclear where to best document (and test) this feature because it's part of import behavior. Please advise.
+
+**Release note**:
+```release-note
+None
+```
+",1,2,[]
+45,233280779,39,149135719,2018-11-23 21:21:19,2019-02-16 23:02:30,closed,Added second axis,"Todo:
+- [x] Add examples
+- [x] Finalize how the API will be organized
+- [x] Add tests",0,8,[]
+46,232767573,35,149135719,2018-11-21 18:53:01,2018-11-21 19:07:41,closed,2.3.5,,0,3,[]
+47,232543651,33,149135719,2018-11-21 05:32:46,2018-11-21 18:41:26,closed,Fix subgroup orientation error that occurs with non-categorical axes,"- Fixed: #32: xaxis orientation with datetime axis.
+- Fixed #34: subtitle covered by outside_top legend
+- Also fixed overlap issue with source label and xaxis labels",0,5,[]
+48,231949981,29,149135719,2018-11-19 12:06:14,2018-11-20 22:05:12,closed,Add slackin link to README,"**What this PR does / why we need it**:  
+This PR simply adds a link to the [Slackin page](https://slackin.spotify.com) for the Spotify FOSS Slack team 🙂
+
+**Special notes for your reviewer**:  
+None, but hi 👋
+
+**Release note**:
+```release-note
+NONE
+```
+",1,2,[]
+49,231849119,28,149135719,2018-11-19 04:17:42,2018-11-20 21:54:48,closed,Added save and show svg options,"- Can't get scatter plots to output correctly, possibly due to an underlying bokeh issue: https://github.com/bokeh/bokeh/issues/8446
+- Still need tests
+- Need to restore the wait_until_render_complete functions and get them to work with chrome #27, though wouldn't consider this a blocker for this PR",0,7,[]
+50,231467261,22,149135719,2018-11-16 09:34:20,2018-11-16 15:49:25,closed,Add line callout style properties,"<!--  Thanks for sending a pull request!  Here are some tips for you:
+1. If this is your first time, read our contributor guidelines <https://github.com/spotify/chartify/blob/master/CONTRIBUTING.rst>
+2. If the PR is unfinished, please prefix the subject line with [WIP], [DRAFT], or [RFC].
+-->
+
+**What this PR does / why we need it**: Hooks up line callout width, style, and alpha with bokeh so that changing line style works.
+
+**Which issue(s) this PR fixes**: N/A
+<!-- optional; in `fixes #<issue number>, fixes #<issue_number>, ...` format, will close the issue(s) when PR gets merged: -->
+Fixes #: N/A
+
+**Special notes for your reviewer**: N/A
+
+**Release note**: N/A
+<!--  Write your release note:
+1. Enter your extended release note in the below block. If the PR requires additional action from users switching to the new release, start the release note with the string ""action required: "".
+2. If no release note is required, just write ""NONE"".
+-->
+```release-note
+
+```
+",1,1,[]
+51,231449966,21,149135719,2018-11-16 08:24:10,2018-11-16 15:49:04,closed,Update orientation doc string,"<!--  Thanks for sending a pull request!  Here are some tips for you:
+1. If this is your first time, read our contributor guidelines <https://github.com/spotify/chartify/blob/master/CONTRIBUTING.rst>
+2. If the PR is unfinished, please prefix the subject line with [WIP], [DRAFT], or [RFC].
+-->
+
+**What this PR does / why we need it**: Updates the docstring for the line callout to align with the parameter name
+
+**Which issue(s) this PR fixes**: Confusion about the use of the line callout
+<!-- optional; in `fixes #<issue number>, fixes #<issue_number>, ...` format, will close the issue(s) when PR gets merged: -->
+Fixes #: N/A
+
+**Special notes for your reviewer**: N/A
+
+**Release note**: N/A
+<!--  Write your release note:
+1. Enter your extended release note in the below block. If the PR requires additional action from users switching to the new release, start the release note with the string ""action required: "".
+2. If no release note is required, just write ""NONE"".
+-->
+```release-note
+
+```
+",1,2,[]
+52,230609337,17,149135719,2018-11-13 20:11:17,2018-11-13 20:15:31,closed,Bokeh 1.0,,0,3,[]
+53,230605894,16,149135719,2018-11-13 19:58:58,2018-11-13 20:07:43,closed,Bokeh 1.0,,0,1,[]
+54,229425631,13,149135719,2018-11-08 16:19:33,2018-11-09 17:51:29,closed,Added stackoverflow tag to readme,,0,1,[]
+55,225537618,10,149135719,2018-10-24 20:20:29,2018-10-24 20:28:16,closed,Upgrade Pillow,,0,2,[]
+56,223380844,8,149135719,2018-10-16 20:12:10,2018-10-18 22:24:34,closed,Categorical scatter plots,"- Default stack order now matches legend order. Thanks granholm!
+- Added ability to shift color palettes
+- Added categorical scatter plot. Thanks keertia!
+- Fixed bug with text_stacked with multiple categorical levels. Thanks dkeyes!",0,8,[]
+57,218755127,5,149135719,2018-09-27 18:57:20,2018-09-27 19:06:57,closed,Fix columndatasource bug,,0,3,[]
+58,218501692,3,149135719,2018-09-27 01:52:05,2018-09-27 03:30:37,closed,Updated history typos,,0,2,[]
+59,218363759,2,149135719,2018-09-26 15:36:55,2018-09-27 01:27:28,closed,Axis orientation & scatter plot markers,"- Give users control over grouped axis orientation.
+- Expose scatter plot alpha and marker control",0,9,[]
+60,217385092,1,149135719,2018-09-21 19:52:54,2018-09-25 04:16:47,closed,Add hexbin plot method,,1,7,[]
